@@ -76,8 +76,8 @@ The download package contains:
 | 📥 **Download Page** | [Download SODA+ AI](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.0-beta.html) |
 | 📄 **Release Notes** | [View Release Notes](https://sodaplusbeta.blob.core.windows.net/downloads/RELEASE_NOTES_1.0.0-beta.md) |
 | 📖 **User Guide** | Included in download |
-| 🐛 **Report Issues** | [GitHub Issues](https://github.com/jcboyer/SODA_PLUS_AI_ReleasedBeta/issues) |
-| 💬 **Discussions** | [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI_ReleasedBeta/discussions) |
+| 🐛 **Report Issues** | [GitHub Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) |
+| 💬 **Discussions** | [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions) |
 
 ---
 
@@ -92,7 +92,7 @@ We're currently in **beta testing phase** and welcome your feedback!
 - 🎨 UI/UX feedback
 
 **How to provide feedback:**
-1. [Open an issue](https://github.com/jcboyer/SODA_PLUS_AI_ReleasedBeta/issues/new) on GitHub
+1. [Open an issue](https://github.com/jcboyer/SODA_PLUS_AI/issues/new) on GitHub
 2. Include your Windows version and system specs
 3. Attach screenshots if applicable
 4. Describe steps to reproduce any issues
@@ -104,7 +104,7 @@ We're currently in **beta testing phase** and welcome your feedback!
 - ✅ No data collection without consent
 - ✅ Secure cloud-based API key storage
 - ✅ Local analysis (SQL queries run on your server)
-- ✅ Open source (code available for review)
+- ✅ Open documentation (public repo for issues and docs)
 
 ---
 
@@ -119,8 +119,8 @@ This software is currently in beta and available for testing purposes.
 Need help? We're here for you:
 
 - 📖 Check the included User Guide
-- 🐛 [Report bugs on GitHub](https://github.com/jcboyer/SODA_PLUS_AI_ReleasedBeta/issues)
-- 💬 [Join discussions](https://github.com/jcboyer/SODA_PLUS_AI_ReleasedBeta/discussions)
+- 🐛 [Report bugs on GitHub](https://github.com/jcboyer/SODA_PLUS_AI/issues)
+- 💬 [Join discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
 
 ---
 
