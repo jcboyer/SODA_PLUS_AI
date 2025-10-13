@@ -1,0 +1,49 @@
+# CRITICAL: Prevent source code from being committed
+*.cs
+*.xaml
+*.csproj
+*.sln
+*.config
+*.json
+*.ps1
+
+# Allow specific documentation
+!README.md
+!INSTALLATION.md
+!TROUBLESHOOTING.md
+!RELEASE_NOTES.md
+!SODA_PLUS_User_Guide.md
+
+# Build outputs
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+
+# IDE files
+.vs/
+.vscode/
+*.user
+*.suo
+
+# OS files
+Thumbs.db
+.DS_Store
+*.swp
+*.swo
+
+# Temp files
+*.tmp
+*.log
+*.bak
+
+# Package files
+*.zip
+*.7z
+*.tar.gz
+
+# Allow screenshots
+!Screenshots/**/*.png
+!Screenshots/**/*.jpg
+!Screenshots/**/*.gif
