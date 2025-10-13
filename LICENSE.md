@@ -1,7 +1,7 @@
 # SODA+ AI Beta License
 
 ## Copyright Notice
-Copyright © 2025 Jean-Charles Boyer (jcboyer)
+Copyright © 2025 Jerome Charles Boyer (jcboyer)
 
 ## Beta Testing License
 
