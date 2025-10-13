@@ -3,7 +3,7 @@
 ## Quick Installation
 
 ### Step 1: Download
-[⬇️ Download SODA+ AI v1.0.0-beta](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.0-beta.html)
+[⬇️ Download SODA+ AI v1.0.1-beta](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.1-beta.html)
 
 ### Step 2: Extract
 Right-click the downloaded ZIP file and select **Extract All...**
@@ -84,6 +84,6 @@ This is normal for new applications.
 
 **Ready to analyze your SQL Server dependencies?**
 
-[⬇️ Download Now](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.0-beta.html)
+[⬇️ Download Now](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.1-beta.html)
 
 </div>

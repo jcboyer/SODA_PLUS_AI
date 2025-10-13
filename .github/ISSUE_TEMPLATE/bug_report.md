@@ -22,7 +22,7 @@ assignees: ''
 
 ## 💻 System Information
 - **Windows Version:** [e.g., Windows 11]
-- **SODA+ AI Version:** [e.g., 1.0.0-beta]
+- **SODA+ AI Version:** [e.g., 1.0.1-beta]
 - **SQL Server Version:** [e.g., SQL Server 2019]
 
 ## 📸 Screenshots
