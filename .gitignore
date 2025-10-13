@@ -5,14 +5,14 @@
 *.sln
 *.config
 *.json
-*.ps1
 
 # Allow specific documentation
 !README.md
 !INSTALLATION.md
 !TROUBLESHOOTING.md
-!RELEASE_NOTES.md
-!SODA_PLUS_User_Guide.md
+!CHANGELOG.md
+!GETTING_STARTED.md
+!LICENSE
 
 # Build outputs
 bin/
@@ -30,20 +30,10 @@ obj/
 # OS files
 Thumbs.db
 .DS_Store
-*.swp
-*.swo
 
-# Temp files
-*.tmp
-*.log
-*.bak
-
-# Package files
-*.zip
-*.7z
-*.tar.gz
-
-# Allow screenshots
-!Screenshots/**/*.png
-!Screenshots/**/*.jpg
-!Screenshots/**/*.gif
+# Allow screenshots and markdown
+!docs/**/*.md
+!docs/**/*.png
+!docs/**/*.jpg
+!docs/**/*.gif
+!.github/**/*.md
