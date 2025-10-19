@@ -63,35 +63,81 @@ That's it! No admin rights needed, no manual configuration required.
 - **Storage**: ~100MB for application + ~50MB for chart rendering tools (downloaded on first use)
 - **Internet**: Required for AI features and chart rendering setup
 
-For the Techies:
-BUILD MACHINE:
-┌─────────────────────────────────────────┐
-│ 1. Create PS1 with PLACEHOLDER          │
-│ 2. Encode to Base64                     │
-│ 3. Create BAT with Base64               │
-│ 4. Upload MSIX to Azure                 │
-│ 5. Replace PLACEHOLDER with real URL    │ 
-│ 6. Re-encode PS1 with real URL          │ 
-│ 7. Regenerate BAT with updated Base64   │ 
-│ 8. Upload updated BAT to Azure          │
-└─────────────────────────────────────────┘
-              ↓
-         AZURE BLOB
-┌─────────────────────────────────────────┐
-│ • SODA_PLUS_AI_1.0.8-beta.msix          │
-│ • Install-SODA_1.0.8-beta.bat ← UPDATED │
-│ • download_1.0.8-beta.html              │
-└─────────────────────────────────────────┘
-              ↓
-         TARGET PC
-┌─────────────────────────────────────────┐
-│ 1. Download BAT file                    │
-│ 2. Double-click BAT                     │
-│ 3. BAT decodes Base64 → PowerShell      │
-│ 4. PowerShell downloads MSIX from URL   │ 
-│ 5. Installs MSIX                        │
-│ 6. Done!                                │
-└─────────────────────────────────────────┘
+## 🔄 Build & Deployment Workflow
+
+### MSIX Package Build Process
+
+The build system uses a sophisticated Base64-encoded installer to ensure the BAT file is self-contained and includes the correct Azure Blob Storage URL:
+
+```mermaid
+flowchart TB
+    subgraph BUILD["🏗️ BUILD MACHINE"]
+        direction TB
+        B1["📝 Create PS1 with PLACEHOLDER"]
+        B2["🔒 Encode to Base64"]
+        B3["📄 Create BAT with Base64"]
+        B4["☁️ Upload MSIX to Azure"]
+        B5["🔧 Replace PLACEHOLDER with real URL"]
+        B6["🔒 Re-encode PS1 with real URL"]
+        B7["📄 Regenerate BAT with updated Base64"]
+        B8["☁️ Upload updated BAT to Azure"]
+        
+        B1 --> B2 --> B3 --> B4 --> B5 --> B6 --> B7 --> B8
+        
+        style B5 fill:#90EE90,stroke:#228B22,stroke-width:3px
+        style B6 fill:#90EE90,stroke:#228B22,stroke-width:3px
+        style B7 fill:#90EE90,stroke:#228B22,stroke-width:3px
+    end
+    
+    subgraph AZURE["☁️ AZURE BLOB STORAGE"]
+        direction TB
+        A1["📦 SODA_PLUS_AI.msix"]
+        A2["🔄 Install-SODA.bat<br/><b>← UPDATED with Real URL</b>"]
+        A3["🌐 download.html"]
+        
+        style A2 fill:#FFD700,stroke:#FFA500,stroke-width:3px
+    end
+    
+    subgraph TARGET["💻 TARGET PC"]
+        direction TB
+        T1["⬇️ Download BAT file"]
+        T2["🖱️ Double-click BAT"]
+        T3["🔓 BAT decodes Base64 → PowerShell"]
+        T4["⬇️ PowerShell downloads MSIX<br/><b>← REAL URL NOW!</b>"]
+        T5["📦 Installs MSIX"]
+        T6["✅ Done!"]
+        
+        T1 --> T2 --> T3 --> T4 --> T5 --> T6
+        
+        style T4 fill:#87CEEB,stroke:#4169E1,stroke-width:3px
+    end
+    
+    BUILD -->|Upload| AZURE
+    AZURE -->|Download| TARGET
+```
+
+### Key Features
+
+- ✅ **Self-Contained Installer**: BAT file includes all PowerShell code (Base64 encoded)
+- ✅ **Dynamic URL Injection**: Real Azure Blob URL is injected during build
+- ✅ **No External Dependencies**: User only needs to download one file
+- ✅ **Automatic MSIX Installation**: PowerShell handles download and installation
+- ✅ **Progress Reporting**: Real-time download progress display
+
+### Build Command
+
+```powershell
+.\Build-Publish-Upload-MSIX.ps1 -Version "1.0.8-beta"
+```
+
+### User Experience
+
+1. User downloads `Install-SODA_1.0.8-beta.bat` (21 KB)
+2. Double-clicks the BAT file
+3. PowerShell automatically downloads MSIX (~84 MB)
+4. MSIX installs with Start Menu integration
+5. Done! 🎉
+
 
 ---
 
