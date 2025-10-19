@@ -2,7 +2,7 @@
 
 **SQL Object Dependency Analyzer with AI-Powered Code Review**
 
-[![Version](https://img.shields.io/badge/version-1.0.6--beta-blue)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.8-beta.html)
+[![Version](https://img.shields.io/badge/version-1.0.8--beta-blue)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.8-beta.html)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.8-beta.html)
 [![.NET](https://img.shields.io/badge/.NET-8%20%7C%2010-512BD4)](https://dotnet.microsoft.com/)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/jcboyer/SODA_PLUS_AI/blob/main/LICENSE.md)
