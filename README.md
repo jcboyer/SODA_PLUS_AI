@@ -129,7 +129,41 @@ flowchart TB
 ```powershell
 .\Build-Publish-Upload-MSIX.ps1 -Version "1.0.8-beta"
 ```
+## 📊 Technical Details
 
+### Base64 Encoding Approach
+
+**Problem Solved**: How to embed PowerShell code in a BAT file with dynamic Azure URLs?
+
+**Solution**: 
+1. Create PowerShell installer script with placeholder URL
+2. Encode to Base64 (UTF-16LE)
+3. After MSIX upload, replace placeholder with real URL
+4. Re-encode with real URL
+5. Upload updated BAT file
+
+**Benefits**:
+- ✅ No escaping issues (Base64 is binary-safe)
+- ✅ Single file download (no external PS1 needed)
+- ✅ Works on all Windows 10/11 systems
+- ✅ No admin rights required
+- ✅ Browser cache-friendly (no conflicting files)
+
+### File Sizes
+
+| File | Size | Purpose |
+|------|------|---------|
+| `Install-SODA.bat` | ~21 KB | Self-contained installer with Base64 encoded PowerShell |
+| `SODA_PLUS_AI.msix` | ~84 MB | Complete application package |
+| `download.html` | ~12 KB | User-friendly download page |
+
+### Supported Platforms
+
+- Windows 10 (Build 14393+) ✅
+- Windows 11 ✅
+- x64 Architecture only ✅
+---  
+  
 ### User Experience
 
 1. User downloads `Install-SODA_1.0.8-beta.bat` (21 KB)
@@ -137,8 +171,6 @@ flowchart TB
 3. PowerShell automatically downloads MSIX (~84 MB)
 4. MSIX installs with Start Menu integration
 5. Done! 🎉
-
-
 ---
 
 ## 🎯 Quick Start Guide
