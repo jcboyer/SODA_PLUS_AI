@@ -124,7 +124,7 @@ flowchart TB
 - ✅ **Automatic MSIX Installation**: PowerShell handles download and installation
 - ✅ **Progress Reporting**: Real-time download progress display
 
-### Build Command
+### Build Command -- Developer's system
 
 ```powershell
 .\Build-Publish-Upload-MSIX.ps1 -Version "1.0.8-beta"
