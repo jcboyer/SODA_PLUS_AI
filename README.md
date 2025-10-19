@@ -2,8 +2,8 @@
 
 **SQL Object Dependency Analyzer with AI-Powered Code Review**
 
-[![Version](https://img.shields.io/badge/version-1.0.6--beta-blue)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.6-beta.html)
-[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.6-beta.html)
+[![Version](https://img.shields.io/badge/version-1.0.6--beta-blue)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.8-beta.html)
+[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.8-beta.html)
 [![.NET](https://img.shields.io/badge/.NET-8%20%7C%2010-512BD4)](https://dotnet.microsoft.com/)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/jcboyer/SODA_PLUS_AI/blob/main/LICENSE.md)
 
@@ -42,11 +42,11 @@ SODA+ AI is a powerful tool for SQL Server developers and DBAs that combines **d
 
 ## 📥 Download & Install
 
-### **Latest Version: 1.0.6-beta**
+### **Latest Version: 1.0.8-beta**
 
-**[📦 Download Installer](https://sodaplusbeta.blob.core.windows.net/downloads/Install-SODA_1.0.6-beta.bat)** ← Just double-click to install!
+**[📦 Download Installer](https://sodaplusbeta.blob.core.windows.net/downloads/Install-SODA_1.0.8-beta.bat)** ← Just double-click to install!
 
-**[🌐 Full Download Page](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.6-beta.html)**
+**[🌐 Full Download Page](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.8-beta.html)**
 
 ### Quick Installation (3 Steps)
 
@@ -62,6 +62,36 @@ That's it! No admin rights needed, no manual configuration required.
 - **RAM**: 4GB minimum (8GB recommended)
 - **Storage**: ~100MB for application + ~50MB for chart rendering tools (downloaded on first use)
 - **Internet**: Required for AI features and chart rendering setup
+
+For the Techies:
+BUILD MACHINE:
+┌─────────────────────────────────────────┐
+│ 1. Create PS1 with PLACEHOLDER          │
+│ 2. Encode to Base64                     │
+│ 3. Create BAT with Base64               │
+│ 4. Upload MSIX to Azure                 │
+│ 5. Replace PLACEHOLDER with real URL    │ 
+│ 6. Re-encode PS1 with real URL          │ 
+│ 7. Regenerate BAT with updated Base64   │ 
+│ 8. Upload updated BAT to Azure          │
+└─────────────────────────────────────────┘
+              ↓
+         AZURE BLOB
+┌─────────────────────────────────────────┐
+│ • SODA_PLUS_AI_1.0.8-beta.msix          │
+│ • Install-SODA_1.0.8-beta.bat ← UPDATED │
+│ • download_1.0.8-beta.html              │
+└─────────────────────────────────────────┘
+              ↓
+         TARGET PC
+┌─────────────────────────────────────────┐
+│ 1. Download BAT file                    │
+│ 2. Double-click BAT                     │
+│ 3. BAT decodes Base64 → PowerShell      │
+│ 4. PowerShell downloads MSIX from URL   │ 
+│ 5. Installs MSIX                        │
+│ 6. Done!                                │
+└─────────────────────────────────────────┘
 
 ---
 
