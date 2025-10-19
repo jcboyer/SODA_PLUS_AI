@@ -124,7 +124,7 @@ This happens **once**, then chart rendering is instant! ✨
 
 ```
 SODA_PLUS_AI_ReleasedBeta/
-├── SODA_PLUS_MAIN/              # Main WPF application (.NET 8)
+├── SODA_PLUS_MAIN/              # Main WPF application (.NET 10)
 ├── SODA_PLUS_DEPENDENCIES/      # Core dependency analysis library
 ├── SODA_PLUS_CHARTING/          # Mermaid chart generation
 ├── SODA_PLUS_AI_REVIEW/         # AI integration layer
