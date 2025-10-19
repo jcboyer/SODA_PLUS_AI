@@ -1,145 +1,122 @@
-﻿# 📥 Download SODA+ AI
+# SODA+ AI
 
-[![Download SODA+ AI](https://img.shields.io/badge/Download-SODA+%20AI%20v1.0.0--beta-blueviolet?style=for-the-badge&logo=download)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.0-beta.html)
-[![Version](https://img.shields.io/badge/Version-1.0.0--beta-blue?style=for-the-badge)](https://sodaplusbeta.blob.core.windows.net/downloads/RELEASE_NOTES_1.0.0-beta.md)
-[![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11%20x64-brightgreen?style=for-the-badge)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.0-beta.html)
+**SQL Object Dependency Analyzer with AI-Powered Code Review**
 
----
-
-## 🚀 Quick Start
-
-1. **[⬇️ Download SODA+ AI v1.0.0-beta](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.0-beta.html)**
-2. Extract the ZIP file to your desired location
-3. Run `SODA_PLUS_MAIN.exe` (no installation required!)
-4. Login with your email address
-5. Connect to your SQL Server and start analyzing!
+[![Version](https://img.shields.io/badge/version-1.0.6--beta-blue)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.6-beta.html)
+[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.6-beta.html)
+[![.NET](https://img.shields.io/badge/.NET-8%20%7C%2010-512BD4)](https://dotnet.microsoft.com/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
 ---
 
-## 📦 What's Included
+## 🚀 What is SODA+ AI?
 
-The download package contains:
+SODA+ AI is a powerful tool for SQL Server developers and DBAs that combines **dependency analysis** with **AI-powered code review**. Understand your database schema, visualize dependencies, and get intelligent recommendations for optimizing your SQL code.
 
-- ✅ **Single-file executable** - `SODA_PLUS_MAIN.exe` (self-contained with .NET runtime)
-- ✅ **User Guide** - Complete documentation
-- ✅ **Release Notes** - Version history and new features
-- ✅ **README** - Quick start instructions
+### Key Features
 
-**No installation required!** Just download, extract, and run.
+✨ **Interactive Dependency Visualization**
+- Multi-level drill-down through stored procedures, functions, views, and tables
+- Visual impact analysis - see what depends on what
+- Identify circular dependencies and unused objects
 
----
-
-## 💻 System Requirements
-
-| Requirement | Specification |
-|-------------|---------------|
-| **Operating System** | Windows 10 or Windows 11 (64-bit) |
-| **RAM** | 4GB minimum (8GB recommended) |
-| **Disk Space** | 500MB free space |
-| **Internet Connection** | Required for AI features |
-| **.NET Runtime** | Included (self-contained) |
-
----
-
-## ✨ Key Features
-
-### 🔍 Dependency Analysis
-- Visual dependency mapping with interactive drill-down
-- Impact analysis for database objects
-- Hierarchical dependency trees
-- Real-time dependency discovery
-
-### 🤖 AI-Powered Code Review
-- Intelligent SQL code analysis
+🤖 **AI-Powered Code Review**
+- Context-aware analysis of your SQL code
+- Best practice recommendations
 - Performance optimization suggestions
-- Best practices recommendations
 - Security vulnerability detection
 
-### 📊 Interactive Visualizations
-- Beautiful dependency charts
+📊 **Advanced Charting**
 - Mermaid diagram generation
-- Export capabilities
-- Customizable views
+- SVG export for documentation
+- Multiple visualization modes
+- Beautiful, professional diagrams
 
-### ☁️ Cloud Integration
-- Cloud-based API key management
-- Secure authentication
+☁️ **Cloud Integration**
+- Secure API key management
+- Cloud-based analysis powered by Azure
 - Automatic updates
-- Team collaboration features
+- Zero configuration required
 
 ---
 
-## 📚 Resources
+## 📥 Download & Install
 
-| Resource | Link |
-|----------|------|
-| 📥 **Download Page** | [Download SODA+ AI](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.0-beta.html) |
-| 📄 **Release Notes** | [View Release Notes](https://sodaplusbeta.blob.core.windows.net/downloads/RELEASE_NOTES_1.0.0-beta.md) |
-| 📖 **User Guide** | Included in download |
-| 🐛 **Report Issues** | [GitHub Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) |
-| 💬 **Discussions** | [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions) |
+### **Latest Version: 1.0.6-beta**
 
----
+**[📦 Download Installer](https://sodaplusbeta.blob.core.windows.net/downloads/Install-SODA_1.0.6-beta.bat)** ← Just double-click to install!
 
-## 🎯 Beta Testing
+**[🌐 Full Download Page](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.6-beta.html)**
 
-We're currently in **beta testing phase** and welcome your feedback!
+### Quick Installation (3 Steps)
 
-**What we're looking for:**
-- 🐛 Bug reports
-- 💡 Feature suggestions
-- 📝 Documentation improvements
-- 🎨 UI/UX feedback
+1. **Download** the installer (BAT file)
+2. **Double-click** `Install-SODA_1.0.6-beta.bat`
+3. **Launch** from Start Menu → Search "SODA+ AI"
 
-**How to provide feedback:**
-1. [Open an issue](https://github.com/jcboyer/SODA_PLUS_AI/issues/new) on GitHub
-2. Include your Windows version and system specs
-3. Attach screenshots if applicable
-4. Describe steps to reproduce any issues
+That's it! No admin rights needed, no manual configuration required.
+
+### System Requirements
+
+- **OS**: Windows 10/11 (64-bit)
+- **RAM**: 4GB minimum (8GB recommended)
+- **Storage**: ~100MB for application + ~50MB for chart rendering tools (downloaded on first use)
+- **Internet**: Required for AI features and chart rendering setup
 
 ---
 
-## 🔐 Security & Privacy
+## 🎯 Quick Start Guide
 
-- ✅ No data collection without consent
-- ✅ Secure cloud-based API key storage
-- ✅ Local analysis (SQL queries run on your server)
-- ✅ Open documentation (public repo for issues and docs)
+1. **Launch SODA+ AI** from Start Menu
+2. **Connect to SQL Server**
+   - Enter server name
+   - Choose authentication method
+   - Select database
+3. **Explore Dependencies**
+   - Right-click any object (stored proc, view, table)
+   - Select "Show Dependencies"
+   - Drill down into related objects
+4. **Generate Charts**
+   - Select objects to visualize
+   - Click "Chart → Generate Mermaid"
+   - Export as SVG for documentation
+5. **AI Code Review**
+   - Select a stored procedure or function
+   - Click "AI Review"
+   - Get instant recommendations
 
----
+### First-Time Chart Rendering Setup
 
-## 📝 License
+When you first use the **Chart → Render SVG** feature:
+- SODA+ AI automatically downloads Node.js (~50MB)
+- Installs Mermaid rendering tools (~2 minutes)
+- Saves setup to `%LocalAppData%\MermaidRenderer\`
 
-This software is currently in beta and available for testing purposes.
-
----
-
-## 🤝 Support
-
-Need help? We're here for you:
-
-- 📖 Check the included User Guide
-- 🐛 [Report bugs on GitHub](https://github.com/jcboyer/SODA_PLUS_AI/issues)
-- 💬 [Join discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
+This happens **once**, then chart rendering is instant! ✨
 
 ---
 
 ## 📸 Screenshots
 
-*(Add your screenshots here)*
+### Dependency Tree View
+![Dependency Tree](SODA_PLUS_MAIN/Resources/Screenshots/dependency-tree.png)
+
+### AI-Powered Code Review
+![AI Review](SODA_PLUS_MAIN/Resources/Screenshots/ai-review.png)
+
+### Mermaid Diagram Export
+![Mermaid Chart](SODA_PLUS_MAIN/Resources/Screenshots/mermaid-chart.png)
 
 ---
 
-## 🎉 Thank You!
+## 🔧 For Developers
 
-Thank you for being part of our beta testing program. Your feedback helps make SODA+ AI better for everyone!
+### Building from Source
 
----
+**Prerequisites:**
+- Visual Studio 2022 (v17.12+)
+- .NET 8 SDK
+- .NET 10 SDK (preview)
+- Windows 10 SDK (for MSIX packaging)
 
-<div align="center">
-
-### [⬇️ Download SODA+ AI v1.0.0-beta Now](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.0-beta.html)
-
-**Made with ❤️ by the SODA+ AI Team**
-
-</div>
+**Build Steps:**
