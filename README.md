@@ -311,7 +311,7 @@ This is a **beta release** - your feedback helps make SODA+ AI better!
 
 Contributions are welcome! Please:
 
-1. Fork the repository
+1. Fork the repository -- the application code is currently private. 
 2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
@@ -321,7 +321,7 @@ Contributions are welcome! Please:
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/jcboyer/SODA_PLUS_AI/blob/main/LICENSE.md) file for details.
+This project is licensed under this License - see the [LICENSE.md](https://github.com/jcboyer/SODA_PLUS_AI/blob/main/LICENSE.md) file for details.
 
 ---
 
@@ -358,6 +358,6 @@ SODA+ AI uses **MSIX packaging** for modern, secure deployment:
 
 **Made with ❤️ for SQL Server developers**
 
-[Download](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.6-beta.html) • [Documentation](docs/) • [Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) • [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
+[Download](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.8-beta.html) • [Documentation](docs/) • [Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) • [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
 
 </div>
