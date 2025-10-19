@@ -119,22 +119,6 @@ This happens **once**, then chart rendering is instant! ✨
 - .NET 10 SDK (preview)
 - Windows 10 SDK (for MSIX packaging)
 
-**Build Steps:**
-
-```powershell
-# Clone repository
-git clone https://github.com/jcboyer/SODA_PLUS_AI_ReleasedBeta.git
-cd SODA_PLUS_AI_ReleasedBeta
-
-# Restore packages
-dotnet restore SODA_PLUS_AI_ReleasedBeta.sln
-
-# Build solution
-dotnet build SODA_PLUS_AI_ReleasedBeta.sln -c Release
-
-# Or build and create MSIX package
-.\Build-Publish-Upload-MSIX.ps1 -Version "1.0.x-dev" -SkipUpload
-```
 
 ### Project Structure
 
@@ -151,7 +135,7 @@ SODA_PLUS_AI_ReleasedBeta/
 
 ### Technologies Used
 
-- **Frontend**: WPF (.NET 8), XAML
+- **Frontend**: WPF (.NET 10), XAML
 - **Backend**: Azure Functions (.NET 8), Azure Blob Storage
 - **AI**: Azure OpenAI, GPT-4 integration
 - **Charting**: Mermaid.js, Node.js renderer
@@ -166,14 +150,6 @@ SODA_PLUS_AI_ReleasedBeta/
 1. Open Settings → Apps
 2. Search for "SODA+ AI"
 3. Click Uninstall
-
-**PowerShell:**
-```powershell
-Get-AppxPackage *sodaplusai* | Remove-AppxPackage
-```
-
-All app data is automatically removed!
-
 ---
 
 ## 📖 Documentation
@@ -201,18 +177,20 @@ This is a **beta release** - your feedback helps make SODA+ AI better!
 
 ## 🗺️ Roadmap
 
-### v1.0.0 (Q1 2025)
+### v1.0.0 (Q4 2025)
 - ✅ Core dependency analysis
 - ✅ AI-powered code review
 - ✅ Mermaid chart generation
 - 🚧 Code signing certificate
 - 🚧 Performance optimizations
 
-### v1.1.0 (Q2 2025)
-- 📋 Schema comparison
+### v1.1.0 (Q1 2026)
+- 📋 AI based Schema comparison 
 - 📋 Change tracking
 - 📋 Team collaboration features
 - 📋 Custom AI prompts
+- 📋 AI SQL Agent Analysis
+
 
 ### v2.0.0 (Future)
 - 📋 Multi-database support (PostgreSQL, MySQL)
