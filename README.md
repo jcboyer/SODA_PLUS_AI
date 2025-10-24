@@ -42,7 +42,7 @@ SODA+ AI is a powerful tool for SQL Server developers and DBAs that combines **d
 
 ## 📥 Download & Install
 
-### **Latest Version: 1.0.8-beta**
+### **Latest Version: 1.1.0-beta**
 
 **[📦 Download Installer](https://sodaplusbeta.blob.core.windows.net/downloads/Install-SODA_1.1.0-beta.bat)** ← Just double-click to install!
 
@@ -51,7 +51,7 @@ SODA+ AI is a powerful tool for SQL Server developers and DBAs that combines **d
 ### Quick Installation (3 Steps)
 
 1. **Download** the installer (BAT file)
-2. **Double-click** `Install-SODA_1.0.6-beta.bat`
+2. **Double-click** `Install-SODA_1.1.0-beta.bat`
 3. **Launch** from Start Menu → Search "SODA+ AI"
 
 That's it! No admin rights needed, no manual configuration required.
@@ -127,8 +127,9 @@ flowchart TB
 ### Build Command -- Developer's system
 
 ```powershell
-.\Build-Publish-Upload-MSIX.ps1 -Version "1.0.8-beta"
+.\Build-Publish-Upload-MSIX.ps1 -Version "1.1.0-beta"
 ```
+
 ## 📊 Technical Details
 
 ### Base64 Encoding Approach
@@ -166,7 +167,7 @@ flowchart TB
   
 ### User Experience
 
-1. User downloads `Install-SODA_1.0.8-beta.bat` (21 KB)
+1. User downloads `Install-SODA_1.1.0-beta.bat` (21 KB)
 2. Double-clicks the BAT file
 3. PowerShell automatically downloads MSIX (~84 MB)
 4. MSIX installs with Start Menu integration
