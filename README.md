@@ -2,8 +2,8 @@
 
 **SQL Object Dependency Analyzer with AI-Powered Code Review**
 
-[![Version](https://img.shields.io/badge/version-1.0.8--beta-blue)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.8-beta.html)
-[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.8-beta.html)
+[![Version](https://img.shields.io/badge/version-1.1.0--beta-blue)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.1.0-beta.html)
+[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.1.0-beta.html)
 [![.NET](https://img.shields.io/badge/.NET-8%20%7C%2010-512BD4)](https://dotnet.microsoft.com/)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/jcboyer/SODA_PLUS_AI/blob/main/LICENSE.md)
 
@@ -44,9 +44,9 @@ SODA+ AI is a powerful tool for SQL Server developers and DBAs that combines **d
 
 ### **Latest Version: 1.0.8-beta**
 
-**[📦 Download Installer](https://sodaplusbeta.blob.core.windows.net/downloads/Install-SODA_1.0.8-beta.bat)** ← Just double-click to install!
+**[📦 Download Installer](https://sodaplusbeta.blob.core.windows.net/downloads/Install-SODA_1.1.0-beta.bat)** ← Just double-click to install!
 
-**[🌐 Full Download Page](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.8-beta.html)**
+**[🌐 Full Download Page](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.1.0-beta.html)**
 
 ### Quick Installation (3 Steps)
 
@@ -358,6 +358,6 @@ SODA+ AI uses **MSIX packaging** for modern, secure deployment:
 
 **Made with ❤️ for SQL Server developers**
 
-[Download](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.8-beta.html) • [Documentation](docs/) • [Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) • [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
+[Download](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.1.0-beta.html) • [Documentation](docs/) • [Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) • [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
 
 </div>
