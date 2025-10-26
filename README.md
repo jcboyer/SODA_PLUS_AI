@@ -2,8 +2,8 @@
 
 **SQL Object Dependency Analyzer with AI-Powered Code Review**
 
-[![Version](https://img.shields.io/badge/version-1.1.0--beta-blue)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.1.0-beta.html)
-[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.1.0-beta.html)
+[![Version](https://img.shields.io/badge/version-1.2.0--beta-blue)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.2.0-beta.html)
+[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey)](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.2.0-beta.html)
 [![.NET](https://img.shields.io/badge/.NET-8%20%7C%2010-512BD4)](https://dotnet.microsoft.com/)
 [![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/jcboyer/SODA_PLUS_AI/blob/main/LICENSE.md)
 
@@ -42,16 +42,16 @@ SODA+ AI is a powerful tool for SQL Server developers and DBAs that combines **d
 
 ## 📥 Download & Install
 
-### **Latest Version: 1.1.0-beta**
+### **Latest Version: 1.2.0-beta**
 
-**[📦 Download Installer](https://sodaplusbeta.blob.core.windows.net/downloads/Install-SODA_1.1.0-beta.bat)** ← Just double-click to install!
+**[📦 Download Installer](https://sodaplusbeta.blob.core.windows.net/downloads/Install-SODA_1.2.0-beta.bat)** ← Just double-click to install!
 
-**[🌐 Full Download Page](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.1.0-beta.html)**
+**[🌐 Full Download Page](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.2.0-beta.html)**
 
 ### Quick Installation (3 Steps)
 
 1. **Download** the installer (BAT file)
-2. **Double-click** `Install-SODA_1.1.0-beta.bat`
+2. **Double-click** `Install-SODA_1.2.0-beta.bat`
 3. **Launch** from Start Menu → Search "SODA+ AI"
 
 That's it! No admin rights needed, no manual configuration required.
@@ -127,7 +127,7 @@ flowchart TB
 ### Build Command -- Developer's system
 
 ```powershell
-.\Build-Publish-Upload-MSIX.ps1 -Version "1.1.0-beta"
+.\Build-Publish-Upload-MSIX.ps1 -Version "1.2.0-beta"
 ```
 
 ## 📊 Technical Details
@@ -167,7 +167,7 @@ flowchart TB
   
 ### User Experience
 
-1. User downloads `Install-SODA_1.1.0-beta.bat` (21 KB)
+1. User downloads `Install-SODA_1.2.0-beta.bat` (21 KB)
 2. Double-clicks the BAT file
 3. PowerShell automatically downloads MSIX (~84 MB)
 4. MSIX installs with Start Menu integration
@@ -359,6 +359,6 @@ SODA+ AI uses **MSIX packaging** for modern, secure deployment:
 
 **Made with ❤️ for SQL Server developers**
 
-[Download](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.1.0-beta.html) • [Documentation](docs/) • [Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) • [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
+[Download](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.2.0-beta.html) • [Documentation](docs/) • [Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) • [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
 
 </div>
