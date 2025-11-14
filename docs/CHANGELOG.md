@@ -1,4 +1,4 @@
-# CHANGELOG
+﻿# CHANGELOG
 
 All notable changes to SODA+ AI will be documented in this file.
 
@@ -15,6 +15,96 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Offline AI response caching
 - Batch chart generation
 - Custom fix pattern management
+
+---
+
+## [1.5.1] - 2025-11-13
+
+### Added
+- **Version-Neutral Public Documentation** - Public site now always points to latest release
+  - Dynamic version badge using version.json from Azure Blob Storage
+  - Version-neutral download links (Install-SODA_Latest.bat, SODA_PLUS_AI_Latest.msix)
+  - Automatic version detection from blob storage metadata
+- **YouTube Demo Integration** - Public README now includes demo video
+  - 2-minute walkthrough video embedded
+  - Visual introduction for new users
+  - Direct link to YouTube demo (ecZOFDrbr9I)
+- **Enhanced Documentation Structure** - Reorganized public documentation
+  - Time estimates for each guide (5 min, 30 min, 2-3 hrs)
+  - Clear navigation with guide comparison table
+  - "Which Guide Should I Use?" decision helper
+  - Documentation index (docs/README.md)
+- **RELEASE_HISTORY.md** - Version tracking with download links
+  - Chronological version history
+  - Direct download links for each version (latest + archive)
+  - Release notes links
+  - Automatic cleanup (keeps last 5 versions)
+- **Security & Privacy Section** - Public README transparency
+  - Explicit privacy guarantees
+  - Security disclosure process
+  - No data collection without consent statement
+- **Improved Screenshot Paths** - Fixed broken image links
+  - Changed from `SODA_PLUS_MAIN/Resources/Screenshots/` to `docs/screenshots/`
+  - All screenshots now display correctly on GitHub
+
+### Changed
+- **Public Site README** - Complete rewrite for better user experience
+  - Shifted from technical/developer focus to user-focused content
+  - Simplified installation instructions
+  - Better feature categorization
+  - Clearer call-to-action for downloads
+- **Sync-PublicRepo.ps1** - Completed missing sections
+  - Added [3/9] Copy User Guides section
+  - Added [4/9] Copy Screenshots section
+  - Added [5/9] Copy Developer Documentation section
+  - Added [6/9] Copy CHANGELOG.md section
+  - Added [7/9] Copy Release Notes section
+  - Added [8/9] Update Public RELEASE_NOTES.md section
+  - Fixed missing closing brace causing parser errors
+  - All 9 phases now functional
+- **Badge Strategy** - Dynamic vs. static badges
+  - Version badge: Dynamic (pulls from version.json)
+  - Download badge: Static but version-neutral
+  - Platform badge: Static (Windows 10/11 x64)
+
+### Fixed
+- **Sync-PublicRepo.ps1 Parser Error** - Script now parses correctly
+  - Added missing closing brace for final if (-not $DryRun) block
+  - All sections properly closed
+  - Script executes successfully end-to-end
+- **Git Merge Conflicts** - Resolved public repo conflicts
+  - LICENSE file conflict resolved (removed old LICENSE, kept LICENSE.md)
+  - README.md merge conflict resolved (accepted incoming changes)
+  - RELEASE_NOTES.md conflict resolved
+  - Successfully pushed to GitHub (commit 17f95f5)
+- **Public Repo Path Detection** - Script now finds correct public repo
+  - Updated path from `C:\Git\SODA_PLUS_AI` to `G:\SODA_PLUS_AI_Public`
+  - Automatic path validation in Sync-PublicRepo.ps1
+
+### Security
+- **Content Sanitization** - Sync-PublicRepo.ps1 security checks
+  - Azure AccountKey redaction
+  - API keys and Bearer tokens redaction
+  - Database passwords and connection strings redaction
+  - SAS tokens on blob storage URLs redaction
+  - Azure Function keys redaction
+  - Automatic sanitization of all copied documentation
+
+### Technical
+- **Documentation Deployment Workflow**
+  - Single command: `.\Sync-PublicRepo.ps1 -Version "1.5.1" -PublicRepoPath "G:\SODA_PLUS_AI_Public"`
+  - Automated git commit and push
+  - Version-neutral content replacement
+  - Badge URL updates
+  - Screenshot path corrections
+- **Version Management**
+  - version.json format: `{"version":"1.5.1","releaseDate":"2025-01-31",...}`
+  - Dynamic badge URL: `https://img.shields.io/badge/dynamic/json?url=...version.json`
+  - Archive URLs for historical versions
+- **Build Artifact Locations**
+  - Latest MSIX: `https://sodaplusbeta.blob.core.windows.net/downloads/SODA_PLUS_AI_Latest.msix`
+  - Latest Installer: `https://sodaplusbeta.blob.core.windows.net/downloads/Install-SODA_Latest.bat`
+  - Archive: `https://sodaplusbeta.blob.core.windows.net/downloads/archive/SODA_PLUS_AI_1.5.1.msix`
 
 ---
 
@@ -200,8 +290,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Examples:
 - `1.0.0-beta` - First beta release
 - `1.1.0-beta` - Second beta release with new features
-- `1.5.0-beta` - Fifth beta release (current)
-- `1.1.1-beta` - Bug fix release
+- `1.5.0-beta` - Fifth beta release
+- `1.5.1` - Bug fix and documentation update
 - `1.2.0-rc` - Release candidate
 - `2.0.0` - Major release (production)
 
@@ -221,12 +311,14 @@ Examples:
 
 ## Links
 
+- [1.5.1] - https://github.com/jcboyer/SODA_PLUS_AI_PRE_PROD/compare/v1.5.0-beta...v1.5.1
 - [1.5.0-beta] - https://github.com/jcboyer/SODA_PLUS_AI_PRE_PROD/releases/tag/v1.5.0-beta
 - [1.1.0-beta] - https://github.com/jcboyer/SODA_PLUS_AI/releases/tag/v1.1.0-beta
 - [1.0.0-beta] - https://github.com/jcboyer/SODA_PLUS_AI/releases/tag/v1.0.0-beta
-- [Unreleased] - https://github.com/jcboyer/SODA_PLUS_AI_PRE_PROD/compare/v1.5.0-beta...HEAD
+- [Unreleased] - https://github.com/jcboyer/SODA_PLUS_AI_PRE_PROD/compare/v1.5.1...HEAD
 
 ---
 
 **Maintained by:** Jerome Boyer  
-**Last Updated:** 2025-01-29
+**Last Updated:** 2025-11-13  
+**Repository:** https://github.com/jcboyer/SODA_PLUS_AI_PRE_PROD
