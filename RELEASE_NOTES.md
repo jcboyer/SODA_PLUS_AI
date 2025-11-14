@@ -1,19 +1,28 @@
-# SODA+ AI - Release 1.0.0-beta
+# SODA+ AI - Release 1.5.1
 
 ## What's New
-- Enhanced dependency analysis with drill-down
-- Improved AI-powered code review
-- Interactive dependency charting
-- Cloud-based API key management
+
+<!-- Highlights extracted from RELEASE_NOTES_v1.5.1.md -->
+
+For full details, see: [docs/RELEASE_NOTES_v1.5.1.md](docs/RELEASE_NOTES_v1.5.1.md)
 
 ## Installation
-1. Download and extract ZIP
-2. Run SODA_PLUS_MAIN.exe
-3. Login with your email
+1. **[📦 Download Latest Release](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)**
+2. **Double-click** `Install-SODA_Latest.bat`
+3. **Launch** from Start Menu → Search "SODA+ AI"
 
-## Requirements
-- Windows 10/11 (x64)
-- No .NET installation required
+## Documentation
+- [Quick Start Guide](docs/Quick_Start_Guide.md) (5 min)
+- [Concise Guide](docs/Concise_Guide.md) (30 min)
+- [Reference Guide](docs/Reference_Guide.md) (Quick Lookup)
+- [Full User Guide](docs/User_Guide_Full.md) (Complete Reference)
 
 ## Support
-- GitHub: https://github.com/jcboyer/SODA_PLUS_AI_ReleasedBeta
+- [GitHub Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues)
+- [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
+
+---
+
+**Version:** 1.5.1  
+**Release Date:** November 13, 2025  
+**Download:** https://sodaplusbeta.blob.core.windows.net/downloads/download.html
