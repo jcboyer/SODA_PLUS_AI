@@ -1,253 +1,364 @@
-# SODA+ AI - SQL Server Dependency Analysis
+# SODA+ AI
 
-[![Download Latest](https://img.shields.io/badge/Download-Latest%20Release-blueviolet?style=for-the-badge&logo=download)](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)
-[![Latest Version](https://img.shields.io/badge/dynamic/json?url=https://sodaplusbeta.blob.core.windows.net/downloads/version.json&query=$.version&label=Version&style=for-the-badge&color=blue)](docs/CHANGELOG.md)
-[![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11%20x64-brightgreen?style=for-the-badge)](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)
+**SQL Object Dependency Analyzer with AI-Powered Code Review**
 
----
-
-## 🎬 Quick Demo
-
-**Watch SODA+ AI in action!** See how to analyze SQL Server dependencies in just 2 minutes:
-
-[![SODA+ AI Demo](https://img.youtube.com/vi/ecZOFDrbr9I/maxresdefault.jpg)](https://youtu.be/ecZOFDrbr9I)
-
-**[▶️ Watch Demo Video (2 min)](https://youtu.be/ecZOFDrbr9I)**
+[![Version](https://img.shields.io/badge/version-1.5.0--beta-blue)](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)
+[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-lightgrey)](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)
+[![.NET](https://img.shields.io/badge/.NET-8%20%7C%2010-512BD4)](https://dotnet.microsoft.com/)
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/jcboyer/SODA_PLUS_AI/blob/main/LICENSE.md)
 
 ---
 
-## 🚀 Quick Start
+## 🚀 What is SODA+ AI?
 
-1. **[⬇️ Download Latest Release](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)** (Always up-to-date)
-2. Double-click `Install-SODA_Latest.bat`
-3. Launch from Start Menu → Search "SODA+ AI"
-4. Login with your email address
-5. Connect to your SQL Server and start analyzing!
+SODA+ AI is a powerful tool for SQL Server developers and DBAs that combines **dependency analysis** with **AI-powered code review**. Understand your database schema, visualize dependencies, and get intelligent recommendations for optimizing your SQL code.
 
-**No admin rights needed, no manual configuration required!**
+### Key Features
 
----
+✨ **Interactive Dependency Visualization**
+- Multi-level drill-down through stored procedures, functions, views, and tables
+- Visual impact analysis - see what depends on what
+- Identify circular dependencies and unused objects
 
-## 📚 Documentation
+🤖 **AI-Powered Code Review**
+- Context-aware analysis of your SQL code
+- Best practice recommendations
+- Performance optimization suggestions
+- Security vulnerability detection
 
-| Guide | Time | Description |
-|-------|------|-------------|
-| 🚀 [Quick Start Guide](docs/Quick_Start_Guide.md) | 5 min | Perfect for first-time users |
-| 📘 [Concise Guide](docs/Concise_Guide.md) | 30 min | Essential features (80% of what you need) |
-| 🔍 [Reference Guide](docs/Reference_Guide.md) | Instant | Alphabetical feature lookup |
-| 📖 [Full User Guide](docs/User_Guide_Full.md) | 2-3 hrs | Complete reference with all features |
-| 🛠️ [Developer Docs](docs/developers/) | Varies | Version sync, Azure integration |
+📊 **Advanced Charting**
+- Mermaid diagram generation
+- SVG export for documentation
+- Multiple visualization modes
+- Beautiful, professional diagrams
 
-**Not sure which guide to use?** See: [Which Guide Should I Use?](docs/README.md#which-guide-should-i-use)
-
----
-
-## ✨ Key Features
-
-### 🔍 Dependency Analysis
-- **Visual dependency mapping** with interactive drill-down
-- **Impact analysis** for database objects before making changes
-- **Hierarchical dependency trees** (upstream/downstream)
-- **Real-time dependency discovery** across multiple databases
-
-### 🤖 AI-Powered Code Review (Grok-2)
-- **Intelligent SQL code analysis** with context-aware suggestions
-- **Performance optimization** recommendations
-- **Security vulnerability detection** (SQL injection, permissions)
-- **Best practices** and refactoring suggestions
-
-### 📊 Interactive Visualizations
-- **Beautiful Mermaid dependency charts** with customizable depth
-- **Logic flowcharts** for procedure/function control flow
-- **Export capabilities** (SVG, Mermaid, CSV, JSON, Markdown)
-- **Save/load chart files** for reuse and sharing
-
-### 🔄 Cross-Database Search
-- **20x faster** parallel search across multiple databases
-- **Search inside code** definitions (procedures, functions, views)
-- **AI-powered relevance filtering** for accurate results
-- **Multi-server support** with connection management
-
-### ☁️ Cloud Integration
-- **Azure Key Vault** secure API key management
-- **User session management** with auto-login
-- **Automatic updates** via Azure Blob Storage
+☁️ **Cloud Integration**
+- Secure API key management
+- Cloud-based analysis powered by Azure
+- Automatic updates
+- Zero configuration required
 
 ---
 
-## 💻 System Requirements
+## 📥 Download & Install
 
-| Requirement | Specification |
-|-------------|---------------|
-| **Operating System** | Windows 10 or Windows 11 (64-bit) |
-| **RAM** | 4GB minimum (8GB recommended) |
-| **Disk Space** | ~100MB for application + ~50MB for chart rendering |
-| **Internet Connection** | Required for AI features |
-| **.NET Runtime** | Included (self-contained) |
-| **SQL Server** | 2008 or later (any edition) |
+### **Latest Version: 1.5.0-beta**
 
+**[📦 Download Installer](https://sodaplusbeta.blob.core.windows.net/downloads/Install-SODA_1.5.0-beta.bat)** ← Just double-click to install!
+
+**[🌐 Full Download Page](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)**
+
+### Quick Installation (3 Steps)
+
+1. **Download** the installer (BAT file)
+2. **Double-click** `Install-SODA_1.5.0-beta.bat`
+3. **Launch** from Start Menu → Search "SODA+ AI"
+
+That's it! No admin rights needed, no manual configuration required.
+
+### System Requirements
+
+- **OS**: Windows 10/11 (64-bit)
+- **RAM**: 4GB minimum (8GB recommended)
+- **Storage**: ~100MB for application + ~50MB for chart rendering tools (downloaded on first use)
+- **Internet**: Required for AI features and chart rendering setup
+
+## 🔄 Build & Deployment Workflow
+
+### MSIX Package Build Process
+
+The build system uses a sophisticated Base64-encoded installer to ensure the BAT file is self-contained and includes the correct Azure Blob Storage URL:
+
+```mermaid
+flowchart TB
+    subgraph BUILD["🏗️ BUILD MACHINE"]
+        direction TB
+        B1["📝 Create PS1 with PLACEHOLDER"]
+        B2["🔒 Encode to Base64"]
+        B3["📄 Create BAT with Base64"]
+        B4["☁️ Upload MSIX to Azure"]
+        B5["🔧 Replace PLACEHOLDER with real URL"]
+        B6["🔒 Re-encode PS1 with real URL"]
+        B7["📄 Regenerate BAT with updated Base64"]
+        B8["☁️ Upload updated BAT to Azure"]
+        
+        B1 --> B2 --> B3 --> B4 --> B5 --> B6 --> B7 --> B8
+        
+        style B5 fill:#90EE90,stroke:#228B22,stroke-width:3px
+        style B6 fill:#90EE90,stroke:#228B22,stroke-width:3px
+        style B7 fill:#90EE90,stroke:#228B22,stroke-width:3px
+    end
+    
+    subgraph AZURE["☁️ AZURE BLOB STORAGE"]
+        direction TB
+        A1["📦 SODA_PLUS_AI.msix"]
+        A2["🔄 Install-SODA.bat<br/><b>← UPDATED with Real URL</b>"]
+        A3["🌐 download.html"]
+        
+        style A2 fill:#FFD700,stroke:#FFA500,stroke-width:3px
+    end
+    
+    subgraph TARGET["💻 TARGET PC"]
+        direction TB
+        T1["⬇️ Download BAT file"]
+        T2["🖱️ Double-click BAT"]
+        T3["🔓 BAT decodes Base64 → PowerShell"]
+        T4["⬇️ PowerShell downloads MSIX<br/><b>← REAL URL NOW!</b>"]
+        T5["📦 Installs MSIX"]
+        T6["✅ Done!"]
+        
+        T1 --> T2 --> T3 --> T4 --> T5 --> T6
+        
+        style T4 fill:#87CEEB,stroke:#4169E1,stroke-width:3px
+    end
+    
+    BUILD -->|Upload| AZURE
+    AZURE -->|Download| TARGET
+```
+
+### Key Features
+
+- ✅ **Self-Contained Installer**: BAT file includes all PowerShell code (Base64 encoded)
+- ✅ **Dynamic URL Injection**: Real Azure Blob URL is injected during build
+- ✅ **No External Dependencies**: User only needs to download one file
+- ✅ **Automatic MSIX Installation**: PowerShell handles download and installation
+- ✅ **Progress Reporting**: Real-time download progress display
+
+### Build Command -- Developer's system
+
+```powershell
+.\Build-Publish-Upload-MSIX.ps1 -Version "1.5.0-beta"
+```
+
+## 📊 Technical Details
+
+### Base64 Encoding Approach
+
+**Problem Solved**: How to embed PowerShell code in a BAT file with dynamic Azure URLs?
+
+**Solution**: 
+1. Create PowerShell installer script with placeholder URL
+2. Encode to Base64 (UTF-16LE)
+3. After MSIX upload, replace placeholder with real URL
+4. Re-encode with real URL
+5. Upload updated BAT file
+
+**Benefits**:
+- ✅ No escaping issues (Base64 is binary-safe)
+- ✅ Single file download (no external PS1 needed)
+- ✅ Works on all Windows 10/11 systems
+- ✅ No admin rights required
+- ✅ Browser cache-friendly (no conflicting files)
+
+### File Sizes
+
+| File | Size | Purpose |
+|------|------|---------|
+| `Install-SODA.bat` | ~21 KB | Self-contained installer with Base64 encoded PowerShell |
+| `SODA_PLUS_AI.msix` | ~84 MB | Complete application package |
+| `download.html` | ~12 KB | User-friendly download page |
+
+### Supported Platforms
+
+- Windows 10 (Build 14393+) ✅
+- Windows 11 ✅
+- x64 Architecture only ✅
+---  
+  
+### User Experience
+
+1. User downloads `Install-SODA_1.5.0-beta.bat` (21 KB)
+2. Double-clicks the BAT file
+3. PowerShell automatically downloads MSIX (~84 MB)
+4. MSIX installs with Start Menu integration
+5. Done! 🎉
 ---
 
-## 📝 Latest Release
+## 🎯 Quick Start Guide
 
-**Current Version:** See [CHANGELOG](docs/CHANGELOG.md)
+1. **Launch SODA+ AI** from Start Menu
+2. **Connect to SQL Server**
+   - Enter server name
+   - Choose authentication method
+   - Select database
+3. **Explore Dependencies**
+   - Right-click any object (stored proc, view, table)
+   - Select "Show Dependencies"
+   - Drill down into related objects
+4. **Generate Charts**
+   - Select objects to visualize
+   - Click "Chart → Generate Mermaid"
+   - Export as SVG for documentation
+5. **AI Code Review**
+   - Select a stored procedure or function
+   - Click "AI Review"
+   - Get instant recommendations
 
-For detailed release notes and version history, visit:
-- 📄 [Release History](docs/RELEASE_HISTORY.md) - All versions with download links
-- 📋 [CHANGELOG](docs/CHANGELOG.md) - Detailed version history
+### First-Time Chart Rendering Setup
 
----
+When you first use the **Chart → Render SVG** feature:
+- SODA+ AI automatically downloads Node.js (~50MB)
+- Installs Mermaid rendering tools (~2 minutes)
+- Saves setup to `%LocalAppData%\MermaidRenderer\`
 
-## 🎯 Use Cases
-
-### For Database Developers
-- Understand complex stored procedure dependencies
-- Analyze impact before modifying database objects
-- Identify performance bottlenecks with AI assistance
-- Document database architecture with visual charts
-
-### For Database Administrators
-- Audit database security with AI-powered analysis
-- Plan database refactoring with dependency visualization
-- Identify unused or obsolete objects
-- Generate documentation for compliance
-
-### For Development Teams
-- Onboard new developers faster with visual maps
-- Review code quality with AI recommendations
-- Maintain consistent coding standards
-- Collaborate using exported charts and reports
-
----
-
-## 📥 Resources
-
-| Resource | Link |
-|----------|------|
-| 📥 **Download** | [Latest Release](https://sodaplusbeta.blob.core.windows.net/downloads/download.html) |
-| 📖 **Documentation** | [User Guides](docs/) |
-| 📄 **Release Notes** | [CHANGELOG](docs/CHANGELOG.md) |
-| 📦 **Previous Versions** | [Release History](docs/RELEASE_HISTORY.md) |
-| 🐛 **Report Issues** | [GitHub Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) |
-| 💬 **Discussions** | [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions) |
-
----
-
-## 🔐 Security & Privacy
-
-- ✅ **No data collection** without explicit consent
-- ✅ **Secure Azure Key Vault** API key storage with RBAC
-- ✅ **Local SQL analysis** (queries run on your server only)
-- ✅ **Encrypted sessions** with Windows DPAPI
-- ✅ **Open documentation** (public repo for transparency)
-
-**Security Disclosure:** Please report security vulnerabilities via [GitHub Security Advisories](https://github.com/jcboyer/SODA_PLUS_AI/security/advisories/new)
+This happens **once**, then chart rendering is instant! ✨
 
 ---
 
 ## 📸 Screenshots
 
-### Main Interface
-![Main Interface](docs/screenshots/MainInterface.png)
+### Dependency Tree View
+![Dependency Tree](SODA_PLUS_MAIN/Resources/Screenshots/dependency-tree.png)
 
-### Environment Selection
-![Environment Selection](docs/screenshots/EnvironmentSelection.png)
+### AI-Powered Code Review
+![AI Review](SODA_PLUS_MAIN/Resources/Screenshots/ai-review.png)
 
-### Dependency Analysis
-![Dependency Analysis](docs/screenshots/DependencyAnalysis.png)
+### Mermaid Diagram Export
+![Mermaid Chart](SODA_PLUS_MAIN/Resources/Screenshots/mermaid-chart.png)
 
-### AI Code Review
-![AI Code Review](docs/screenshots/AIReview.png)
+---
 
-### Dependency Charts
-![Dependency Charts](docs/screenshots/DependencyChart.png)
+## 🔧 For Developers
 
-*More screenshots available in [docs/screenshots/](docs/screenshots/)*
+### Building from Source
+
+**Prerequisites:**
+- Visual Studio 2022 (v17.12+)
+- .NET 8 SDK
+- .NET 10 SDK (preview)
+- Windows 10 SDK (for MSIX packaging)
+
+
+### Project Structure
+
+```
+SODA_PLUS_AI_ReleasedBeta/
+├── SODA_PLUS_MAIN/              # Main WPF application (.NET 10)
+├── SODA_PLUS_DEPENDENCIES/      # Core dependency analysis library
+├── SODA_PLUS_CHARTING/          # Mermaid chart generation
+├── SODA_PLUS_AI_REVIEW/         # AI integration layer
+├── MermaidRenderer/             # Node.js-based SVG renderer (.NET 10)
+├── SODA_PLUS_AZURE_FUNCTIONS/   # Backend Azure Functions
+└── Build-Publish-Upload-MSIX.ps1 # Automated build & deployment
+```
+
+### Technologies Used
+
+- **Frontend**: WPF (.NET 10), XAML
+- **Backend**: Azure Functions (.NET 8), Azure Blob Storage
+- **AI**: Azure OpenAI, GPT-4 integration
+- **Charting**: Mermaid.js, Node.js renderer
+- **Database**: SQL Server (all versions), Azure SQL
+- **Packaging**: MSIX, Windows App Installer
+
+---
+
+## 🛠️ Uninstallation
+
+**Windows Settings:**
+1. Open Settings → Apps
+2. Search for "SODA+ AI"
+3. Click Uninstall
+---
+
+## 📖 Documentation
+
+- [User Guide](SODA_PLUS_MAIN/Resources/SODA_PLUS_User_Guide.md)
+- [API Documentation](docs/API.md)
+- [Chart Syntax Guide](docs/CHARTING.md)
+- [Deployment Guide](docs/DEPLOYMENT.md)
+
+---
+
+## 🐛 Found a Bug?
+
+This is a **beta release** - your feedback helps make SODA+ AI better!
+
+**Report issues:**
+- [GitHub Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues)
+- Include:
+  - Windows version
+  - SQL Server version
+  - Steps to reproduce
+  - Screenshots if applicable
+
+---
+
+## 🗺️ Roadmap
+
+### v1.0.0 (Q4 2025)
+- ✅ Core dependency analysis
+- ✅ AI-powered code review
+- ✅ Mermaid chart generation
+- 🚧 Code signing certificate
+- 🚧 Performance optimizations
+
+### v1.1.0 (Q1 2026)
+- 📋 AI based Schema comparison 
+- 📋 Change tracking
+- 📋 Team collaboration features
+- 📋 Custom AI prompts
+- 📋 AI SQL Agent Analysis
+
+
+### v2.0.0 (Future)
+- 📋 Multi-database support (PostgreSQL, MySQL)
+- 📋 CI/CD integration
+- 📋 Advanced reporting
 
 ---
 
 ## 🤝 Contributing
 
-We welcome contributions! Here's how you can help:
+Contributions are welcome! Please:
 
-### Bug Reports
-1. [Open an issue](https://github.com/jcboyer/SODA_PLUS_AI/issues/new?template=bug_report.md)
-2. Include Windows version and system specs
-3. Attach screenshots if applicable
-4. Describe steps to reproduce
-
-### Feature Requests
-1. [Open an issue](https://github.com/jcboyer/SODA_PLUS_AI/issues/new?template=feature_request.md)
-2. Describe the use case
-3. Explain expected behavior
-
-### Documentation
-1. Submit pull requests for documentation improvements
-2. Report unclear or missing documentation
-3. Share tips and best practices in [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
+1. Fork the repository -- the application code is currently private. 
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
-## 🆘 Support
+## 📄 License
 
-Need help? We're here for you:
-
-- 📖 **Documentation**: [User Guides](docs/)
-- 🔍 **Search Issues**: [Existing Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues)
-- 🐛 **Report Bugs**: [New Issue](https://github.com/jcboyer/SODA_PLUS_AI/issues/new)
-- 💬 **Ask Questions**: [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
-
-**Response Time:** We typically respond to issues within 24-48 hours.
+This project is licensed under this License - see the [LICENSE.md](https://github.com/jcboyer/SODA_PLUS_AI/blob/main/LICENSE.md) file for details.
 
 ---
 
-## 📜 License
+## 💡 Why MSIX?
 
-This software is currently in beta and available for testing purposes.
+SODA+ AI uses **MSIX packaging** for modern, secure deployment:
 
-**Terms:**
-- ✅ Free to use for evaluation and testing
-- ✅ No warranty or support guarantee
-- ⚠️ Not licensed for production use without agreement
-
-For licensing inquiries, please [contact us](https://github.com/jcboyer/SODA_PLUS_AI/discussions).
-
----
-
-## 🎉 Thank You!
-
-Thank you for using SODA+ AI! Your feedback helps make it better for everyone.
-
-**Special Thanks:**
-- All beta testers who provided valuable feedback
-- The open-source community for inspiration and tools
-- Microsoft for .NET, Azure, and Visual Studio
-- X.AI for Grok API integration
+✅ **No Admin Rights Required** - Installs in user space  
+✅ **Automatic Updates** - Get new features seamlessly  
+✅ **Clean Uninstall** - Zero leftover files or registry entries  
+✅ **Start Menu Integration** - Shortcuts created automatically  
+✅ **Windows Store Ready** - Production version will be in Microsoft Store  
 
 ---
 
-## 🏗️ Built With
+## 🙏 Acknowledgments
 
-- **.NET 10** & **.NET 8** - Application framework
-- **WPF** - User interface
-- **Microsoft.Data.SqlClient** - SQL Server connectivity
-- **Grok-2 (X.AI)** - AI-powered code analysis
-- **Mermaid** - Chart generation
-- **Azure Key Vault** - Secure API key management
-- **WebView2** - HTML rendering
+- [Mermaid.js](https://mermaid.js.org/) - Diagram generation
+- [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service) - AI capabilities
+- [Material Design Icons](https://materialdesignicons.com/) - UI icons
+- Community contributors and beta testers
+
+---
+
+## 📞 Contact
+
+- **GitHub**: [@jcboyer](https://github.com/jcboyer)
+- **Issues**: [Report a bug](https://github.com/jcboyer/SODA_PLUS_AI/issues)
+- **Discussions**: [Community forum](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
 
 ---
 
 <div align="center">
 
-### [⬇️ Download Latest Release Now](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)
+**Made with ❤️ for SQL Server developers**
 
-**Latest Version:** [See CHANGELOG](docs/CHANGELOG.md)
-
----
-
-**Made with ❤️ by the SODA+ AI Team**
-
-[Documentation](docs/) • [Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) • [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions) • [Release History](docs/RELEASE_HISTORY.md)
+[Download](https://sodaplusbeta.blob.core.windows.net/downloads/download.html) • [Documentation](docs/) • [Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) • [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
 
 </div>

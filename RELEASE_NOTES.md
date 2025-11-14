@@ -1,28 +1,25 @@
-# SODA+ AI - Release 1.5.1
+# SODA+ AI - Release 1.5.0-beta
 
 ## What's New
 
-<!-- Highlights extracted from RELEASE_NOTES_v1.5.1.md -->
+<!-- Highlights extracted from RELEASE_NOTES_v1.5.0-beta.md -->
 
-For full details, see: [docs/RELEASE_NOTES_v1.5.1.md](docs/RELEASE_NOTES_v1.5.1.md)
+For full details, see: [docs/RELEASE_NOTES_v1.5.0-beta.md](docs/RELEASE_NOTES_v1.5.0-beta.md)
 
 ## Installation
-1. **[📦 Download Latest Release](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)**
-2. **Double-click** `Install-SODA_Latest.bat`
-3. **Launch** from Start Menu → Search "SODA+ AI"
+1. **[📦 Download Installer](https://sodaplusbeta.blob.core.windows.net/downloads/Install-SODA_1.5.0-beta.bat)**
+2. **Double-click** `Install-SODA_1.5.0-beta.bat`
+3. **Launch** from Start Menu
 
-## Documentation
-- [Quick Start Guide](docs/Quick_Start_Guide.md) (5 min)
-- [Concise Guide](docs/Concise_Guide.md) (30 min)
-- [Reference Guide](docs/Reference_Guide.md) (Quick Lookup)
-- [Full User Guide](docs/User_Guide_Full.md) (Complete Reference)
+## Requirements
+- Windows 10/11 (x64)
+- No .NET installation required
 
 ## Support
-- [GitHub Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues)
-- [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
+- **GitHub**: https://github.com/jcboyer/SODA_PLUS_AI
+- **Issues**: [Report a bug](https://github.com/jcboyer/SODA_PLUS_AI/issues)
 
 ---
 
-**Version:** 1.5.1  
-**Release Date:** November 13, 2025  
-**Download:** https://sodaplusbeta.blob.core.windows.net/downloads/download.html
+**Version:** 1.5.0-beta  
+**Last Updated:** November 05, 2025
