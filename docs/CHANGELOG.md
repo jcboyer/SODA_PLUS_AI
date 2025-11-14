@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.5.0-beta] - 2025-01-29
+## [1.5.0-beta] - 2025-11-01
 
 ### Added
 - **Two-Stage Installer System** - Improved installation reliability
@@ -101,7 +101,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.1.0-beta] - 2025-01-26
+## [1.1.0-beta] - 2025-10-26
 
 ### Added
 - **AI-Assisted Self-Learning Chart Error Correction** - Revolutionary feature that automatically fixes chart rendering errors
@@ -141,7 +141,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.0.0-beta] - 2024-10-20
+## [1.0.0-beta] - 2025-10-20
 
 ### Added
 - **Enhanced Dependency Analysis with Drill-Down**
