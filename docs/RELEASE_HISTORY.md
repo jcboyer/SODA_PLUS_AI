@@ -1,4 +1,31 @@
 
+## [1.5.6] - 2025-11-23
+
+### Download
+- [MSIX Package](https://sodaplusbeta.blob.core.windows.net/downloads/archive/SODA_PLUS_AI_1.5.6.msix)
+- [Installer (BAT)](https://sodaplusbeta.blob.core.windows.net/downloads/archive/Install-SODA_1.5.6.bat)
+- [Release Notes](RELEASE_NOTES_v1.5.6.md)
+
+---
+
+## [1.5.5] - 2025-11-23
+
+### Download
+- [MSIX Package](https://sodaplusbeta.blob.core.windows.net/downloads/archive/SODA_PLUS_AI_1.5.5.msix)
+- [Installer (BAT)](https://sodaplusbeta.blob.core.windows.net/downloads/archive/Install-SODA_1.5.5.bat)
+- [Release Notes](RELEASE_NOTES_v1.5.5.md)
+
+---
+
+## [1.5.4] - 2025-11-19
+
+### Download
+- [MSIX Package](https://sodaplusbeta.blob.core.windows.net/downloads/archive/SODA_PLUS_AI_1.5.4.msix)
+- [Installer (BAT)](https://sodaplusbeta.blob.core.windows.net/downloads/archive/Install-SODA_1.5.4.bat)
+- [Release Notes](RELEASE_NOTES_v1.5.4.md)
+
+---
+
 # Release History
 
 ## [1.5.1] - 2025-11-13
