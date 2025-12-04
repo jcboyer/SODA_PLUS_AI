@@ -50,7 +50,7 @@
 - **Hierarchical dependency trees** (upstream/downstream)
 - **Real-time dependency discovery** across multiple databases
 
-### 🤖 AI-Powered Code Review (Grok-2)
+### 🤖 AI-Powered Code Review (Grok-Latest Release)
 - **Intelligent SQL code analysis** with context-aware suggestions
 - **Performance optimization** recommendations
 - **Security vulnerability detection** (SQL injection, permissions)
@@ -236,7 +236,7 @@ Thank you for using SODA+ AI! Your feedback helps make it better for everyone.
 - **.NET 10** & **.NET 8** - Application framework
 - **WPF** - User interface
 - **Microsoft.Data.SqlClient** - SQL Server connectivity
-- **Grok-2 (X.AI)** - AI-powered code analysis
+- **Grok-Latest Release (X.AI)** - AI-powered code analysis
 - **Mermaid** - Chart generation
 - **Azure Key Vault** - Secure API key management
 - **WebView2** - HTML rendering
