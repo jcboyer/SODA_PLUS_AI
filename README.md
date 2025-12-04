@@ -184,7 +184,7 @@ We welcome contributions! Here's how you can help:
 ### Documentation
 1. Submit pull requests for documentation improvements
 2. Report unclear or missing documentation
-3. Share tips and best practices in [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
+3. Share tips and best practices in [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/issues)
 
 ---
 
@@ -195,7 +195,7 @@ Need help? We're here for you:
 - 📖 **Documentation**: [User Guides](docs/)
 - 🔍 **Search Issues**: [Existing Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues)
 - 🐛 **Report Bugs**: [New Issue](https://github.com/jcboyer/SODA_PLUS_AI/issues/new)
-- 💬 **Ask Questions**: [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
+- 💬 **Ask Questions**: [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI/issues)
 
 **Response Time:** We typically respond to issues within 24-48 hours.
 
@@ -215,7 +215,7 @@ This software is currently in beta and available for testing purposes.
 - ✅ No warranty or support guarantee
 - ⚠️ Not licensed for production use without agreement
 
-For licensing inquiries, please [contact us](https://github.com/jcboyer/SODA_PLUS_AI/discussions).
+For licensing inquiries, please [contact us](https://github.com/jcboyer/SODA_PLUS_AI/issues).
 
 ---
 
@@ -253,6 +253,6 @@ Thank you for using SODA+ AI! Your feedback helps make it better for everyone.
 
 **Made with ❤️ by the SODA+ AI Team**
 
-[Documentation](docs/) • [Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) • [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions) • [Release History](docs/RELEASE_HISTORY.md)
+[Documentation](docs/) • [Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) • [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/issues) • [Release History](docs/RELEASE_HISTORY.md)
 
 </div>
