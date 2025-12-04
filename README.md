@@ -200,6 +200,11 @@ Need help? We're here for you:
 **Response Time:** We typically respond to issues within 24-48 hours.
 
 ---
+## ⚠️ Free Trial
+- SODA+ AI is free to download, test, and evaluate until March 31, 2026.
+- AI features (Grok-powered analysis) are included at no cost during the trial but subject to usage limits to manage developer expenses.
+- Post-trial: We may introduce paid tiers for unlimited AI, require your own API key, or disable it in the free version. Core dependency analysis remains free and open.
+- Production use? Contact us for licensing.
 
 ## 📜 License
 
