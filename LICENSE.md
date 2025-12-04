@@ -24,6 +24,12 @@ This software is currently in **BETA TESTING** phase and is provided for evaluat
 - Use the software for illegal purposes
 - Claim ownership or authorship of this software
 
+## Free Trial
+- SODA+ AI is free to download, test, and evaluate until [March 31 2026].
+- AI features (Grok-powered analysis) are included at no cost during the trial but subject to usage limits to manage developer expenses.
+- Post-trial: We may introduce paid tiers for unlimited AI, require your own API key, or disable it in the free version. Core dependency analysis remains free and open.
+- Production use? Contact us for licensing.
+
 ### Disclaimer
 
 THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
