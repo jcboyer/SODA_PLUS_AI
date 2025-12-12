@@ -3,7 +3,7 @@
 ## Quick Installation
 
 ### Step 1: Download
-[⬇️ Download SODA+ AI v1.0.1-beta](https://sodaplusbeta.blob.core.windows.net/downloads/download_1.0.1-beta.html)
+[⬇️ Download SODA+ AI](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)
 
 ### Step 2: Extract
 Right-click the downloaded ZIP file and select **Extract All...**
