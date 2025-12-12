@@ -143,6 +143,11 @@ For detailed release notes and version history, visit:
 
 **Security Disclosure:** Please report security vulnerabilities via [GitHub Security Advisories](https://github.com/jcboyer/SODA_PLUS_AI/security/advisories/new)
 
+## Free Trial
+- SODA+ AI is free to download, test, and evaluate until [March 31 2026].
+- AI features (Grok-powered analysis) are included at no cost during the trial but subject to usage limits to manage developer expenses.
+- Post-trial: We may introduce paid tiers for unlimited AI, require your own API key, or disable it in the free version. Core dependency analysis remains free and open.
+- Production use? Contact us for licensing.
 ---
 
 ## 📸 Screenshots
