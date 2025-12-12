@@ -50,7 +50,7 @@
 - **Hierarchical dependency trees** (upstream/downstream)
 - **Real-time dependency discovery** across multiple databases
 
-### 🤖 AI-Powered Code Review (Grok-Latest Release)
+### 🤖 AI-Powered Code Review (Grok-2)
 - **Intelligent SQL code analysis** with context-aware suggestions
 - **Performance optimization** recommendations
 - **Security vulnerability detection** (SQL injection, permissions)
@@ -153,20 +153,14 @@ For detailed release notes and version history, visit:
 ### Environment Selection
 ![Environment Selection](docs/screenshots/EnvironmentSelection.png)
 
-### Dependency Analyzer
-![Dependency Analyzer](docs/screenshots/AnalyzerMainView.png)
+### Dependency Analysis
+![Dependency Analysis](docs/screenshots/DependencyAnalysis.png)
 
 ### AI Code Review
-![AI Code Review](docs/screenshots/AIReviewWindow.png)
+![AI Code Review](docs/screenshots/AIReview.png)
 
 ### Dependency Charts
-![Dependency Charts](docs/screenshots/ChartWindow.png)
-
-### Dependency Context Menu
-![Dependency Context Menu](docs/screenshots/DependencyContextMenu.png)
-
-### Drill-Down Workflow
-![Drill-Down Workflow](docs/screenshots/DrillDownWorkflow.png)
+![Dependency Charts](docs/screenshots/DependencyChart.png)
 
 *More screenshots available in [docs/screenshots/](docs/screenshots/)*
 
@@ -190,7 +184,7 @@ We welcome contributions! Here's how you can help:
 ### Documentation
 1. Submit pull requests for documentation improvements
 2. Report unclear or missing documentation
-3. Share tips and best practices in [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/issues)
+3. Share tips and best practices in [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
 
 ---
 
@@ -201,16 +195,11 @@ Need help? We're here for you:
 - 📖 **Documentation**: [User Guides](docs/)
 - 🔍 **Search Issues**: [Existing Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues)
 - 🐛 **Report Bugs**: [New Issue](https://github.com/jcboyer/SODA_PLUS_AI/issues/new)
-- 💬 **Ask Questions**: [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI/issues)
+- 💬 **Ask Questions**: [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
 
 **Response Time:** We typically respond to issues within 24-48 hours.
 
 ---
-## ⚠️ Free Trial
-- SODA+ AI is free to download, test, and evaluate until March 31, 2026.
-- AI features (Grok-powered analysis) are included at no cost during the trial but subject to usage limits to manage developer expenses.
-- Post-trial: We may introduce paid tiers for unlimited AI, require your own API key, or disable it in the free version. Core dependency analysis remains free and open.
-- Production use? Contact us for licensing.
 
 ## 📜 License
 
@@ -221,7 +210,7 @@ This software is currently in beta and available for testing purposes.
 - ✅ No warranty or support guarantee
 - ⚠️ Not licensed for production use without agreement
 
-For licensing inquiries, please [contact us](https://github.com/jcboyer/SODA_PLUS_AI/issues).
+For licensing inquiries, please [contact us](https://github.com/jcboyer/SODA_PLUS_AI/discussions).
 
 ---
 
@@ -242,7 +231,7 @@ Thank you for using SODA+ AI! Your feedback helps make it better for everyone.
 - **.NET 10** & **.NET 8** - Application framework
 - **WPF** - User interface
 - **Microsoft.Data.SqlClient** - SQL Server connectivity
-- **Grok-Latest Release (X.AI)** - AI-powered code analysis
+- **Grok-2 (X.AI)** - AI-powered code analysis
 - **Mermaid** - Chart generation
 - **Azure Key Vault** - Secure API key management
 - **WebView2** - HTML rendering
@@ -259,6 +248,6 @@ Thank you for using SODA+ AI! Your feedback helps make it better for everyone.
 
 **Made with ❤️ by the SODA+ AI Team**
 
-[Documentation](docs/) • [Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) • [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/issues) • [Release History](docs/RELEASE_HISTORY.md)
+[Documentation](docs/) • [Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) • [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions) • [Release History](docs/RELEASE_HISTORY.md)
 
 </div>
