@@ -101,5 +101,5 @@ Complete documentation with all features and workflows.
 
 ---
 
-**Last Updated:** November 23, 2025  
+**Last Updated:** December 12, 2025  
 **Version:** 1.5.6
