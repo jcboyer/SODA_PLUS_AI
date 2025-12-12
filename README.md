@@ -147,11 +147,11 @@ For detailed release notes and version history, visit:
 
 ## 📸 Screenshots
 
-### Main Interface
-![Main Interface](docs/screenshots/MainInterface.png)
-
 ### Environment Selection
 ![Environment Selection](docs/screenshots/EnvironmentSelection.png)
+
+### Main Interface
+![Main Interface](docs/screenshots/MainInterface.png)
 
 ### Dependency Analysis
 ![Dependency Analysis](docs/screenshots/DependencyAnalysis.png)
