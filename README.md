@@ -153,14 +153,20 @@ For detailed release notes and version history, visit:
 ### Environment Selection
 ![Environment Selection](docs/screenshots/EnvironmentSelection.png)
 
-### Dependency Analysis
-![Dependency Analysis](docs/screenshots/DependencyAnalysis.png)
+### Dependency Analyzer
+![Dependency Analyzer](docs/screenshots/AnalyzerMainView.png)
 
 ### AI Code Review
-![AI Code Review](docs/screenshots/AIReview.png)
+![AI Code Review](docs/screenshots/AIReviewWindow.png)
 
 ### Dependency Charts
-![Dependency Charts](docs/screenshots/DependencyChart.png)
+![Dependency Charts](docs/screenshots/ChartWindow.png)
+
+### Dependency Context Menu
+![Dependency Context Menu](docs/screenshots/DependencyContextMenu.png)
+
+### Drill-Down Workflow
+![Drill-Down Workflow](docs/screenshots/DrillDownWorkflow.png)
 
 *More screenshots available in [docs/screenshots/](docs/screenshots/)*
 
