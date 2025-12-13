@@ -1,4 +1,4 @@
-﻿# SODA PLUS - SQL Object Dependency Analyzer
+# SODA PLUS - SQL Object Dependency Analyzer
 ## Step-by-Step User Guide
 
 ---
@@ -156,14 +156,14 @@ When you first launch SODA PLUS AI, you'll be prompted to login or register to a
 3. Click **Apply** to continue
 4. **⚠️ Production Warning**: If you select PROD, you'll get a safety confirmation dialog
 
-![Environment Selection Dialog](Resources/Screenshots/EnvironmentSelection.png)
+![Environment Selection Dialog](Resources/Screenshots/EnvironmentSelection_PUBLIC_GUIDE.png)
 *Figure 1: Choose your environment - SANDBOX (green), TEST (orange), or PROD (red)*
 
 ---
 
 ### **Main Interface Overview**
 
-![SODA+ Main Interface](Resources/Screenshots/MainInterface.png)
+![SODA+ Main Interface](Resources/Screenshots/MainInterface_PUBLIC_GUIDE.png)
 *Figure 2: Main application window showing Server/Database/Object Explorer (left), Analysis area (center), and Messages (bottom)*
 
 The main window has 4 key areas:
@@ -677,7 +677,7 @@ Previously, charting was only available for **Stored Procedures** and **Function
 
 #### **Dependency Analysis - Multi-Tab Architecture** ⭐ **UPDATED!**
 
-![Dependency Analyzer](Resources/Screenshots/AnalyzerMainView.png)
+![Dependency Analyzer](Resources/Screenshots/AnalyzerMainView_PUBLIC_GUIDE.png)
 *Figure 3: Dependency Analyzer showing LEFT panel (3 sub-tabs: Downstream, Upstream, Call Order) and RIGHT panel (SQL Code Viewer with search)*
 
 The Dependency Analyzer features a **powerful multi-tab architecture** that lets you analyze multiple objects simultaneously:
@@ -1054,7 +1054,7 @@ Tab 3: dbo.GetProductOrders
 
 ### **Step 8: AI Code Analysis** - ENHANCED WORKFLOW! 🎉
 
-![AI Review Window](Resources/Screenshots/AIReviewWindow.png)
+![AI Review Window](Resources/Screenshots/AIReviewWindow_PUBLIC_GUIDE.png)
 *Figure 6: AI Review window with three tabs - Sent Prompt, AI Response, and Formatted View*
 
 When you select an AI analysis option, a **dedicated AI Review window** opens with:
@@ -1264,7 +1264,7 @@ Right-click on vw_CustomerOrders (View)
 3. Mermaid code auto-generated from database dependencies
 4. Shows node/edge count in status bar
 
-![Dependency Chart Window](Resources/Screenshots/ChartWindow.png)
+![Dependency Chart Window](Resources/Screenshots/ChartWindow_PUBLIC_GUIDE.png)
 *Figure 7: Chart window showing generated Mermaid code and dependency visualization*
 
 **Step 2: Review Diagram**

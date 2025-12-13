@@ -147,20 +147,20 @@ For detailed release notes and version history, visit:
 
 ## 📸 Screenshots
 
-### Environment Selection
-![Environment Selection](docs/screenshots/EnvironmentSelection.png)
-
 ### Main Interface
-![Main Interface](docs/screenshots/MainInterface.png)
+![Main Interface](docs/screenshots/MainInterface_PUBLIC_GUIDE.png)
+
+### Environment Selection
+![Environment Selection](docs/screenshots/EnvironmentSelection_PUBLIC_GUIDE.png)
 
 ### Dependency Analysis
-![Dependency Analysis](docs/screenshots/DependencyAnalysis.png)
+![Dependency Analysis](docs/screenshots/AnalyzerMainView_PUBLIC_GUIDE.png)
 
 ### AI Code Review
-![AI Code Review](docs/screenshots/AIReview.png)
+![AI Code Review](docs/screenshots/AIReviewWindow_PUBLIC_GUIDE.png)
 
 ### Dependency Charts
-![Dependency Charts](docs/screenshots/DependencyChart.png)
+![Dependency Charts](docs/screenshots/ChartWindow_PUBLIC_GUIDE.png)
 
 *More screenshots available in [docs/screenshots/](docs/screenshots/)*
 
