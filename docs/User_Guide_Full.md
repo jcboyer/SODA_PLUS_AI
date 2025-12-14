@@ -6,26 +6,26 @@
 ## 📑 **Table of Contents**
 
 ### **📚 Getting Started**
-- [Step 0: Initial Login & Registration](#step-0-initial-login--registration-new-) ⭐ **NEW!**
+- [Step 0: Initial Login & Registration](#step-0-initial-login--registration-new) ⭐ **NEW!**
 - [Step 1: Launch the Application](#step-1-launch-the-application)
 - [Step 2: Environment Selection](#step-2-environment-selection)
 - [Main Interface Overview](#main-interface-overview)
 
 ### **🔧 Basic Setup**
-- [Step 3: Connect to Servers](#step-3-connect-to-servers-enhanced-) ⭐ **ENHANCED!**
+- [Step 3: Connect to Servers](#step-3-connect-to-servers-enhanced) ⭐ **ENHANCED!**
 - [Step 4: Select a Server](#step-4-select-a-server)
 - [Step 5: Select a Database](#step-5-select-a-database)
-- [Step 6: Search for Objects](#step-6-search-for-objects-new-) ⭐ **NEW!**
+- [Step 6: Search for Objects](#step-6-search-for-objects-new) ⭐ **NEW!**
 
 ### **⚡ Core Features**
-- [Step 7: Analyze Database Objects](#step-7-analyze-database-objects-enhanced-) ⭐ **ENHANCED!**
+- [Step 7: Analyze Database Objects](#step-7-analyze-database-objects-enhanced) ⭐ **ENHANCED!**
 - [Step 8: Review Analysis Results](#step-8-review-analysis-results)
-- [Step 8a: Drill-Down Dependency Analysis](#step-8a-drill-down-dependency-analysis-new-) ⭐ **NEW!**
+- [Step 8a: Drill-Down Dependency Analysis](#step-8a-drill-down-dependency-analysis-new) ⭐ **NEW!**
 
 ### **🤖 AI & Advanced Analysis**
-- [Step 9: AI Code Analysis](#step-9-ai-code-analysis---new-enhanced-workflow-)
-- [Step 9a: Working with Refactor Suggestions](#step-9a-working-with-refactor-suggestions-new-) ⭐ **NEW!**
-- [Step 10: Dependency Charting](#step-10-dependency-charting-new-)
+- [Step 9: AI Code Analysis](#step-9-ai-code-analysis---new-enhanced-workflow)
+- [Step 9a: Working with Refactor Suggestions](#step-9a-working-with-refactor-suggestions-new) ⭐ **NEW!**
+- [Step 10: Dependency Charting](#step-10-dependency-charting-new)
 - [Step 11: Working with AI Analysis Types](#step-11-working-with-ai-analysis-types)
 - [Step 12: Advanced AI Features](#step-12-advanced-ai-features)
 
@@ -39,7 +39,6 @@
 - [Tips for Best Results](#tips-for-best-results)
 
 ---
-
 
 ### **Step 0: Initial Login & Registration** (NEW! 🎯)
 
@@ -134,8 +133,6 @@ When you first launch SODA PLUS AI, you'll be prompted to login or register to a
 **Issue: Session file corrupted**
 - **Solution:** Delete `%APPDATA%\SODA_PLUS\user_session.dat`
 - Login again to recreate session
-
-[↑ Back to Top](#-table-of-contents)
 
 ---
 
@@ -345,8 +342,6 @@ Connection Options:
 - ✅ Safe to backup configuration file (passwords remain encrypted)
 - ⚠️ Don't share configuration file between users (decryption will fail)
 
-[↑ Back to Top](#-table-of-contents)
-
 ---
 
 ### **Step 4: Select a Server**
@@ -366,8 +361,6 @@ Connection Options:
 - SQL Server Auth: Decrypts password and includes in connection
 - All servers: Applies `TrustServerCertificate` and `ConnectTimeout` settings
 
-[↑ Back to Top](#-table-of-contents)
-
 ---
 
 ### **Step 5: Select a Database**
@@ -376,8 +369,6 @@ Connection Options:
    - Connect to the specific database
    - Load all database objects (Tables, Views, Stored Procedures, Functions)
    - Populate the Object Explorer with organized object types
-
-[↑ Back to Top](#-table-of-contents)
 
 ---
 
@@ -577,8 +568,6 @@ Results:
 - Results still appear, just takes 1-2 seconds
 - Consider more specific search terms
 
-[↑ Back to Top](#-table-of-contents)
-
 ---
 
 ### **Step 7: Analyze Database Objects** (ENHANCED! 🎯)
@@ -668,8 +657,6 @@ Previously, charting was only available for **Stored Procedures** and **Function
 1. **Single-click** any object in the Object Explorer
 2. The object will be selected and analysis will load in the main work area
 3. Use the menu bar options: **Analyze** → **Dependencies**
-
-[↑ Back to Top](#-table-of-contents)
 
 ---
 
@@ -1048,8 +1035,6 @@ Tab 3: dbo.GetProductOrders
 → Compare similar procedures side-by-side!
 ```
 
-[↑ Back to Top](#-table-of-contents)
-
 ---
 
 ### **Step 8: AI Code Analysis** - ENHANCED WORKFLOW! 🎉
@@ -1175,8 +1160,6 @@ When you select an AI analysis option, a **dedicated AI Review window** opens wi
 - **Cause**: JavaScript disabled or browser security settings
 - **Solution**: Check WebView2 initialization succeeded
 - **Workaround**: Use AI Response tab (always works)
-
-[↑ Back to Top](#-table-of-contents)
 
 ---
 
@@ -1563,8 +1546,6 @@ graph TD
 5. **Documentation** - Show decision trees
 6. **View Logic** - Understand CASE statements in views ⭐ **NEW!**
 
-[↑ Back to Top](#-table-of-contents)
-
 ---
 
 ### **Step 11: Working with AI Analysis Types**
@@ -1616,8 +1597,6 @@ graph TD
 - Readability improvements
 - Modularity enhancements
 - **Loads Refactor tab with refactoring plan**
-
-[↑ Back to Top](#-table-of-contents)
 
 ---
 
@@ -1679,8 +1658,6 @@ At the bottom of the AI Review window:
 | **Ctrl+F** | Search (native browser search) | Formatted View |
 | **Enter** | Search (custom search bar) | Formatted View |
 
-[↑ Back to Top](#-table-of-contents)
-
 ---
 
 ### **Step 13: Navigation and Workspace Management**
@@ -1725,8 +1702,6 @@ At the bottom of the AI Review window:
 - **Ctrl+S**: Save AI session (in AI Review window)
 - **Right-click**: Context menus throughout the interface
 - **Double-click**: Quick actions or view details
-
-[↑ Back to Top](#-table-of-contents)
 
 ---
 
@@ -1817,8 +1792,6 @@ At the bottom of the AI Review window:
     - **Accept Refactor** → Mark as Applied and commit changes
     - **Document**: Save AI session for team review and audit trail
 
-[↑ Back to Top](#-table-of-contents)
-
 ---
 
 ### **Help and Support**
@@ -1834,8 +1807,6 @@ At the bottom of the AI Review window:
 - Connection issues show specific error details
 - **Copy Messages** function for troubleshooting support
 - AI errors shown in dedicated AI Response tab
-
-[↑ Back to Top](#-table-of-contents)
 
 ---
 
@@ -1897,8 +1868,6 @@ At the bottom of the AI Review window:
 54. **🎨 NEW: Document priority decisions** - Screenshot color-coded grid for team discussions
 
 ---
-
-[↑ Back to Top](#-table-of-contents)
 
 ---
 

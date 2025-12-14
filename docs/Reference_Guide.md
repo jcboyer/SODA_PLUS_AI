@@ -1,4 +1,4 @@
-﻿# 🔍 SODA PLUS - Reference Guide
+# 🔍 SODA PLUS - Reference Guide
 ## Quick Lookup for Features, Commands & Shortcuts
 
 ---
@@ -43,7 +43,7 @@ This is your **quick lookup reference** for SODA PLUS features. Use it to:
 **Add Server**
 - **Location:** Right-click Server Explorer → Add Server...
 - **Shortcut:** Double-click "+ Add Server..." node
-- **See:** [Step 3: Connect to Servers](SODA_PLUS_User_Guide.md#step-3-connect-to-servers-enhanced-)
+- **See:** [Step 3: Connect to Servers](SODA_PLUS_User_Guide.md#step-3-connect-to-servers-enhanced)
 
 **AI Analysis**
 - **Location:** Right-click Procedure/Function → AI Analysis
@@ -54,17 +54,17 @@ This is your **quick lookup reference** for SODA PLUS features. Use it to:
 - **Location:** Dependency Analyzer toolbar (left side)
 - **Action:** Opens AI Review window with SQL code pre-loaded
 - **Icon:** 🤖
-- **See:** [Step 8b: Toolbar Actions](SODA_PLUS_User_Guide.md#step-8b-dependency-analyzer-toolbar-actions-new-)
+- **See:** [Step 8b: Toolbar Actions](SODA_PLUS_User_Guide.md#step-8b-dependency-analyzer-toolbar-actions-new)
 
 **Analyze Dependencies**
 - **Location:** Right-click any object → Analyze Dependencies
 - **Shortcut:** Single-click object, then Analyze menu
-- **See:** [Step 7: Analyze Database Objects](SODA_PLUS_User_Guide.md#step-7-analyze-database-objects-enhanced-)
+- **See:** [Step 7: Analyze Database Objects](SODA_PLUS_User_Guide.md#step-7-analyze-database-objects-enhanced)
 
 **Auto-Login**
 - **Feature:** Automatic login from saved session
 - **File:** `%APPDATA%\SODA_PLUS\user_session.dat`
-- **See:** [Step 0: Initial Login](SODA_PLUS_User_Guide.md#step-0-initial-login--registration-new-)
+- **See:** [Step 0: Initial Login](SODA_PLUS_User_Guide.md#step-0-initial-login--registration-new)
 
 ### B
 
@@ -101,7 +101,7 @@ This is your **quick lookup reference** for SODA PLUS features. Use it to:
 - **Location:** Chart Window toolbar
 - **Options:** Downstream (default), Upstream
 - **Action:** Controls which dependencies are shown in chart
-- **See:** [Chart Window: Direction Options](#direction-options--new)
+- **See:** [Chart Window: Direction Options](#c)
 
 **Clear Chart** ⭐ NEW!
 - **Location:** Chart Window → File menu → Clear Chart
@@ -112,7 +112,7 @@ This is your **quick lookup reference** for SODA PLUS features. Use it to:
 - **Location:** Environment Status Bar (top-right)
 - **Action:** Closes entire application and all windows
 - **Color:** Red button
-- **See:** [Main Interface: Environment Status Bar](SODA_PLUS_User_Guide.md#environment-status-bar-new-)
+- **See:** [Main Interface: Environment Status Bar](SODA_PLUS_User_Guide.md#environment-status-bar-new)
 
 **Copy Name**
 - **Location:** Right-click any object → Copy Name
@@ -128,7 +128,7 @@ This is your **quick lookup reference** for SODA PLUS features. Use it to:
   - 20x faster (parallel processing)
   - AI-powered relevance filtering
   - Multi-server support
-- **See:** [Cross-Database Search Guide](../Docs/SEARCH_FEATURE_GUIDE.md)
+- **See:** [Cross-Database Search Guide](SODA_PLUS_Search_Guide.md)
 
 **Custom Prompts**
 - **Location:** Bottom of AI Review window
@@ -154,7 +154,7 @@ This is your **quick lookup reference** for SODA PLUS features. Use it to:
 - **Default:** Downstream (what object depends on)
 - **Options:** Downstream, Upstream
 - **Use:** Control which dependencies appear in chart
-- **See:** [Chart Window: Direction Options](#direction-options--new)
+- **See:** [Chart Window: Direction Options](#c)
 
 **Depth Setting**
 - **Location:** Analyzer toolbar (numeric spinner)
@@ -171,7 +171,7 @@ This is your **quick lookup reference** for SODA PLUS features. Use it to:
 **Drill-Down Analysis**
 - **Action:** Right-click dependency → Analyze Dependencies
 - **Result:** Opens new tab for that object
-- **See:** [Step 8a: Drill-Down](SODA_PLUS_User_Guide.md#step-8a-drill-down-dependency-analysis-new-)
+- **See:** [Step 8a: Drill-Down](SODA_PLUS_User_Guide.md#step-8a-drill-down-dependency-analysis-new)
 
 ### E
 
@@ -245,7 +245,7 @@ This is your **quick lookup reference** for SODA PLUS features. Use it to:
 **Multi-Tab Architecture**
 - **Feature:** Multiple analyzer tabs (max 10)
 - **Switch:** Click tab header or Ctrl+Tab
-- **See:** [Step 8: Multi-Tab Architecture](SODA_PLUS_User_Guide.md#dependency-analysis---multi-tab-architecture-)
+- **See:** [Step 8: Multi-Tab Architecture](SODA_PLUS_User_Guide.md#dependency-analysis---multi-tab-architecture)
 
 ### O
 
@@ -274,7 +274,7 @@ This is your **quick lookup reference** for SODA PLUS features. Use it to:
   - Graceful fallback if automation fails
 - **Requirements:** SSMS must be installed
 - **Time Saved:** 10x faster than manual workflow (45s → 5s)
-- **See:** [SSMS Integration](#ssms-integration--new)
+- **See:** [SSMS Integration](#a)
 
 **Open SVG**
 - **Location:** Chart Window toolbar → Output menu
@@ -341,7 +341,7 @@ This is your **quick lookup reference** for SODA PLUS features. Use it to:
 - **Location:** Top-left panel
 - **Shows:** SQL Servers in current environment
 - **Add:** Right-click → Add Server...
-- **See:** [Step 3: Connect to Servers](SODA_PLUS_User_Guide.md#step-3-connect-to-servers-enhanced-)
+- **See:** [Step 3: Connect to Servers](SODA_PLUS_User_Guide.md#step-3-connect-to-servers-enhanced)
 
 **Session Management**
 - **Auto-Login:** From saved session file
@@ -632,7 +632,7 @@ All exports include:
 **Error:** "Cannot connect to server"
 - **Cause:** Server name incorrect or server offline
 - **Solution:** Verify server name, check SQL Server is running
-- **See:** [Step 3: Adding Server](SODA_PLUS_User_Guide.md#step-3-connect-to-servers-enhanced-)
+- **See:** [Step 3: Adding Server](SODA_PLUS_User_Guide.md#step-3-connect-to-servers-enhanced)
 
 **Error:** "Login failed for user"
 - **Cause:** Authentication credentials incorrect
@@ -699,7 +699,7 @@ All exports include:
   - Verify object types are checked (Tables/Views/Procedures/Functions)
   - Try broader search term
   - Enable "Search inside code" for comprehensive search
-- **See:** [Cross-Database Search Guide](../Docs/SEARCH_FEATURE_GUIDE.md)
+- **See:** [Cross-Database Search Guide](SODA_PLUS_Search_Guide.md)
 
 **Error:** "Multi-server search failed on some servers"
 - **Cause:** Connection or permission issues on specific servers
@@ -708,7 +708,7 @@ All exports include:
   - Verify connection to failed servers
   - Test authentication settings
   - Partial results from successful servers still available
-- **See:** [Cross-Database Search Guide](../Docs/SEARCH_FEATURE_GUIDE.md)
+- **See:** [Cross-Database Search Guide](SODA_PLUS_Search_Guide.md)
 
 **Error:** "AI filtering unavailable"
 - **Cause:** No valid user session or Grok API key not assigned
@@ -716,7 +716,7 @@ All exports include:
   - Check you're logged in with valid session
   - Verify "Search inside code" is enabled (required for AI filtering)
   - Contact administrator to verify API key assignment
-- **See:** [Cross-Database Search Guide](../Docs/SEARCH_FEATURE_GUIDE.md)
+- **See:** [Cross-Database Search Guide](SODA_PLUS_Search_Guide.md)
 
 **Error:** "Permission denied accessing database"
 - **Cause:** User lacks VIEW DEFINITION permission on database
@@ -724,7 +724,7 @@ All exports include:
   - Contact database administrator
   - Request VIEW DEFINITION permission
   - Or exclude that database from search
-- **See:** [Cross-Database Search Guide](../Docs/SEARCH_FEATURE_GUIDE.md)
+- **See:** [Cross-Database Search Guide](SODA_PLUS_Search_Guide.md)
 
 ---
 
@@ -892,8 +892,6 @@ All exports include:
 - 🚀 **[Quick Start Guide](SODA_PLUS_QuickStart.md)** - 5-minute setup
 - 📘 **[Concise Guide](SODA_PLUS_Guide_Concise.md)** - 30-minute essentials
 - 📖 **[Full User Guide](SODA_PLUS_User_Guide.md)** - Complete reference
-
-[↑ Back to Top](#-table-of-contents)
 
 ---
 
@@ -1122,8 +1120,6 @@ END
 - 🚀 **[Quick Start Guide](SODA_PLUS_QuickStart.md)** - 5-minute setup
 - 📘 **[Concise Guide](SODA_PLUS_Guide_Concise.md)** - 30-minute essentials
 - 📖 **[Full User Guide](SODA_PLUS_User_Guide.md)** - Complete reference
-
-[↑ Back to Top](#-table-of-contents)
 
 ---
 

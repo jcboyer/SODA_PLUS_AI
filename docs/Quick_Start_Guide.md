@@ -3,7 +3,7 @@
 
 ---
 
-**Version:** 1.0 | **Last Updated:** November 2025 
+**Version:** 1.1 | **Last Updated:** December 2025 
 **Target Audience:** New Users | **Estimated Time:** 5 minutes
 
 ---
@@ -228,7 +228,7 @@ Click [🔌 Test Connection]
 - Click **🔍 Search**
 - See results from all databases!
 - **Tip:** Double-click a result to open it in Dependency Analyzer
-- **→ See [Cross-Database Search Guide](../Docs/SEARCH_FEATURE_GUIDE.md) for details**
+- **→ See [Step 11: Cross-Database Search](SODA_PLUS_Search_Guide.md) in Search Guide**
 
 **4. Check Drill-Down** (3 minutes)
 - In the dependency tree, **right-click** a dependency
@@ -250,7 +250,7 @@ Once you're comfortable, explore these:
   - 🔍 **Comprehensive** - Searches names, code, columns, triggers, constraints
   - 🌐 **Multi-server** - Search entire environments (DEV, TEST, PROD)
   - 🤖 **AI Filtering** - Remove irrelevant matches with Grok AI
-- **→ See [Step 11: Cross-Database Search](../Docs/SEARCH_FEATURE_GUIDE.md) in Search Guide**
+- **→ See [Step 11: Cross-Database Search](SODA_PLUS_Search_Guide.md) in Search Guide**
 
 **📊 Charting** (10 minutes)
 - Right-click object → **Chart Analysis** → **Quick Chart**
@@ -271,7 +271,7 @@ Once you're comfortable, explore these:
 - Click **Export** button in analyzer toolbar
 - Choose format: CSV, JSON, Markdown, or Text
 - Save for documentation or reports
-- **→ See [Step 8b: Toolbar Actions](SODA_PLUS_User_Guide.md#step-8b-dependency-analyzer-toolbar-actions-new-) in Full Guide**
+- **→ See [Step 8b: Toolbar Actions](SODA_PLUS_User_Guide.md#step-8b-dependency-analyzer-toolbar-actions-new) in Full Guide**
 
 **📺 Full Window Mode** (2 minutes)
 - Click **Full Window** button in analyzer toolbar
@@ -386,4 +386,22 @@ After 5 minutes, you should be able to:
 
 **Need more?** 📖 Move to the [Concise User Guide](SODA_PLUS_Guide_Concise.md) for essential features.
 
-[↑ Back to Top](#-table-of-contents)
+---
+
+## 🔍 **Can't Find a Section?**
+
+All guides have built-in search to help you navigate:
+
+- **Search in Guide:** Press `Ctrl+F` while viewing any guide to search for keywords
+- **Floating Top Button:** Click the blue **↑** button (bottom-right) to return to Table of Contents
+- **Clear Search:** Click the "Clear" button to reset search and view full guide
+
+**💡 Search Tips:**
+- Try partial words: "login", "server", "analyze"
+- Use feature names: "AI Analysis", "Charting", "Dependencies"
+- Search error messages or symptoms directly
+
+**Still can't find what you need?** See the [Complete User Guide](SODA_PLUS_User_Guide.md) for comprehensive coverage.
+
+---
+

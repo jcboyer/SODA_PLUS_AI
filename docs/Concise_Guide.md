@@ -1,4 +1,4 @@
-﻿# 📘 SODA PLUS - Concise User Guide
+# 📘 SODA PLUS - Concise User Guide
 ## Essential Features in 30 Minutes
 
 ---
@@ -22,7 +22,7 @@
    - [Use Object Search](#use-object-search)
    - [Multi-Tab Workflow](#multi-tab-workflow)
 4. [Advanced Features (5 min)](#advanced-features-5-min)
-   - [Cross-Database Search](#cross-database-search)
+   - [Cross-Database Search](#cross-database-search-new)
    - [Quick Charting](#quick-charting)
    - [AI Analysis Basics](#ai-analysis-basics)
    - [Export Dependencies](#export-dependencies)
@@ -81,7 +81,7 @@ This guide covers **essential SODA PLUS features** in 30 minutes. It's the middl
 
 **✅ Done!** You're logged in with secure API key assignment.
 
-> **📖 For details:** See [Step 0: Initial Login](SODA_PLUS_User_Guide.md#step-0-initial-login--registration-new-)
+> **📖 For details:** See [Step 0: Initial Login](SODA_PLUS_User_Guide.md#step-0-initial-login--registration-new)
 
 ---
 
@@ -127,7 +127,7 @@ Connection Options:
 
 **✅ Connected!** Server appears in Server Explorer.
 
-> **📖 For SQL Auth details:** See [Step 3: Connect to Servers](SODA_PLUS_User_Guide.md#step-3-connect-to-servers-enhanced-)
+> **📖 For SQL Auth details:** See [Step 3: Connect to Servers](SODA_PLUS_User_Guide.md#step-3-connect-to-servers-enhanced)
 
 ---
 
@@ -334,7 +334,7 @@ Removed:    35 false positives
 
 ✅ **Use search for:** Finding objects by name OR content, impact analysis, code audits, GDPR compliance
 
-> **📖 For complete guide:** See [Cross-Database Search Guide](../Docs/SEARCH_FEATURE_GUIDE.md)
+> **📖 For complete guide:** See [Cross-Database Search Guide](SODA_PLUS_Search_Guide.md)
 
 ---
 
@@ -764,7 +764,19 @@ This concise guide **does not cover**:
 - 🔍 **[Reference Guide](SODA_PLUS_Reference.md)** - Quick lookup
 - 📖 **[Full User Guide](SODA_PLUS_User_Guide.md)** - Complete reference
 
-[↑ Back to Top](#-table-of-contents)
+---
+
+## 🔍 **Navigation Help**
+
+**Can't find a specific section?** All guides have built-in search:
+- **Ctrl+F** - Search for any keyword in the current guide
+- **↑ Button** (bottom-right) - Scroll back to Table of Contents  
+- **Clear Button** - Reset search to view full guide
+
+**💡 Quick Search Tips:**
+- Feature names: "Search", "Charting", "AI Analysis"
+- Actions: "export", "analyze", "connect"
+- Errors or issues: search the exact error message
 
 ---
 
