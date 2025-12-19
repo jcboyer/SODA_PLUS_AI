@@ -1,7 +1,7 @@
 # SODA+ AI - SQL Server Dependency Analysis
 
 [![Download Latest](https://img.shields.io/badge/Download-Latest%20Release-blueviolet?style=for-the-badge&logo=download)](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)
-[![Latest Version](https://img.shields.io/badge/dynamic/json?url=https://sodaplusbeta.blob.core.windows.net/downloads/version.json&query=$.version&label=Version&style=for-the-badge&color=blue)](docs/CHANGELOG.md)
+[![Latest Version](https://img.shields.io/badge/dynamic/json?url=https://sodaplusbeta.blob.core.windows.net/downloads/version.json&query=$.latestVersion&label=Version&style=for-the-badge&color=blue)](docs/CHANGELOG.md)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11%20x64-brightgreen?style=for-the-badge)](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)
 
 ---
