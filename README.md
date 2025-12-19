@@ -28,7 +28,7 @@ We're especially interested in feedback on:
 
 - 🐛 **Bug Reports** - Anything not working as expected?
 - 💡 **Feature Suggestions** - What would make your workflow better?
-- 🤖 **AI Code Review Accuracy** - Are Grok-2's suggestions helpful for your SQL code?
+- 🤖 **AI Code Review Accuracy** - Are Grok-4's suggestions helpful for your SQL code?
 - 🎨 **Usability Issues** - Is the interface intuitive? Anything confusing?
 - ⚡ **Performance** - Speed issues on large databases (1000+ objects)?
 - 🔗 **SQL Server Compatibility** - Testing on various versions (2008-2022, Azure SQL)?
@@ -49,8 +49,8 @@ Choose the method that works best for you:
 |-------------|---------|
 | **Operating System** | Windows 10 or Windows 11 (64-bit) |
 | **SQL Server Access** | SQL Server 2008+ (any edition, including Azure SQL) |
-| **AI Features** | Optional xAI/Grok API key ([get one free](https://x.ai/)) |
-| **Internet Connection** | Required for AI features and updates |
+| **AI Features** | Optional xAI/Grok API key - Included for the Beta ([get one free](https://x.ai/)) |
+| **Internet Connection** | Required for Login and AI features and updates |
 | **Time Commitment** | 30 minutes to 2 hours (your choice!) |
 
 ### 🎁 Beta Tester Benefits
@@ -116,7 +116,7 @@ Every bug report, suggestion, and piece of feedback helps make SODA+ AI better f
 - **Hierarchical dependency trees** (upstream/downstream)
 - **Real-time dependency discovery** across multiple databases
 
-### 🤖 AI-Powered Code Review (Grok-2)
+### 🤖 AI-Powered Code Review (Grok-4)
 - **Intelligent SQL code analysis** with context-aware suggestions
 - **Performance optimization** recommendations
 - **Security vulnerability detection** (SQL injection, permissions)
@@ -298,7 +298,7 @@ Thank you for using SODA+ AI! Your feedback helps make it better for everyone.
 - **.NET 10** & **.NET 8** - Application framework
 - **WPF** - User interface
 - **Microsoft.Data.SqlClient** - SQL Server connectivity
-- **Grok-2 (X.AI)** - AI-powered code analysis
+- **Grok-4 (X.AI)** - AI-powered code analysis
 - **Mermaid** - Chart generation
 - **Azure Key Vault** - Secure API key management
 - **WebView2** - HTML rendering
