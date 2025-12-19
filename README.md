@@ -91,7 +91,6 @@ Every bug report, suggestion, and piece of feedback helps make SODA+ AI better f
 4. Login with your email address
 5. Connect to your SQL Server and start analyzing!
 
-**No admin rights needed, no manual configuration required!**
 
 ---
 
