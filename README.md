@@ -6,6 +6,73 @@
 
 ---
 
+## 🧪 Beta Testers Wanted!
+
+<div align="center">
+
+### We need YOUR help to make SODA+ AI better! 🚀
+
+**Try the latest version on your SQL Server environments and share your feedback.**
+
+</div>
+
+### 📦 Get Started in 3 Steps
+
+1. **[⬇️ Download the Latest Beta](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)**
+2. **Double-click `Install-SODA_Latest.bat`** (no admin rights needed!)
+3. **Launch from Start Menu** → Search "SODA+ AI"
+
+### 🎯 What We're Looking For
+
+We're especially interested in feedback on:
+
+- 🐛 **Bug Reports** - Anything not working as expected?
+- 💡 **Feature Suggestions** - What would make your workflow better?
+- 🤖 **AI Code Review Accuracy** - Are Grok-2's suggestions helpful for your SQL code?
+- 🎨 **Usability Issues** - Is the interface intuitive? Anything confusing?
+- ⚡ **Performance** - Speed issues on large databases (1000+ objects)?
+- 🔗 **SQL Server Compatibility** - Testing on various versions (2008-2022, Azure SQL)?
+
+### 📢 How to Share Feedback
+
+Choose the method that works best for you:
+
+| Method | Best For | Link |
+|--------|----------|------|
+| 🐛 **GitHub Issues** | Bug reports, specific problems | [Report Issue](https://github.com/jcboyer/SODA_PLUS_AI/issues/new?labels=beta-feedback) |
+| 💬 **GitHub Discussions** | General feedback, questions, ideas | [Beta Testing Thread](https://github.com/jcboyer/SODA_PLUS_AI/discussions) |
+| 📧 **Direct Email** | Private feedback, security concerns | [Contact via GitHub](https://github.com/jcboyer) |
+
+### ✅ Beta Testing Requirements
+
+| Requirement | Details |
+|-------------|---------|
+| **Operating System** | Windows 10 or Windows 11 (64-bit) |
+| **SQL Server Access** | SQL Server 2008+ (any edition, including Azure SQL) |
+| **AI Features** | Optional xAI/Grok API key ([get one free](https://x.ai/)) |
+| **Internet Connection** | Required for AI features and updates |
+| **Time Commitment** | 30 minutes to 2 hours (your choice!) |
+
+### 🎁 Beta Tester Benefits
+
+- ✅ **Early access** to new features
+- ✅ **Direct influence** on product direction
+- ✅ **Priority support** for reported issues
+- ✅ **Recognition** in release notes (if you'd like)
+- ✅ **Free lifetime license** when we go commercial (limited to first 100 beta testers!)
+
+### 📊 Current Beta Status
+
+- **Active Beta Testers:** Looking for 50-100 participants
+- **Testing Period:** Ongoing (rolling updates)
+- **Next Major Release:** Targeting Q1 2026
+
+### 🙏 Thank You for Helping Us Build Something Great!
+
+Every bug report, suggestion, and piece of feedback helps make SODA+ AI better for the entire SQL Server community. We read and respond to every submission!
+
+---
+
 ## 🎬 Quick Demo
 
 **Watch SODA+ AI in action!** See how to analyze SQL Server dependencies in just 2 minutes:
@@ -130,6 +197,7 @@ For detailed release notes and version history, visit:
 | 📦 **Previous Versions** | [Release History](docs/RELEASE_HISTORY.md) |
 | 🐛 **Report Issues** | [GitHub Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) |
 | 💬 **Discussions** | [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions) |
+| 🧪 **Beta Feedback** | [Beta Testing Thread](https://github.com/jcboyer/SODA_PLUS_AI/discussions) |
 
 ---
 
