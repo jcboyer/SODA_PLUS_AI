@@ -1,4 +1,4 @@
-# SODA PLUS - SQL Object Dependency Analyzer
+﻿# SODA PLUS - SQL Object Dependency Analyzer
 ## Step-by-Step User Guide
 
 ---
@@ -16,6 +16,7 @@
 - [Step 4: Select a Server](#step-4-select-a-server)
 - [Step 5: Select a Database](#step-5-select-a-database)
 - [Step 6: Search for Objects](#step-6-search-for-objects-new) ⭐ **NEW!**
+- [Step 6a: SQL Formatting Preferences](#step-6a-sql-formatting-preferences-new) ⭐ **NEW!**
 
 ### **⚡ Core Features**
 - [Step 7: Analyze Database Objects](#step-7-analyze-database-objects-enhanced) ⭐ **ENHANCED!**
@@ -480,7 +481,6 @@ Results:
     sp_UpdateOrder
     sp_ProcessPayment
 ```
-(Only `dbo` schema shown, other schemas hidden)
 
 **Example 3: Find Views with "Order"**
 ```
@@ -567,6 +567,409 @@ Results:
 - Normal for databases with 10,000+ objects
 - Results still appear, just takes 1-2 seconds
 - Consider more specific search terms
+
+---
+
+### **Step 6a: SQL Formatting Preferences** (NEW! 💎)
+
+SODA PLUS includes a **powerful SQL formatting system** that allows you to customize how SQL code is formatted when you click the **💎 Format** button in the Dependency Analyzer.
+
+#### **Why Use SQL Formatting Preferences?**
+- ✅ **Consistent code style** across your team or organization
+- ✅ **Personal preferences** - Format SQL the way YOU like it
+- ✅ **Cloud-based storage** - Settings sync across sessions
+- ✅ **Organization templates** - Admins can set shop-wide defaults
+- ✅ **20 customization options** - Fine-tune every aspect of formatting
+- ✅ **Live preview** - See changes instantly before saving
+- ✅ **Production-ready formatter** - Uses Microsoft ScriptDom (SQL Server 2008-2022)
+
+#### **Opening SQL Formatting Preferences:**
+
+**Method 1: Tools Menu (Recommended)**
+1. Go to **Tools** menu (top menu bar)
+2. Select **SQL Formatting Preferences**
+3. Dialog opens with current settings
+
+**Method 2: Keyboard Shortcut**
+- Press **Ctrl+Shift+F** (if configured)
+
+#### **Dialog Layout:**
+```
+┌─────────────────────────────────────────────────┐
+│ SQL Formatting Preferences                      │
+├─────────────────────────────────────────────────┤
+│ 📋 My Preferences │ ⭐ Organization Template    │ ← Tabs
+├─────────────────────────────────────────────────┤
+│ LEFT: Settings                                   │
+│ • Keyword Casing                                 │
+│ • Indentation Size                               │
+│ • New Line Options (18 checkboxes)              │
+│                                                  │
+│ RIGHT: Live Preview                              │
+│ • Sample SQL formatted with current settings    │
+│ • Updates as you change options                 │
+└─────────────────────────────────────────────────┘
+│ 💾 Save My Preferences │ 🔄 Reset │ ❌ Cancel   │ ← Buttons
+└─────────────────────────────────────────────────┘
+```
+
+#### **Formatting Options:**
+
+**1. Keyword Casing (3 options)**
+- **UPPERCASE** (default) - `SELECT FROM WHERE`
+- **lowercase** - `select from where`
+- **PascalCase** - `Select From Where`
+
+**2. Indentation Size**
+- **Range:** 0-10 spaces
+- **Default:** 4 spaces
+- **Common values:** 2, 4, 8
+- **Recommendations:**
+  - 2 spaces - Compact, good for small screens
+  - 4 spaces - Industry standard, most readable
+  - 8 spaces - High contrast, accessibility
+
+**3. New Line Options (18 checkboxes)**
+
+**Clause Placement:**
+- ☑️ New line before FROM clause
+- ☑️ New line before WHERE clause
+- ☑️ New line before ORDER BY clause
+- ☑️ New line before GROUP BY clause
+- ☑️ New line before HAVING clause
+- ☑️ New line before JOIN clause
+
+**Alignment:**
+- ☑️ Align clause bodies (indent aligned)
+- ☐ AS keyword on own line
+
+**Multiline Lists:**
+- ☑️ Multiline SELECT elements list
+- ☑️ Multiline WHERE predicates list
+- ☑️ Multiline INSERT sources list
+- ☑️ Multiline INSERT targets list
+- ☑️ Multiline SET clause items
+- ☑️ Multiline view columns list
+
+**Indentation:**
+- ☑️ Indent SET clause
+- ☑️ Indent view body
+
+**Parentheses:**
+- ☑️ New line before opening parenthesis in multiline list
+- ☑️ New line before closing parenthesis in multiline list
+
+#### **Using the Live Preview:**
+
+The **right panel** shows a **live preview** of how SQL will be formatted with your current settings.
+
+**Preview Features:**
+- **Sample SQL** - Complex query with JOINs, WHERE, ORDER BY
+- **Real-time updates** - Changes as you adjust settings
+- **Syntax highlighting** - Color-coded SQL (AvalonEdit)
+- **Scrollable** - For long formatted queries
+- **Dark on white** - Easy to read
+
+**Example Preview:**
+
+**Before (Compact):**
+```sql
+SELECT u.UserId, u.Name FROM Users u WHERE u.Active = 1 ORDER BY u.Name
+```
+
+**After (IndentationSize=8, UPPERCASE, New Lines ON):**
+```sql
+SELECT  u.UserId,
+        u.Name
+FROM    Users u
+WHERE   u.Active = 1
+ORDER BY u.Name
+```
+
+#### **Saving Your Preferences:**
+
+**Personal Preferences:**
+1. Adjust settings in **"My Preferences"** tab
+2. Review preview to confirm
+3. Click **💾 Save My Preferences**
+4. **Success message:** "Your personal formatting preferences have been saved successfully"
+5. Settings saved to cloud (Azure Functions + Database)
+6. **Format button** in Dependency Analyzer now uses YOUR settings
+
+**What Gets Saved:**
+- All 20 formatting options
+- Stored in `UserConfigurationOverrides` table
+- Associated with your user account
+- Syncs across sessions (auto-login)
+- Overrides organization template (if any)
+
+#### **Organization Templates (Admins Only):**
+
+If you have **IsOrganizationAdmin** role, you'll see a second tab:
+
+**⭐ Organization Template Tab**
+
+**Purpose:**
+- Set **shop-wide defaults** for all users in your organization
+- Users can still create personal overrides
+- Great for code consistency across teams
+
+**How to Save Organization Template:**
+1. Switch to **"Organization Template"** tab
+2. Adjust settings to desired defaults
+3. Click **⭐ Save as Organization Template**
+4. **Confirmation dialog:**
+   ```
+   Save these settings as the organization-wide default?
+   
+   This will affect all users in your organization who haven't
+   created personal overrides.
+   
+   [Yes] [No]
+   ```
+5. Click **Yes** to confirm
+6. **Success message:** "Organization template saved successfully! All users in your organization will now use these settings by default."
+7. Settings saved to `ConfigurationTemplates` table
+8. All users without personal overrides will use these settings
+
+**Who Sees This Tab:**
+- Only users with `IsOrganizationAdmin = true`
+- Regular users see only "My Preferences" tab
+- Admins can set both: Org template + Personal overrides
+
+#### **Hierarchical Configuration:**
+
+SODA PLUS uses a **3-tier hierarchy** for SQL formatting:
+
+```
+1. Hard-Coded Defaults (Built-in)
+   ↓
+2. Organization Template (Admin sets)
+   ↓
+3. User Overrides (Your personal settings)
+```
+
+**Priority:** User Overrides > Organization Template > Hard-Coded Defaults
+
+**Example:**
+- **Default:** IndentationSize = 4
+- **Org Template:** IndentationSize = 2 (Admin preference)
+- **Your Override:** IndentationSize = 8 (Your preference)
+- **Result when YOU format:** Uses 8 (your override wins)
+- **Result for other users:** Uses 2 (org template, no personal override)
+
+#### **Reset to Defaults:**
+
+**Button:** 🔄 Reset to Defaults
+
+**Action:**
+1. Click **Reset** button
+2. **Confirmation dialog:**
+   ```
+   Reset all settings to shop defaults?
+   
+   This will discard any personal overrides you've made.
+   
+   [Yes] [No]
+   ```
+3. Click **Yes** to confirm
+4. All settings revert to **organization template** (or hard-coded defaults)
+5. **Does NOT save automatically** - must click "Save My Preferences"
+
+**When to Use:**
+- You want to match organization standards
+- Your custom settings aren't working well
+- Starting fresh with defaults
+
+#### **Format Button Integration:**
+After saving preferences, the **💎 Format** button in Dependency Analyzer will **automatically use your settings**.
+
+**Workflow:**
+```
+1. Open Dependency Analyzer for stored procedure
+   ↓
+2. View SQL code in right panel
+   ↓
+3. Click 💎 Format button (toolbar)
+   ↓
+4. System loads YOUR formatting preferences from cloud
+   ↓
+5. Applies preferences using SqlFormatter
+   ↓
+6. Code updates with YOUR indentation, casing, etc.
+   ↓
+7. Status: "✅ SQL formatted using SQL Server 2022 (using your preferences)"
+```
+
+**Status Messages:**
+- **With preferences:** "✅ SQL formatted using SQL Server 2022 (using your preferences)"
+- **Without preferences:** "✅ SQL formatted using SQL Server 2022 (using defaults)"
+
+#### **Behind the Scenes:**
+
+**Technology Stack:**
+- **Formatter:** Microsoft ScriptDom (supports SQL Server 2008-2022)
+- **Storage:** Azure SQL Database (`UserConfigurationOverrides` table)
+- **API:** Azure Functions (secure RESTful endpoints)
+- **Authentication:** Session tokens (validated per request)
+- **Encryption:** Passwords encrypted with Windows DPAPI
+
+**Data Flow:**
+```
+1. You click "Save My Preferences"
+   ↓
+2. Client serializes 20 options to JSON
+   ↓
+3. PUT /api/configuration/override
+   Headers: X-Session-Token, X-User-Id
+   Body: { userId, templateName, overrideData }
+   ↓
+4. Azure Functions validates session token
+   ↓
+5. Saves to UserConfigurationOverrides table
+   ↓
+6. Returns 200 OK
+   ↓
+7. Client shows success message
+```
+**Loading Preferences:**
+```
+1. You click 💎 Format button
+   ↓
+2. Client calls callback to load preferences
+   ↓
+3. GET /api/configuration/{userId}/SqlFormatter
+   Headers: X-Session-Token, X-User-Id
+   ↓
+4. Azure Functions validates session
+   ↓
+5. Queries UserConfigurationOverrides table
+   ↓
+6. Merges with organization template (if any)
+   ↓
+7. Returns merged configuration JSON
+   ↓
+8. SqlFormatter uses your preferences
+```
+
+#### **Security Features:**
+
+**Session-Based Authentication:**
+- Every API call requires valid session token
+- Session tokens validated against database
+- Tokens expire after 24 hours (configurable)
+- Prevents unauthorized access
+
+**User Isolation:**
+- Users can ONLY modify their own settings
+- UserId validated from session (not trusted from client)
+- Authorization checks prevent impersonation
+
+**Admin Controls:**
+- Only `IsOrganizationAdmin` can modify organization templates
+- Regular users cannot access admin endpoints
+- Role validation on server side
+
+#### **Example Scenarios:**
+
+**Scenario 1: New User (First Time)**
+```
+1. Open SQL Formatting Preferences
+2. Default settings loaded (hard-coded or org template)
+3. Change IndentationSize to 8
+4. Change KeywordCasing to lowercase
+5. Click "Save My Preferences"
+6. ✅ Settings saved to cloud
+7. Format button now uses 8-space, lowercase
+```
+
+**Scenario 2: Admin Setting Org Template**
+```
+1. Admin opens SQL Formatting Preferences
+2. Switch to "Organization Template" tab
+3. Set IndentationSize = 4 (company standard)
+4. Set KeywordCasing = UPPERCASE
+5. Click "Save as Organization Template"
+6. Confirm dialog
+7. ✅ All users without overrides now use 4-space, UPPERCASE
+```
+
+**Scenario 3: User Overriding Org Template**
+```
+1. Org template: IndentationSize = 4
+2. User prefers 8-space indentation
+3. Open SQL Formatting Preferences
+4. "My Preferences" tab shows 4 (org template)
+5. Change to 8
+6. Click "Save My Preferences"
+7. ✅ User's format button now uses 8 (override wins)
+8. Other users still use 4 (org template)
+```
+
+#### **Troubleshooting:**
+
+**Issue: "Preferences not saving"**
+- **Check:** Are you logged in? (session required)
+- **Check:** Network connection to Azure Functions
+- **Solution:** Restart app, try again
+
+**Issue: "Format button not using my preferences"**
+- **Check:** Did you click "Save My Preferences"?
+- **Check:** Status message - does it say "(using your preferences)"?
+- **Solution:** Reopen dialog, verify settings, save again
+
+**Issue: "Organization Template tab missing"**
+- **Cause:** You don't have admin role
+- **Check:** Only `IsOrganizationAdmin` users see this tab
+- **Solution:** Contact administrator for role assignment
+
+**Issue: "Preview not updating"**
+- **Cause:** Formatter initialization failed
+- **Solution:** Check Messages panel for errors
+- **Workaround:** Changes still save, preview just not showing
+
+**Issue: "Settings lost after restart"**
+- **Cause:** Save failed or session expired
+- **Solution:** Check session is valid (login if needed)
+- **Verify:** Reopen dialog - settings should persist
+
+#### **Tips for Best Results:**
+1. **Start with Defaults** - Don't change everything at once
+2. **Use Preview** - See changes before saving
+3. **Test on Complex SQL** - Verify with real procedures
+4. **Match Team Style** - Coordinate with colleagues
+5. **Document Standards** - Share org template settings
+6. **Indentation Sweet Spots:**
+   - **2 spaces** - Compact, laptop-friendly
+   - **4 spaces** - Industry standard (recommended)
+   - **8 spaces** - High visibility, presentations
+7. **Keyword Casing:**
+   - **UPPERCASE** - Traditional SQL style (most common)
+   - **lowercase** - Modern style, easier to type
+   - **PascalCase** - Rare, but some teams prefer
+8. **New Lines ON** - More readable for complex queries
+9. **Multiline Lists ON** - Better for long SELECT lists
+10. **Save Often** - Settings persist across sessions
+
+#### **What's NOT Configurable:**
+The formatter has some **fixed behaviors** that cannot be changed:
+- ❌ Comment preservation (always maintained)
+- ❌ String literal preservation (always maintained)
+- ❌ SQL Server version detection (automatic)
+- ❌ Syntax validation (always performed)
+- ❌ Error handling (always enabled)
+
+#### **Supported SQL Server Versions:**
+The formatter supports all modern SQL Server versions:
+- ✅ SQL Server 2008 / 2008 R2
+- ✅ SQL Server 2012
+- ✅ SQL Server 2014
+- ✅ SQL Server 2016
+- ✅ SQL Server 2017
+- ✅ SQL Server 2019
+- ✅ SQL Server 2022
+
+**Auto-detection:** Formatter detects SQL Server version from connection string.
 
 ---
 
@@ -1341,210 +1744,8 @@ Right-click on vw_CustomerOrders (View)
 - ✅ Analyzing complex conditional statements
 - ✅ Code review focusing on logic flow
 - ✅ Documenting decision trees
-- ✅ Understanding CASE statement branches
+- ✅ Understanding CASE statements branches
 - ✅ Analyzing subquery logic (especially in Views)
-
-#### **Chart Window Controls:**
-**Button Bar:**
-- **📊 Generate Chart** / **AI Generate Chart** - Create diagram
-  - Shows "Cancel" when AI is running
-  - Text indicates which mode is active
-- **💾 Save .mmd** - Save Mermaid code to file
-- **🎨 Render SVG** - Convert Mermaid to SVG graphic
-- **🖼️ Open SVG** - View rendered SVG
-- **📋 Copy Mermaid** - Copy code to clipboard
-- **✖ Close** - Close chart window
-
-**Three Tabs:**
-1. **📝 Mermaid Code** - Editable diagram syntax
-2. **📊 Dependency Data** - Raw dependency information
-3. **🤖 AI Response** - AI output (AI-Enhanced mode only)
-
-**Status Bar:**
-- Left: Operation status
-- Center: Progress indicator
-- Right: File paths (.mmd and .svg)
-
-#### **Understanding Chart Diagrams:**
-**Node Format:**
-```
-dbo.ObjectName
-[ObjectType]
-```
-
-**Edge Labels:**
-- **"uses"** → Arrow pointing TO your object (it depends on)
-- **"used by"** → Arrow pointing FROM your object (others depend on it)
-
-**Example Quick Chart:**
-```mermaid
-graph TD
-    A[dbo.MyProcedure<br/>Procedure] --> B[dbo.Users<br/>Table]
-    C[dbo.ErrorLog_Insert<br/>Procedure] --> A
-```
-
-**Example AI-Enhanced Chart:**
-```mermaid
-graph TD
-    subgraph "Data Access Layer"
-        A[dbo.MyProcedure<br/>Main Entry Point]
-        B[dbo.GetUserData<br/>Helper Proc]
-    end
-    
-    subgraph "Data Tables"
-        C[dbo.Users<br/>Primary Table]
-        D[dbo.ErrorLog<br/>Audit Table]
-    end
-    
-    A -->|Calls for user data| B
-    B -->|SELECT| C
-    A -->|On error| D
-```
-
-#### **Advanced AI Chart Features:**
-**Dependency Context Enhancement:**
-- AI receives list of all dependencies
-- Both DEPENDS ON and DEPENDED ON BY
-- Schema and type information
-- Helps AI understand full context
-
-**Smart Layout Selection:**
-- AI chooses `graph TD` (top-down) or `graph LR` (left-right)
-- Based on complexity and width
-- Optimizes for readability
-
-**Multi-Level Analysis:**
-- Quick Chart: Shows direct dependencies only
-- AI Chart: Can identify chains (A→B→C)
-- Traces logical flow through SQL code
-
-**Logical Grouping:**
-- AI may use `subgraph` for related objects
-- Groups by function (e.g., "Error Handling", "Data Access")
-- Makes complex diagrams clearer
-
-#### **Chart Best Practices:**
-✅ **DO:**
-- Start with Quick Chart for initial view
-- Use AI Chart for complex procedures/views (20+ dependencies)
-- Save both .mmd and .svg files for documentation
-- Edit Mermaid code to simplify if diagram is cluttered
-- Compare Quick vs AI charts to see the difference
-- Use charts in code reviews to explain changes
-- Include SVGs in technical documentation
-- Use Logic Flowchart to understand complex CASE statements and conditional logic
-
-❌ **DON'T:**
-- Use AI Chart for every simple procedure (wastes API credits)
-- Chart objects with 50+ dependencies (unreadable)
-- Edit Mermaid code without understanding the syntax
-- Rely solely on charts - combine with dependency analysis
-- Forget to save .mmd before rendering SVG
-
-#### **Troubleshooting Charts:**
-**Problem: "No SQL code available for AI analysis"**
-- **Solution**: AI-Enhanced Chart requires SQL code
-  - Use Quick Chart instead (works without SQL)
-  - Check if object definition can be retrieved
-  - Verify permissions to read object definition
-
-**Problem: "API key unavailable"**
-- **Solution**: Configure API key for AI features
-  - Check appsettings.json for `Grok:ApiKey`
-  - System will prompt for key if not configured
-  - Store key securely in configuration
-
-**Problem: AI chart looks same as Quick chart**
-- **Solution**: 
-  - Simple objects may produce similar output
-  - AI benefits most visible with complex procedures
-  - Try on procedure with 15+ lines of code
-  - Check AI Response tab for actual AI output
-
-**Problem: "Render failed - SVG file not created"**
-- **Solution**: 
-  - Check MermaidRenderer.exe exists in app directory
-  - Verify Mermaid code is valid
-  - Check file permissions in temp directory
-  - Review error message in status bar
-
-**Problem: Diagram is cluttered/unreadable**
-- **Solution**:
-  - Edit Mermaid code to remove less critical nodes
-  - Try AI-Enhanced Chart for better layout
-  - Change `graph TD` to `graph LR`
-  - Break into multiple smaller charts
-  - Adjust SVG size parameters
-
-**Problem: Manual edits to Mermaid code not showing in rendered SVG**
-- **Solution**:
-  - Edit the Mermaid code in the Mermaid Code tab
-  - Click **Render SVG** button after making edits
-  - The renderer automatically captures current code state
-  - Your edits are saved and rendered each time
-  - **Tip**: Window title shows `*` when you have unsaved edits
-
-**Problem: Chart window position off-screen**
-- **Solution**:
-  - Window auto-adjusts to screen bounds
-  - Manually drag to preferred position
-  - Reopens at same position next time
-
-**Problem: Chart options greyed out for Views**
-- **Solution**: ✅ **FIXED!** All chart options now enabled for Views
-  - Update to latest version (v2.1+)
-  - All three chart types work for Views
-  - Quick Chart, AI-Enhanced Chart, and Logic Flowchart all available
-
-#### **Chart Configuration:**
-**appsettings.json Settings:**
-```json
-{
-  "Grok": {
-    "Model": "grok-2-1212",
-    "ApiKey": "your-key-here"
-  },
-  "Mermaid": {
-    "MaxSqlChars": 25000
-  },
-  "Prompts": {
-    "MermaidFlowchart": "your-custom-prompt"
-  }
-}
-```
-
-**Customizing AI Prompt:**
-- Override default prompt in `Prompts:MermaidFlowchart`
-- Use placeholders: `{dependencyData}`, `{sqlCode}`
-- Control output format and level of detail
-- Adjust for your specific documentation needs
-
-#### **Use Cases for Each Chart Type:**
-
-**Quick Chart Use Cases:**
-1. **Daily Development** - Fast dependency checks
-2. **Debugging** - Quick impact analysis before changes
-3. **Code Review** - Show direct dependencies
-4. **Offline Work** - No internet/API required
-5. **Batch Documentation** - Generate many charts quickly
-6. **View Analysis** - Visualize table relationships in views ⭐ **NEW!**
-
-**AI-Enhanced Chart Use Cases:**
-1. **Complex Analysis** - Procedures with intricate logic
-2. **Documentation** - Professional diagrams for wikis
-3. **Presentations** - Polished visuals for stakeholders
-4. **Architecture Review** - Understanding layered design
-5. **Onboarding** - Help new team members understand flow
-6. **Impact Analysis** - Deep multi-level dependency chains
-7. **Complex Views** - Multi-table JOIN optimization ⭐ **NEW!**
-
-**Logic Flowchart Use Cases:**
-1. **Logic Understanding** - Visualize IF/WHILE/TRY-CATCH
-2. **Code Review** - Focus on decision logic
-3. **Debugging** - Trace conditional branches
-4. **Refactoring** - Simplify complex logic
-5. **Documentation** - Show decision trees
-6. **View Logic** - Understand CASE statements in views ⭐ **NEW!**
 
 ---
 
@@ -1720,155 +1921,9 @@ At the bottom of the AI Review window:
 8. **For Dependency Analysis:**
    - **Main Tab Opens**: New analyzer tab appears (e.g., "📋 dbo.MyProcedure ✖")
    - **Work Area Title Updates**: "Analyzing: MyProcedure"
-   - **Review LEFT PANEL Sub-Tabs**:
-     - **Upstream Sub-Tab** → What does ValidateCustomer need?
-     - **Downstream Sub-Tab** → What depends on this object
-     - **Call Order Sub-Tab** → Click "Generate" to see execution sequence
-   - **Review RIGHT PANEL**: 
-     - SQL code viewer shows object definition
-     - Click items in dependency trees to update code viewer
-     - Use search box to find code within displayed object
-   - **Use Drill-Down**: 
-     - Right-click any dependency → Analyze Dependencies
-     - **NEW TAB opens** for that object (original tab stays open!)
-     - Can open up to **10 tabs** simultaneously
-     - Switch between tabs with Ctrl+Tab or clicking headers
-     - Close tabs with ✖ button when done
-   - **Multi-Tab Benefits**:
-     - Compare multiple objects side-by-side
-     - Explore dependency chains without losing context
-     - Impact analysis across multiple dependent objects
-     - Close tabs individually to stay organized
-9. **For AI Analysis:**
-   - **AI Review Window Opens** (separate window, not a tab in main window)
-   - Review **Sent Prompt** tab → Verify what was sent to AI
-   - Review **AI Response** tab → Read plain text analysis
-   - Review **Formatted View** tab → Interactive HTML view with:
-     - Syntax-highlighted code blocks
-     - Collapsible sections (click headers)
-     - Copy buttons on code blocks
-     - Search functionality (find specific recommendations)
-     - Theme toggle (dark/light)
-     - Table of Contents (for long responses)
-   - Use **Custom Prompts** → Ask follow-up questions
-   - **Save Session** → Store for documentation (Ctrl+S)
-   - **Close Window** → Alt+F4 (doesn't affect analyzer tabs)
-   - **If Analysis Includes Refactoring Suggestions:**
-     - **Refactor Control Window Opens** automatically ✨ **NEW!**
-     - Shows suggestions grid with **color-coded priorities** (Critical/High/Medium/Low)
-     - Review each suggestion's priority, effort, and rationale
-     - **Address Critical (🔴) and High (🟠) priorities first**
-     - Choose workflow: Plan Selected, Apply Single, or Manual Review
-     - Preview changes in diff panel before accepting
-     - Click "Accept Refactor" to apply changes permanently
-     - **Document Refactoring Decisions** - Screenshot color-coded grid for discussions
-     - **Discuss with Team** - Use saved AI session for context
-10. **For Dependency Charts:**
-    - **Chart Window Opens** (separate window, not a tab in main window)
-    - Choose Chart Type → Quick/AI-Enhanced/Logic Flowchart
-    - Generate Chart → Creates Mermaid diagram
-    - Save .mmd → Save source code
-    - Render SVG → Create graphic
-    - Open in browser
-    - Export → Use in documentation
-    - **Close Window** → Charts are independent of analyzer tabs
-11. **Tab Management Workflow**:
-    - **Monitor Tab Count**: Work area shows "(X objects)" 
-    - **Max 10 Tabs**: Close unused tabs before opening new ones
-    - **Switch Tabs**: Click headers or Ctrl+Tab
-    - **Close Individual Tabs**: Click ✖ on tab header
-    - **Close All Tabs**: Right-click work area (if available)
-    - **Tab Reuse**: Analyzing already-open object switches to that tab
-12. **Refactoring Workflow** (when applicable): ✨ **NEW!**
-    - **Review Suggestions Grid** → Sorted by priority (Critical → Low)
-    - **Focus on Red/Orange** → Critical and High priority items first
-    - **Select Suggestions** → Check boxes for items to address
-    - **Choose Workflow**:
-      - **Multi-Step**: Plan Selected → Review Plan → Execute Plan
-      - **Direct**: Apply Single (for one suggestion at a time)
-      - **Manual**: Copy Diff → Apply manually in SQL editor
-    - **Review Diff Preview** → Always check changes before accepting
-    - **Test Changes** → Execute in SANDBOX/TEST first
-    - **Accept Refactor** → Mark as Applied and commit changes
-    - **Document**: Save AI session for team review and audit trail
+   - **Review LEFT PANEL Sub-Tabs**: Downstream, Upstream, Call Order
+   - **Inspect RIGHT PANEL**: View SQL code and use search
 
 ---
 
-### **Help and Support**
-
-#### **Built-in Help**
-- **Help Menu** → **Use Cases** - Opens detailed use case documentation
-- **Messages Panel** - Real-time feedback and error information
-- **Status Bar** - Connection status and current operations
-- **AI Response Tab** - See exactly what was sent to AI
-
-#### **Error Handling**
-- All errors appear in the **Messages panel**
-- Connection issues show specific error details
-- **Copy Messages** function for troubleshooting support
-- AI errors shown in dedicated AI Response tab
-
----
-
-### **Tips for Best Results**
-
-1. **Start with SANDBOX/TEST** environments for learning
-2. **Use right-click menus** - they're context-sensitive and comprehensive
-3. **Check the Messages panel** for real-time feedback
-4. **Collapse unused panels** to maximize work area
-5. **AI Analysis works best** on stored procedures and functions
-6. **Use Low Hanging Improvements first** for quick wins
-7. **Progress through Deeper Improvements** for comprehensive refactoring
-8. **Save AI sessions** for documentation and team review
-9. **Use Custom Prompts** for specific questions about your code
-10. **Review diffs carefully** before accepting refactoring changes
-11. **Double-click improvements** to see full details before applying
-12. **Select specific improvements** rather than applying all at once
-13. **Generate charts** before making major changes to understand impact
-14. **Save both .mmd and .svg** files for dependency documentation
-15. **Use charts in code reviews** to explain changes visually
-16. **🎯 Use drill-down analysis** to explore dependency chains seamlessly
-17. **🎯 Right-click dependencies** for instant analysis without leaving analyzer
-18. **🎯 Combine charts and drill-down** for comprehensive understanding
-19. **🆕 Chart Views too!** All three chart types now work for Views
-20. **🆕 Use Logic Flowchart** to understand complex CASE statements and conditional logic
-21. **🆕 Use UPSTREAM sub-tab** to understand what an object needs to function
-22. **🆕 Use DOWNSTREAM sub-tab** to assess impact before making changes
-23. **🆕 Use Call Order sub-tab** to see execution sequence (not SQL Code tab!)
-24. **🆕 Switch between tabs** using Ctrl+Tab for fast navigation
-25. **🆕 Expand strategically** in dependency trees - don't expand all at once
-26. **✨ NEW: Use Formatted View tab** for reading AI responses - much easier than plain text
-27. **✨ NEW: Collapse sections in Formatted View** to focus on specific improvements
-28. **✨ NEW: Copy code blocks with one click** instead of manual text selection
-29. **✨ NEW: Toggle theme** in Formatted View based on lighting/preference
-30. **✨ NEW: Use search in Formatted View** to quickly find specific recommendations
-31. **✨ NEW: Check Table of Contents** for long AI responses (20+ sections)
-32. **✨ NEW: Switch to AI Response tab** when you need plain text for copying/archiving
-33. **📑 NEW: Drill-down opens NEW TABS** - original analysis stays open!
-34. **📑 NEW: Maximum 10 analyzer tabs** - close unused tabs to stay organized
-35. **📑 NEW: Each tab is independent** - maintains its own state and settings
-36. **📑 NEW: Click RIGHT PANEL items** to view their code without opening new tabs
-37. **📑 NEW: Use tab count indicator** - "(X objects)" shows how many tabs open
-38. **📑 NEW: Compare objects across tabs** - switch tabs to see relationships
-39. **📑 NEW: Close tabs with ✖ button** - clean workspace when analysis complete
-40. **📑 NEW: Work area title shows current object** - "Analyzing: ObjectName" updates per tab
-41. **📑 NEW: Search box in each sub-tab** - appears when 6+ dependencies found
-42. **📑 NEW: Right panel updates dynamically** - click any tree item to see its code
-43. **📑 NEW: Use Call Order for deployment** - shows sequence for script generation
-44. **📑 NEW: Tab tooltips show full details** - hover over tabs for complete object info
-45. **📑 NEW: Linked Server indicators** - 🔗 icon shows cross-server dependencies
-46. **📑 NEW: Cross-Database indicators** - 📂 icon shows objects in other databases
-47. **🎨 NEW: Sort by Priority in Refactor Control** - Focus on Critical (🔴) and High (🟠) items first
-48. **🎨 NEW: Color-coded priorities** - Red=Critical, Orange=High, Yellow=Medium, Green=Low
-49. **🎨 NEW: Address security issues first** - Critical priority items often indicate vulnerabilities
-50. **🎨 NEW: Use "Apply Single (Direct)"** - Fastest workflow for individual high-priority fixes
-51. **🎨 NEW: Review diff preview** - Always check changes before clicking "Accept Refactor"
-52. **🎨 NEW: Plan Selected for related items** - Group similar priority items together
-53. **🎨 NEW: Test Critical fixes immediately** - Don't batch Critical items with Low priority
-54. **🎨 NEW: Document priority decisions** - Screenshot color-coded grid for team discussions
-
----
-
----
-
-**End of User Guide** | **Version:** 2.4 | **Last Updated:** October 2025
+**End of User Guide** | **Version:** 2.5 | **Last Updated:** December 2025

@@ -90,7 +90,7 @@ Complete documentation with all features and workflows.
 ## 📝 Release Notes
 
 - [CHANGELOG](CHANGELOG.md) - Version history
-- [RELEASE_NOTES_v1.5.7](RELEASE_NOTES_v1.5.7.md) - Latest release details
+- [RELEASE_NOTES_v1.6.0](RELEASE_NOTES_v1.6.0.md) - Latest release details
 
 ---
 
@@ -101,5 +101,5 @@ Complete documentation with all features and workflows.
 
 ---
 
-**Last Updated:** December 19, 2025  
-**Version:** 1.5.7
+**Last Updated:** December 24, 2025  
+**Version:** 1.6.0

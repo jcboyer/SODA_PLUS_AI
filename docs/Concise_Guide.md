@@ -1,9 +1,9 @@
-# 📘 SODA PLUS - Concise User Guide
+﻿# 📘 SODA PLUS - Concise User Guide
 ## Essential Features in 30 Minutes
 
 ---
 
-**Version:** 1.0 | **Last Updated:** November 2025  
+**Version:** 1.0 | **Last Updated:** December 2025  
 **Target Audience:** Learning Users | **Estimated Time:** 30 minutes  
 **Purpose:** 80% of what you need to know
 
@@ -164,7 +164,7 @@ Connection Options:
 │ ⬇️ Downstream        │                       │
 │ 📊 Call Order        │ (Shows code of        │
 │                      │  selected object)     │
-│ (Dependency trees)   │                       │
+│ (Dependency trees)   │                       |
 └──────────────────────┴───────────────────────┘
 ```
 
@@ -484,6 +484,9 @@ Removed:    35 false positives
 **Save SVG File:** ⭐ NEW!
 → Chart Window → Output menu → Save SVG As...
 
+**Configure SQL Formatting:** ⭐ NEW!
+→ Tools menu → SQL Formatting Preferences → Adjust settings → Save
+
 **Get AI Suggestions:**
 → Right-click procedure → AI Analysis → Summary
 
@@ -530,6 +533,14 @@ Removed:    35 false positives
    - Safe environment for learning
    - No risk to production
    - Experiment freely
+
+6. **💎 Customize SQL Formatting** ⭐ NEW!
+   - Tools menu → SQL Formatting Preferences
+   - Set indentation (2, 4, 8 spaces)
+   - Choose keyword casing (UPPERCASE, lowercase, PascalCase)
+   - 20 formatting options available
+   - Settings saved to cloud
+   - Format button uses your preferences
 
 ---
 
@@ -780,6 +791,6 @@ This concise guide **does not cover**:
 
 ---
 
-**End of Concise User Guide** | **Version:** 1.0 | **Last Updated:** November 2025  
+**End of Concise User Guide** | **Version:** 1.0 | **Last Updated:** December 2025  
 **Completed?** 🎉 You now know **80% of SODA PLUS** essentials!  
 **Next:** Explore advanced features or read [Full User Guide](SODA_PLUS_User_Guide.md)

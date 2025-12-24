@@ -1,9 +1,9 @@
-# 🔍 SODA PLUS - Reference Guide
+﻿# 🔍 SODA PLUS - Reference Guide
 ## Quick Lookup for Features, Commands & Shortcuts
 
 ---
 
-**Version:** 1.5.2 | **Last Updated:** November 13, 2025  
+**Version:** 1.6.0 | **Last Updated:** December 23, 2025  
 **Target Audience:** All Users | **Use Case:** Quick Feature Lookup
 
 ---
@@ -349,6 +349,17 @@ This is your **quick lookup reference** for SODA PLUS features. Use it to:
 - **Encryption:** Windows DPAPI
 - **See:** [Step 0: Session Features](SODA_PLUS_User_Guide.md#session-features)
 
+**SQL Formatting Preferences** ⭐ NEW!
+- **Location:** Tools menu → SQL Formatting Preferences
+- **Shortcut:** Ctrl+Shift+F (if configured)
+- **Features:** 20 formatting options, live preview, cloud storage
+- **Tabs:** My Preferences, Organization Template (admins only)
+- **Options:** Keyword casing, indentation size (0-10), new line options
+- **Storage:** Azure Functions + Database
+- **Security:** Session-based authentication
+- **Integration:** Format button in Dependency Analyzer uses preferences
+- **See:** [Step 6a: SQL Formatting Preferences](SODA_PLUS_User_Guide.md#step-6a-sql-formatting-preferences-new)
+
 **SQL Code Viewer**
 - **Location:** Right panel in analyzer
 - **Features:** Syntax highlighting, search, breadcrumb
@@ -414,6 +425,7 @@ This is your **quick lookup reference** for SODA PLUS features. Use it to:
 | **F2** | Toggle Database Explorer | Any |
 | **F3** | Toggle Object Explorer | Any |
 | **Ctrl+F** | Open Cross-Database Search | Any ⭐ NEW! |
+| **Ctrl+Shift+F** | SQL Formatting Preferences | Any ⭐ NEW! |
 | **Ctrl+Tab** | Cycle through analyzer tabs | Analyzer tabs open |
 | **Alt+F4** | Close application | Any |
 
@@ -521,6 +533,14 @@ This is your **quick lookup reference** for SODA PLUS features. Use it to:
 | **Open in SSMS** | 📤 | Auto-opens code in SSMS query window | Always ⭐ NEW! |
 | **Full Window** | 📺 | Opens standalone analyzer window | Always |
 | **Depth** | 1-10 | Sets dependency depth | Always |
+
+### **Tools Menu** ⭐ NEW!
+
+| Menu Item | Action | Shortcut | Access Level |
+|-----------|--------|----------|--------------|
+| **SQL Formatting Preferences** | Opens SQL formatting configuration dialog | Ctrl+Shift+F | All users |
+| - My Preferences Tab | Configure personal formatting options | - | All users |
+| - Organization Template Tab | Set shop-wide defaults | - | Admins only |
 
 ### **Chart Window Toolbar**
 
@@ -879,6 +899,18 @@ All exports include:
 **How do I avoid certificate errors in SSMS?** ⭐ NEW!
 → Use "Open in SSMS" button (preserves existing connection)
 
+**How do I customize SQL formatting?** ⭐ NEW!
+→ Tools menu → SQL Formatting Preferences → Adjust settings → Save
+
+**How do I change indentation size?** ⭐ NEW!
+→ SQL Formatting Preferences → Indentation Size (0-10 spaces)
+
+**How do I change keyword casing?** ⭐ NEW!
+→ SQL Formatting Preferences → Keyword Casing (UPPERCASE/lowercase/PascalCase)
+
+**How do I set organization-wide formatting?** ⭐ NEW!
+→ SQL Formatting Preferences → Organization Template tab → Save (admins only)
+
 **How do I logout?**
 → Delete `%APPDATA%\SODA_PLUS\user_session.dat`, restart
 
@@ -895,7 +927,7 @@ All exports include:
 
 ---
 
-**End of Reference Guide** | **Version:** 1.5.2 | **Last Updated:** January 2025  
+**End of Reference Guide** | **Version:** 1.6.0 | **Last Updated:** December 23, 2025  
 **For detailed instructions:** [Full User Guide](SODA_PLUS_User_Guide.md)
 
 ---
@@ -1123,5 +1155,5 @@ END
 
 ---
 
-**End of Reference Guide** | **Version:** 1.5.2 | **Last Updated:** November 13, 2025  
+**End of Reference Guide** | **Version:** 1.6.0 | **Last Updated:** December 23, 2025  
 **For detailed instructions:** [Full User Guide](SODA_PLUS_User_Guide.md)
