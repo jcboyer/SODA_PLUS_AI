@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Custom fix pattern management
 
 
-## [1.6.0] - 2025-12-23
+## [1.6.0] - 2025-12-31
 
 ### Added
 - **SQL Formatting Preferences System** - Cloud-based SQL code formatting with 20 customizable options
@@ -26,6 +26,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Real-time preview updates as settings change
   - Cloud storage via Azure Functions + Database
   - Session-based authentication for all operations
+- **Grok AI SQL Formatting [BETA]** - AI-powered SQL formatting with comment preservation
+  - New "🤖 Format - AI" button in Dependency Analyzer toolbar
+  - Uses Grok AI (xAI) to format SQL while preserving internal comments
+  - ScriptDom strips comments during parsing - AI preserves them
+  - Adaptive timeout based on SQL complexity (30-120 seconds)
+  - Parameter preservation rules prevent `@Parameter` renaming
+  - Progress bar with percentage display during formatting
+  - User preferences integration (keyword casing, indentation, etc.)
+  - **Timeout Protection** - Prevents infinite loops on syntax errors
+    - 30-second base timeout with adaptive scaling
+    - Complexity factors: +2s per 10 parameters, +1s per 100 lines, +1s per 20 comments
+    - Capped at 120 seconds (2 minutes) maximum
+    - Re-entry protection prevents duplicate format operations
+  - **Large SQL Warnings** - User-friendly messages for complex code
+    - SQL > 100KB shows warning before formatting
+    - "Format may take up to 30 seconds or fail..." (Clean mode)
+    - "AI formatting may take up to 2 minutes..." (AI mode)
+    - Graceful timeout with 2-second message display
+- **Local File-First Formatter Options (40-100x Faster)** - Performance optimization
+  - Reads from `%APPDATA%\SODA_PLUS_AI\SqlFormatterOptions.json` first (< 5ms)
+  - Falls back to Azure if local file missing (50-200ms)
+  - Automatic file save when preferences updated
+  - Shared location accessible to both WPF app and SSMS extension
+  - Static fast loader method: `SqlFormattingPreferencesDialog.LoadFormatterOptionsAsync()`
+- **SSMS Header Filtering** - Clean formatted SQL without metadata duplication
+  - Strips SSMS auto-generated headers (`/****** Object: ... ******/`)
+  - Removes `USE [DatabaseName]` statements
+  - Removes `SET ANSI_NULLS` and `SET QUOTED_IDENTIFIER`
+  - Removes `GO` batch separators
+  - Preserves user-written comments before `CREATE/ALTER`
+  - ScriptDom regenerates these statements if needed
 - **Azure Functions Configuration API** - RESTful endpoints for configuration management
   - `GET /api/configuration/{userId}/{templateName}` - Load merged preferences (user override + org template + defaults)
   - `PUT /api/configuration/override` - Save user-specific preferences
@@ -47,7 +78,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `SaveUserOverrideAsync()` - Save personal preferences with session headers
   - `SaveOrganizationTemplateAsync()` - Save org template (admin validation)
   - Integrated with MainShell DI container
-- **Format Button Integration** - 💎 Format button now uses user preferences
+- **Format Button Integration** - 💎 Format buttons now use user preferences
+  - Two format buttons: "💎 Format - Clean" (ScriptDom) and "🤖 Format - AI" (Grok)
   - Callback pattern to load preferences without circular dependencies
   - `SetFormatterOptionsLoader()` method in DependencyAnalyzerControl
   - Automatic preference loading in MainShell.TabManagement.cs
@@ -58,7 +90,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Supports SQL Server 2008, 2012, 2014, 2016, 2017, 2019, 2022
   - Auto-detects SQL Server version from connection string
   - Handles complex SQL: CTEs, window functions, subqueries, triggers, etc.
-  - Preserves comments and string literals
+  - ⚠️ Limitation: Strips internal comments (comments inside procedure body)
+  - Header comments (before CREATE/ALTER) are preserved and re-attached
 - **SessionValidationService Integration** - Enhanced security for configuration endpoints
   - `ValidateSessionAsync()` helper in ConfigurationFunctions
   - Session token extraction from HTTP headers
@@ -70,15 +103,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - DependencyAnalyzerControl constructor accepts callback for preference loading
   - MainShell provides callback that queries ConfigurationSyncService
   - Graceful fallback to defaults if preferences unavailable or loading fails
+  - Re-entry protection prevents infinite loops when formatting fails
+  - Timeout protection with graceful cancellation (30-120 seconds adaptive)
 - **Tools Menu** - Added "SQL Formatting Preferences" menu item
   - Location: Tools → SQL Formatting Preferences
   - Keyboard shortcut: Ctrl+Shift+F (configurable)
   - Opens SqlFormattingPreferencesDialog with current user settings
 - **User Documentation** - Comprehensive SQL Formatting Preferences documentation
   - User Guide: Added Step 6a with 200+ lines of detailed documentation
-  - Concise Guide: Added to common tasks and tips section
-  - Reference Guide: Added to alphabetical index, keyboard shortcuts, Q&A
-  - All guides updated to version dates: December 2025
+  - User Guide: Added Format - AI button section with adaptive timeout, parameter preservation, comment handling
+  - Concise Guide: Added to common tasks and tips section, brief Format - AI mode mention
+  - Reference Guide: Added to alphabetical index, keyboard shortcuts, Q&A, toolbar button reference
+  - Reference Guide: Added 3 new Q&A entries about Format - Clean vs Format - AI
+  - All guides updated to version dates: December 31, 2025
 
 ### Fixed
 - **Configuration Loading** - Fixed JSON parsing in SqlFormattingPreferencesDialog
@@ -97,6 +134,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Checks session exists in database
   - Validates session not expired (LastActivity < 24 hours)
   - Verifies userId matches session owner
+- **Infinite Loop Prevention (Format Clean)** - ScriptDom timeout and re-entry protection
+  - **Root Cause**: ScriptDom's internal parsing loops never gave up on syntax errors
+  - **Solution 1**: Wrap `FormatSql()` in `Task.WhenAny()` with 30-second timeout
+  - **Solution 2**: Add `_isFormattingInProgress` flag to prevent duplicate calls
+  - **Solution 3**: Remove automatic fallback from Format AI to Format Clean
+  - **Impact**: Format Clean now times out gracefully after 30 seconds, shows error message for 2 seconds, then unlocks UI
+  - **Files Modified**: `DependencyAnalyzerControl.xaml.cs` - Added timeout logic, re-entry guard, and status messages
+- **SSMS Header Duplication** - Format Clean no longer duplicates auto-generated statements
+  - **Root Cause**: `ExtractHeaderComments()` collected `USE`, `SET ANSI_NULLS`, `SET QUOTED_IDENTIFIER`, and `GO` as "headers"
+  - **Solution**: Skip SSMS-specific statements during header extraction - ScriptDom regenerates them
+  - **Impact**: Formatted SQL is clean and ready to execute without duplicate metadata
+  - **Files Modified**: `SODA_PLUS_COMMON\SqlFormatter.cs` - Updated `ExtractHeaderComments()` method
 
 ### Security
 - **Session-Based Authentication** - All configuration API calls require valid session token
@@ -133,6 +182,40 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   3. User override (personal preference, highest priority)
   - Merge logic in Azure Functions ConfigurationFunctions.cs
   - GetConfigurationAsync() returns merged result
+- **Adaptive Timeout Algorithm** - Dynamic timeout calculation for Grok AI
+  ```csharp
+  int baseTimeout = 30; // Base timeout in seconds
+  int adaptiveTimeout = baseTimeout 
+      + (parameterCount / 10 * 2)      // +2s per 10 parameters
+      + (lineCount / 100)               // +1s per 100 lines
+      + (commentCount / 20);            // +1s per 20 comments
+  adaptiveTimeout = Math.Min(adaptiveTimeout, 120); // Cap at 2 minutes
+  ```
+  - **Example**: 50 parameters, 500 lines, 100 comments → 30 + 10 + 5 + 5 = **50 seconds**
+  - **Example**: 200 parameters, 2000 lines, 500 comments → 30 + 40 + 20 + 25 = **115 seconds**
+  - **Example**: Extreme case → Capped at **120 seconds** (2 minutes)
+- **Grok AI Parameter Preservation** - Explicit prompt rules
+  ```markdown
+  5. Preserve ALL parameter names (@Parameter, @Variable, etc.) EXACTLY as written
+  6. Do not modify, rename, or suggest changes to any parameter names
+  7. Preserve parameter declarations and their data types exactly
+  ```
+  - Added to `GrokSqlFormatter.cs` BuildFormattingPrompt() method
+  - HttpClient timeout increased from 30s to 60s for parameter-heavy SQL
+- **Re-Entry Protection Architecture** - Prevents duplicate format operations
+  ```csharp
+  private bool _isFormattingInProgress = false;
+  
+  private async void FormatClean_Click(...)
+  {
+      if (_isFormattingInProgress) return; // Ignore duplicate calls
+      _isFormattingInProgress = true;
+      try { /* format */ }
+      finally { _isFormattingInProgress = false; }
+  }
+  ```
+  - Applied to both `FormatClean_Click()` and `FormatAI_Click()`
+  - Debug logging shows re-entry attempts for troubleshooting
 - **Azure Functions Deployment** - Configuration API deployed separately from main app
   - Deployment script: `SODA_PLUS_AZURE_FUNCTIONS\deploy-function-app.ps1`
   - Restart required after deployment: `az functionapp restart`
@@ -149,18 +232,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Used by analyzer controls via callback pattern
 
 ### Performance
+- **Local File-First Loading** - 40-100x faster than Azure API calls
+  - **Local file read**: < 5ms (typical: 2-3ms)
+  - **Azure API call**: 50-200ms (typical: 100ms)
+  - **Speed improvement**: 20-100x faster after first save
+  - **File location**: `C:\Users\{username}\AppData\Roaming\SODA_PLUS_AI\SqlFormatterOptions.json`
 - **Dialog Load Time** - < 1 second for default settings
   - Live preview renders in < 100ms per change
   - AvalonEdit syntax highlighting optimized
 - **Save Preferences** - < 500ms to Azure Functions + Database
   - Async operations don't block UI
   - Optimistic UI updates (assumes success)
-- **Load Preferences** - < 300ms from Azure Functions
-  - Cached in memory during session
-  - Only reloaded on explicit refresh
-- **Format Operation** - 100-500ms depending on SQL complexity
+  - Local file write: < 10ms (instant feedback)
+- **Load Preferences** - < 300ms from Azure Functions (fallback)
+  - Local file read: < 5ms (primary)
+  - Only hits Azure if local file missing
+- **Format Operation** - 100-500ms depending on SQL complexity (Clean mode)
   - Microsoft ScriptDom parser optimized
   - Handles 1000+ line procedures
+  - 30-second timeout for extreme cases
+- **Grok AI Format Operation** - 5-120 seconds depending on SQL size
+  - Small SQL (< 100KB): 5-15 seconds
+  - Medium SQL (100-300KB): 15-45 seconds
+  - Large SQL (> 300KB): 45-120 seconds (adaptive timeout)
+  - Progress bar shows percentage complete
 - **Session Validation** - < 50ms database query
   - Indexed on UserId for fast lookups
   - Cached validation results (1-minute TTL)
@@ -172,10 +267,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   3. Adjust 20 formatting options with live preview
   4. Click "Save My Preferences" (or "Save as Organization Template" for admins)
   5. Settings saved to Azure (UserConfigurationOverrides table)
-  6. Open Dependency Analyzer for any stored procedure
-  7. Click 💎 Format button
-  8. SQL formatted using YOUR saved preferences
-  9. Status: "✅ SQL formatted using SQL Server 2022 (using your preferences)"
+  6. Local file created at `%APPDATA%\SODA_PLUS_AI\SqlFormatterOptions.json`
+  7. Open Dependency Analyzer for any stored procedure
+  8. Click 💎 Format - Clean or 🤖 Format - AI
+  9. SQL formatted using YOUR saved preferences
+  10. Status: "✅ SQL formatted using SQL Server 2022 (using your preferences)"
+- **Format - AI Workflow** (Grok AI):
+  1. Click "🤖 Format - AI" button
+  2. Large SQL warning appears (if > 100KB): "⚠️ Large SQL detected (493,294 chars) - AI formatting may take up to 2 minutes..."
+  3. Progress bar shows: "🤖 Formatting with Grok AI... 45%"
+  4. Adaptive timeout (30-120s) based on SQL complexity
+  5. SQL formatted with comments preserved
+  6. Success message: "✅ SQL formatted with Grok AI (using your preferences: Uppercase, 4 spaces)"
+- **Format - Clean Workflow** (ScriptDom):
+  1. Click "💎 Format - Clean" button
+  2. Large SQL warning appears (if > 100KB): "⚠️ Large SQL detected (493,294 chars) - Format may take up to 30 seconds or fail..."
+  3. Formatting starts (< 1 second for typical SQL)
+  4. If timeout: "⚠️ SQL formatting timed out after 30 seconds - SQL may be too complex or have syntax errors"
+  5. Message displays for 2 seconds, then UI unlocks
+  6. Success message: "✅ SQL formatted using SQL Server 2022 (using your preferences)"
 - **Organization Template Workflow** (Admins):
   1. Login as admin (IsOrganizationAdmin = true)
   2. Tools → SQL Formatting Preferences
@@ -198,6 +308,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Network error: Friendly error message with retry option
   - Azure Functions down: Fallback to hardcoded defaults
   - Invalid JSON: Settings reset to defaults with warning
+  - Format timeout: Clear message shown for 2 seconds, UI unlocks
+  - Infinite loop prevented: Re-entry protection, automatic cleanup
 
 ### Documentation
 - **New Documentation Files Created**:
@@ -205,6 +317,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `FIX_SETTINGS_NOT_LOADING.md` - Troubleshooting guide
   - `SECURITY_ISSUE_ANONYMOUS_AUTH.md` - Security analysis
   - `RELEASE_NOTES_v1.6.0.md` - Comprehensive release notes
+  - `FORMATTER_OPTIONS_PERFORMANCE_FIX.md` - Local file caching (40-100x improvement)
+  - `ADAPTIVE_TIMEOUT_FIX.md` - Timeout calculations & parameter preservation
+  - `INFINITE_LOOP_FIX.md` - Re-entry protection & timeout handling
+  - `SSMS_CONFIG_STORAGE_FIX.md` - SSMS header filtering documentation
+  - `GROK_AI_FORMATTING_COMPLETE.md` - Grok AI integration guide
+  - `SQL_FORMATTING_FLOW_EXPLAINED.md` - End-to-end formatting architecture
 - **User Guide Updates**:
   - Step 6a: SQL Formatting Preferences (200+ lines)
   - Step 8b: Format Button Integration (updated)
@@ -214,6 +332,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Keyboard shortcuts: Added Ctrl+Shift+F
   - Q&A section: Added 6 SQL formatting questions
   - Tools menu reference: Added SQL Formatting Preferences
+  - Added 3 new Q&A entries about Format - Clean vs Format - AI
 - **Concise Guide Updates**:
   - Common tasks: Added "Configure SQL Formatting"
   - Top tips: Added Tip #6 about customization
@@ -383,18 +502,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Asynchronous WebView2 initialization (non-blocking UI)
   - Memory-efficient string processing with `StringBuilder`
 
-### Security
-- **Connection String Security** - Reuses existing infrastructure
-  - Uses `BuildConnectionStringForDatabase()` from MainShell
-  - Inherits authentication from ServerConfig (Windows or SQL Auth)
-  - Encrypted password support via Windows DPAPI
-  - TrustServerCertificate settings respected
-  - No credential exposure in window or exports
-- **HTML Sanitization** - Safe rendering of AI-generated content
-  - `System.Net.WebUtility.HtmlEncode()` prevents XSS attacks
-  - No JavaScript execution in WebView2 (security boundary)
-  - Safe handling of special characters in dependency names and SQL code
-
 ### Documentation
 - **New Documentation Files Created**:
   - `SODA_PLUS_MAIN/FEATURE_DATABASE_OBJECT_SIZE_ANALYSIS.md` - Complete feature documentation
@@ -509,705 +616,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Added `MultipleActiveResultSets=True` to connection strings
     - Allows comment filtering to fetch object definitions while main reader is open
     - Fixed "The connection does not support MultipleActiveResultSets" errors
-
-### Fixed
-- **Critical: Metadata Dictionary Empty Bug** - Server and Database were "Unknown" in conversational mode
-  - **Root Cause**: Two code paths for launching AI Review had inconsistent metadata population
-    - Path 1: Main window right-click → `MainShell.AIIntegration.cs` → Metadata WAS populated ✅
-    - Path 2: Dependency Analyzer toolbar → `MainShell.TabManagement.cs` → Metadata was NOT populated ❌
-  - **Solution**: Added metadata dictionary to `OnAIReviewRequested()` in `MainShell.TabManagement.cs`
-  - **Impact**: Generated SQL scripts now show correct server/database in headers
-  - **Debug Output Added**: Logs metadata count and values for verification
-  - **Files Modified**: `SODA_PLUS_MAIN/Views/MainShell.TabManagement.cs` (line ~325)
-- **AIRequest Metadata Population** - Consistent initialization across all code paths
-  - Both paths now create metadata with `["Server"]` and `["Database"]` keys
-  - Environment variable correctly passed from `_currentEnvironment`
-  - Connection string preserved from ObjectInfo
-- **Prompt Type Enum Parsing** - Correct handling of "CanThisCodeBeSplit" string
-  - Event handler uses exact enum name for reliable parsing
-  - Fallback to Summary if parsing fails (defensive coding)
-- **Trigger Type Detection Bug** - Triggers showing as "TABLE" in upstream dependencies
-  - **Root Cause**: `sys.triggers.type_desc` was returning incorrect values
-  - **Solution**: Hardcoded `'TRIGGER'` in SQL query instead of relying on `type_desc`
-  - **Impact**: Triggers now correctly display as "TRIGGER" instead of "TABLE"
-  - **Files Modified**: `FetchDependencies_ReferencedBy.sql` (Version 2.1)
-- **Duplicate Trigger Noise** - Triggers appearing in BOTH upstream and downstream
-  - **Root Cause 1**: Trigger-specific query wasn't filtering triggers ON the analyzed table
-    - Fixed by adding `WHERE t.parent_id <> object_id(@RootFullName)` filter
-  - **Root Cause 2**: DMV query (`sys.dm_sql_referencing_entities`) also returning self-referencing triggers
-    - Fixed by adding LEFT JOIN to `sys.triggers` and excluding matches
-  - **Impact**: Analyzing `product.Family` now shows triggers ONLY in downstream (not upstream)
-  - **Example**: `trg_Family_UPDATE` appears once (in References) instead of twice
-  - **Files Modified**: `FetchDependencies_ReferencedBy.sql` (Version 2.2)
-- **MultipleActiveResultSets Error** - "The connection does not support MultipleActiveResultSets"
-  - **Root Cause**: Connection created in MAIN project didn't have MARS enabled
-  - **Solution**: Added `MultipleActiveResultSets=True` to `ObjectInfo.GetConnectionString()` in MAIN project
-  - **Impact**: Comment filtering now works without nested reader errors
-  - **Files Modified**: `SODA_PLUS_MAIN/Models/ObjectInfo.cs`
-
-### Changed
-- **AI Analysis Dropdown Menu** - Reorganized menu structure
-  - Added separator after "📚 Best Practices" and "🔧 Refactoring"
-  - Conversational AI entries visually separated from traditional analysis types
-  - Menu order now: Code Review → Quick Wins → [separator] → Security/Performance/Best Practices/Refactoring → [separator] → Conversational AI
-- **AIReviewControl Architecture** - Mode-based UI switching
-  - Traditional mode: Shows tabs (Prompt, Response, Formatted View, Refactor)
-  - Conversational mode: Shows ConversationView control exclusively
-  - Custom prompt disabled in conversational mode (chat takes over)
-  - Execute button triggers different workflows based on mode
-- **Event Handler Naming** - Clear distinction between analysis types
-  - Traditional: `AIReview_Summary_Click`, `AIReview_Security_Click`, etc.
-  - Conversational: `AIReview_CanCodeBeSplit_Click`
-  - Consistent pattern across all menu items
-- **Debug Logging Enhanced** - Comprehensive metadata tracking
-  - `[LaunchAIReview]` logs in MainShell.AIIntegration.cs
-  - `[OnAIReviewRequested]` logs in MainShell.TabManagement.cs
-  - `[PromptTypeComboBox_SelectionChanged]` logs in AIReviewControl.EventHandlers.cs
-  - Metadata count and key/value pairs logged for troubleshooting
-- **SQL Query Architecture** - Transition from inline strings to embedded resources
-  - **Before**: Single 700-line C# string with `if @Direction = 'References'` branching
-  - **After**: Two separate SQL files with clear separation of concerns
-  - **Benefits**:
-    - Easier to read and maintain (SQL syntax highlighting in IDE)
-    - Version control friendly (cleaner diffs)
-    - No escaping issues (no C# string literals)
-    - Professional organization (dedicated Sql folder)
-- **Dependency Filtering Logic** - Three-stage filtering process
-  - **Stage 1**: Self-referencing trigger filter (removes 3 triggers in typical case)
-  - **Stage 2**: Comment filtering (removes ~40% false positives in production databases)
-  - **Stage 3**: Conditional reference validation (detects dynamic SQL patterns)
-  - **Example Results** (analyzing `product.Family`):
-    - SQL returns: 107 objects
-    - After trigger filter: 104 objects (-3 self-referencing triggers)
-    - After comment filter: 62 objects (-42 commented-only references)
-    - Final count: 62 real upstream dependencies
-
-### Technical
-- **Conversational Flow Architecture**
-  - `AIReviewControl.Core.cs`: Mode detection via `IsConversationalPrompt()`
-  - `AIReviewControl.Core.cs`: UI mode switching via `SetConversationalMode()`
-  - `AIReviewControl.Analysis.cs`: Separate execution path `PerformConversationalAnalysis()`
-  - `AIReviewControl.EventHandlers.cs`: Dropdown handler creates ObjectInfo with metadata
-  - `ConversationView.xaml.cs`: Message display, follow-up handling, SSMS integration
-- **Metadata Dictionary Structure**
-  ```csharp
-  Metadata = new Dictionary<string, object>
-  {
-      ["Server"] = depObjectInfo.Server,      // e.g., "JB-MAIN-NEW\PCM"
-      ["Database"] = depObjectInfo.Database   // e.g., "PCM"
-  }
-  ```
-- **ObjectInfo Reconstruction** - Metadata → ObjectInfo conversion
-  - Extract Server/Database from metadata dictionary
-  - Add LineCount from code length
-  - Pass to ConversationView.Initialize()
-  - Used for SQL script generation and SSMS integration
-- **SQL Script Headers** - Generated code includes tracking metadata
-  ```sql
-  -- Object: dbo.Product_COST_UPDATE_Results
-  -- Server: JB-MAIN-NEW\PCM
-  -- Database: PCM
-  -- AI-Generated: 2025-11-15 13:55:39
-  -- AI Conversation ID: a9680486-0b0a-413a-9651-a98fad21cb68
-  
-  USE [PCM]
-  GO
-  ```
-- **Two Code Paths Unified** - Consistent AIRequest creation
-  - Path 1: `MainShell.AIIntegration.cs` → Right-click from Object Explorer
-  - Path 2: `MainShell.TabManagement.cs` → Toolbar button from Dependency Analyzer
-  - Both now populate metadata dictionary identically
-  - Both pass through `CreateAIReviewWindow()` → `InitializeWithSessionAsync()`
-- **Embedded Resource Loading** - SQL query caching system
-  - **LoadEmbeddedSql()** method with comprehensive error handling
-  - **Resource Name Format**: `SODA_PLUS_DEPENDENCIES.Sql.{filename}.sql`
-  - **Lazy Loading**: `Lazy<string>` ensures queries loaded once per app lifetime
-  - **Validation**: Checks for null streams and empty content
-  - **Error Messages**: User-friendly troubleshooting steps if resource missing
-- **Connection String Management** - MARS support across projects
-  - **MAIN Project**: `SODA_PLUS_MAIN/Models/ObjectInfo.cs`
-  - **DEPENDENCIES Project**: `SODA_PLUS_DEPENDENCIES/Models/ObjectInfo.cs`
-  - Both now include `MultipleActiveResultSets=True` in connection strings
-  - Prevents nested reader errors during comment filtering
-- **Comment Filtering Architecture** - Parallel processing with semaphore
-  - **Concurrency Limit**: 10 objects processed simultaneously
-  - **SQL Parsing**: `RemoveCommentsFromSql()` strips `--` and `/* */` comments
-  - **Validation**: Text search on cleaned SQL to detect active references
-  - **Fail-Safe**: If filtering fails, keeps all dependencies (no data loss)
-  - **Performance**: Processes 104 objects in ~1300ms (13ms per object)
-- **SQL Query Version History**
-  - **Version 1.0**: Original monolithic query with inline branching
-  - **Version 2.0**: Split into two embedded SQL files
-  - **Version 2.1**: Fixed trigger type detection, added self-reference filter in trigger query
-  - **Version 2.2**: Added self-reference filter in DMV query (complete fix)
-
-### User Experience
-- **Conversational AI Workflow**:
-  1. Open Dependency Analyzer for any stored procedure
-  2. Click 🤖 AI Analysis → 💬 Can This Code Be Split? [BETA]
-  3. Chat-style window opens with initial analysis request
-  4. AI responds with progressive status updates:
-     - Step 1/3: Preparing analysis...
-     - Step 1/3: Generating summary... (if needed)
-     - Step 2/3: Analyzing code structure...
-     - Step 3/3: Results
-  5. AI response shows recommendations
-  6. SQL code blocks extracted and displayed with syntax highlighting
-  7. User can:
-     - Copy SQL code to clipboard
-     - Open in SSMS (automated workflow)
-     - Ask follow-up questions
-     - Export conversation (future feature)
-
-- **Error Handling**:
-  - Missing code: Warning dialog with explanation
-  - Missing metadata: "Unknown" fallback (now fixed!)
-  - API errors: User-friendly error messages in chat
-  - Summary generation failures: Continues with default summary
-
-- **Dependency Analysis Improvements**:
-  - **Before Comment Filtering**: 107 upstream dependencies (42% noise)
-  - **After Comment Filtering**: 62 upstream dependencies (real references only)
-  - **Before Trigger Fix**: Triggers shown in BOTH directions (duplicate noise)
-  - **After Trigger Fix**: Triggers shown ONLY in downstream (correct direction)
-  - **Visual Feedback**: Debug log shows filtering progress and results
-- **Database Object Size Analysis Workflow**:
-  1. Navigate to Database Explorer
-  2. Select a database from the list
-  3. Right-click on the database name
-  4. Select "📊 Analyze Object Sizes..."
-  5. Window opens showing top 20 largest objects
-  6. Results displayed with object type, name, and line count
-  7. Sort by clicking column headers
-  8. Copy selected rows or export to CSV
-  9. Window stays open (non-modal) - continue working
-- **Productivity Benefits**:
-  - Identify complex objects that may need refactoring
-  - Quick assessment of database code complexity
-  - Export results for documentation or analysis
-  - 10x faster than manual SSMS queries (< 5 seconds vs 30-45 seconds)
-- **Enhanced Dependency Analysis Viewing** - Multiple display options
-  - Plain text view (existing Analysis tab) for raw AI responses
-  - Formatted HTML view (new Formatted View tab) for professional presentation
-  - Automatic switching to Analysis tab after generation
-  - Formatted view loads asynchronously with progress indication
-- **Improved Readability** - Structured presentation of complex analysis
-  - Hierarchical headers for different analysis sections
-  - Color-coded blocks for pain points (red warnings) and recommendations (green success)
-  - Proper list formatting for multiple items
-  - Code syntax highlighting for SQL snippets
-  - Responsive design that works in different window sizes
-- **Machine-Specific Window State** - Seamless multi-device experience
-  - Each machine (laptop, desktop, Citrix) remembers its own window position/size
-  - No conflicts when logging in from different machines
-  - Window state restored automatically per machine on next login
-
-### Performance
-- **Efficient Query Execution** - Fast results even for large databases
-  - SQL query limited to top 20 objects (minimal data transfer)
-  - Async execution with `Task.Run()` (non-blocking UI)
-  - Connection timeout: 30 seconds (configurable)
-  - Wait cursor provides visual feedback
-  - DataGrid virtualization for smooth scrolling
-- **Efficient HTML Generation** - Fast rendering of analysis results
-  - Line-by-line parsing of AI responses (handles large outputs)
-  - Minimal DOM manipulation (single `NavigateToString` call)
-  - Asynchronous WebView2 initialization (non-blocking UI)
-  - Memory-efficient string processing with `StringBuilder`
-
-### Security
-- **Connection String Security** - Reuses existing infrastructure
-  - Uses `BuildConnectionStringForDatabase()` from MainShell
-  - Inherits authentication from ServerConfig (Windows or SQL Auth)
-  - Encrypted password support via Windows DPAPI
-  - TrustServerCertificate settings respected
-  - No credential exposure in window or exports
-- **HTML Sanitization** - Safe rendering of AI-generated content
-  - `System.Net.WebUtility.HtmlEncode()` prevents XSS attacks
-  - No JavaScript execution in WebView2 (security boundary)
-  - Safe handling of special characters in dependency names and SQL code
-
-### Documentation
-- **New Documentation Files Created**:
-  - `SODA_PLUS_MAIN/FEATURE_DATABASE_OBJECT_SIZE_ANALYSIS.md` - Complete feature documentation
-    - Implementation summary with all requirements met
-    - Step-by-step usage workflow
-    - Technical details (SQL query, architecture)
-    - User experience comparison (before/after)
-    - Testing checklist
-    - Example output and screenshots
-  - `IMPLEMENTATION_SUMMARY_MachineName_UserUIState.md` - Machine-specific UI state implementation guide
-    - Database migration scripts
-    - API endpoint changes
-    - Client integration details
-    - Testing scenarios for multi-machine environments
-  - Feature fully documented with examples and troubleshooting
-
----
-
-## [1.5.6] - 2025-11-22
-
-### Fixed
-- **Auto-Update Checker**: Fixed version parsing error when Git commit hash is included in version string
-  - Error: `System.FormatException: The input string '4+9398aa92a1f010aac7bd0a99b70ed5852dd505af' was not in a correct format`
-  - Now properly handles formats like `1.5.5+9398aa92a1f010aac7bd0a99b70ed5852dd505af`
-  - Added `CleanVersionString()` helper to remove build metadata (after `+`) and pre-release suffixes (after `-`)
-  - Changed from `Version.Parse()` to `Version.TryParse()` for graceful error handling
-  - Improved logging to show raw and cleaned version strings for debugging
-
-### Improved
-- **Version Comparison**: Enhanced version comparison logic to handle semantic versioning with build metadata
-  - Strips Git commit hashes before parsing (e.g., `1.5.5+abc123` → `1.5.5`)
-  - Strips pre-release tags before parsing (e.g., `1.5.5-beta` → `1.5.5`)
-  - Handles combined formats (e.g., `1.5.5-beta+abc123` → `1.5.5`)
-- **Error Handling**: Update checker now fails gracefully instead of crashing on parse errors
-  - Returns early if version parsing fails
-  - Logs helpful error messages for troubleshooting
-- **Logging**: Added detailed debug output for version checking process
-  - Shows raw version string from assembly
-  - Shows cleaned version string after sanitization
-  - Shows comparison results
-
-### Technical
-- **CleanVersionString() Method**: New helper for semantic version sanitization
-  - Removes everything after `+` (build metadata)
-  - Removes everything after `-` (pre-release suffix)
-  - Returns clean numeric version for `Version.Parse()`
-- **TryParse Pattern**: Safer version parsing throughout
-  - No exceptions thrown on invalid versions
-  - Early return with log message on failure
-  - User workflow never interrupted
-
----
-
-## [1.5.5] - 2025-11-23
-
-### Added
-- **Conversational AI Mode [BETA]** - Interactive chat-style AI analysis with follow-up questions
-  - New prompt type: "💬 Can This Code Be Split?" 
-  - Chat-based UI with progressive analysis steps
-  - Follow-up question support for iterative refinement
-  - SQL code extraction with syntax highlighting
-  - SSMS integration for generated code snippets
-  - Conversation history with user/assistant message tracking
-  - Progress indicators during multi-step analysis
-- **"💬 Can This Code Be Split? [BETA]" Menu Item** - New entry in AI Analysis dropdown
-  - Location: Dependency Analyzer → 🤖 AI Analysis menu
-  - Position: After separator following "🔧 Refactoring"
-  - Tooltip: "Conversational AI analysis to explore splitting complex code into smaller procedures (BETA feature)"
-  - Works with: Stored Procedures, Functions (objects with analyzable code)
-- **Azure Conversation Storage** - Persistent conversation tracking in cloud database
-  - Table: `AIConversations` - Stores conversation metadata
-  - Table: `AIConversationMessages` - Stores individual messages
-  - Fields tracked: Server, Database, Environment, Object Name, Prompt Type
-  - SQL code extraction and storage for deployment tracking
-  - Conversation ID in generated SQL script headers
-- **ConversationView Control** - New WPF control for chat-style interactions
-  - Progressive message display (user questions → AI status → AI responses)
-  - Collapsible SQL code blocks with copy and SSMS integration
-  - Follow-up question textbox with send button
-  - Stop analysis button for cancellation
-  - Export conversation button (future feature)
-  - Auto-scroll to latest message
-- **SQL Query Refactoring** - Improved maintainability and performance
-  - **Embedded SQL Resources** - Queries loaded from `.sql` files instead of inline C# strings
-    - New files: `FetchDependencies_References.sql` (downstream dependencies)
-    - New files: `FetchDependencies_ReferencedBy.sql` (upstream dependencies)
-    - Location: `SODA_PLUS_DEPENDENCIES/Sql/` folder
-    - Build Action: Embedded Resource (loaded once per app lifetime, cached)
-  - **Query Split** - Monolithic query (~700 lines) split into two direction-specific files
-    - `FetchDependencies_References.sql` - Downstream (what THIS object uses)
-    - `FetchDependencies_ReferencedBy.sql` - Upstream (what uses THIS object)
-    - Each file ~350 lines with comprehensive inline documentation
-  - **Version Tracking** - SQL files include version headers
-    - Version: 2.2 (as of 2025-11-15)
-    - Last Modified date tracked in file header
-    - Change log in `SODA_PLUS_DEPENDENCIES/Sql/README.md`
-  - **Performance Optimization** - 50% smaller queries uploaded to SQL Server
-    - Faster query parsing
-    - Better SQL Server plan cache efficiency
-    - Lazy loading with `Lazy<string>` caching
-- **Comment Filtering Enhancements** - Eliminates false positive dependencies
-  - **Intelligent SQL Comment Detection** - Removes objects only referenced in comments
-    - Supports both `--` single-line and `/* */` block comments
-    - Parallel processing (10 objects concurrently) for speed
-    - Graceful degradation if filtering fails (fail-safe design)
-  - **Self-Referencing Trigger Filter** - Eliminates duplicate noise
-    - Detects triggers attached TO the analyzed table
-    - Excludes them from upstream (ReferencedBy) direction
-    - Keeps them in downstream (References) direction
-    - Example: `trg_Family_UPDATE` on `product.Family` no longer shows as upstream dependency
-  - **MARS Support** - Multiple Active Result Sets enabled for nested queries
-    - Added `MultipleActiveResultSets=True` to connection strings
-    - Allows comment filtering to fetch object definitions while main reader is open
-    - Fixed "The connection does not support MultipleActiveResultSets" errors
-
-### Fixed
-- **Critical: Metadata Dictionary Empty Bug** - Server and Database were "Unknown" in conversational mode
-  - **Root Cause**: Two code paths for launching AI Review had inconsistent metadata population
-    - Path 1: Main window right-click → `MainShell.AIIntegration.cs` → Metadata WAS populated ✅
-    - Path 2: Dependency Analyzer toolbar → `MainShell.TabManagement.cs` → Metadata was NOT populated ❌
-  - **Solution**: Added metadata dictionary to `OnAIReviewRequested()` in `MainShell.TabManagement.cs`
-  - **Impact**: Generated SQL scripts now show correct server/database in headers
-  - **Debug Output Added**: Logs metadata count and values for verification
-  - **Files Modified**: `SODA_PLUS_MAIN/Views/MainShell.TabManagement.cs` (line ~325)
-- **AIRequest Metadata Population** - Consistent initialization across all code paths
-  - Both paths now create metadata with `["Server"]` and `["Database"]` keys
-  - Environment variable correctly passed from `_currentEnvironment`
-  - Connection string preserved from ObjectInfo
-- **Prompt Type Enum Parsing** - Correct handling of "CanThisCodeBeSplit" string
-  - Event handler uses exact enum name for reliable parsing
-  - Fallback to Summary if parsing fails (defensive coding)
-- **Trigger Type Detection Bug** - Triggers showing as "TABLE" in upstream dependencies
-  - **Root Cause**: `sys.triggers.type_desc` was returning incorrect values
-  - **Solution**: Hardcoded `'TRIGGER'` in SQL query instead of relying on `type_desc`
-  - **Impact**: Triggers now correctly display as "TRIGGER" instead of "TABLE"
-  - **Files Modified**: `FetchDependencies_ReferencedBy.sql` (Version 2.1)
-- **Duplicate Trigger Noise** - Triggers appearing in BOTH upstream and downstream
-  - **Root Cause 1**: Trigger-specific query wasn't filtering triggers ON the analyzed table
-    - Fixed by adding `WHERE t.parent_id <> object_id(@RootFullName)` filter
-  - **Root Cause 2**: DMV query (`sys.dm_sql_referencing_entities`) also returning self-referencing triggers
-    - Fixed by adding LEFT JOIN to `sys.triggers` and excluding matches
-  - **Impact**: Analyzing `product.Family` now shows triggers ONLY in downstream (not upstream)
-  - **Example**: `trg_Family_UPDATE` appears once (in References) instead of twice
-  - **Files Modified**: `FetchDependencies_ReferencedBy.sql` (Version 2.2)
-- **MultipleActiveResultSets Error** - "The connection does not support MultipleActiveResultSets"
-  - **Root Cause**: Connection created in MAIN project didn't have MARS enabled
-  - **Solution**: Added `MultipleActiveResultSets=True` to `ObjectInfo.GetConnectionString()` in MAIN project
-  - **Impact**: Comment filtering now works without nested reader errors
-  - **Files Modified**: `SODA_PLUS_MAIN/Models/ObjectInfo.cs`
-
-### Changed
-- **AI Analysis Dropdown Menu** - Reorganized menu structure
-  - Added separator after "📚 Best Practices" and "🔧 Refactoring"
-  - Conversational AI entries visually separated from traditional analysis types
-  - Menu order now: Code Review → Quick Wins → [separator] → Security/Performance/Best Practices/Refactoring → [separator] → Conversational AI
-- **AIReviewControl Architecture** - Mode-based UI switching
-  - Traditional mode: Shows tabs (Prompt, Response, Formatted View, Refactor)
-  - Conversational mode: Shows ConversationView control exclusively
-  - Custom prompt disabled in conversational mode (chat takes over)
-  - Execute button triggers different workflows based on mode
-- **Event Handler Naming** - Clear distinction between analysis types
-  - Traditional: `AIReview_Summary_Click`, `AIReview_Security_Click`, etc.
-  - Conversational: `AIReview_CanCodeBeSplit_Click`
-  - Consistent pattern across all menu items
-- **Debug Logging Enhanced** - Comprehensive metadata tracking
-  - `[LaunchAIReview]` logs in MainShell.AIIntegration.cs
-  - `[OnAIReviewRequested]` logs in MainShell.TabManagement.cs
-  - `[PromptTypeComboBox_SelectionChanged]` logs in AIReviewControl.EventHandlers.cs
-  - Metadata count and key/value pairs logged for troubleshooting
-- **SQL Query Architecture** - Transition from inline strings to embedded resources
-  - **Before**: Single 700-line C# string with `if @Direction = 'References'` branching
-  - **After**: Two separate SQL files with clear separation of concerns
-  - **Benefits**:
-    - Easier to read and maintain (SQL syntax highlighting in IDE)
-    - Version control friendly (cleaner diffs)
-    - No escaping issues (no C# string literals)
-    - Professional organization (dedicated Sql folder)
-- **Dependency Filtering Logic** - Three-stage filtering process
-  - **Stage 1**: Self-referencing trigger filter (removes 3 triggers in typical case)
-  - **Stage 2**: Comment filtering (removes ~40% false positives in production databases)
-  - **Stage 3**: Conditional reference validation (detects dynamic SQL patterns)
-  - **Example Results** (analyzing `product.Family`):
-    - SQL returns: 107 objects
-    - After trigger filter: 104 objects (-3 self-referencing triggers)
-    - After comment filter: 62 objects (-42 commented-only references)
-    - Final count: 62 real upstream dependencies
-
-### Technical
-- **Conversational Flow Architecture**
-  - `AIReviewControl.Core.cs`: Mode detection via `IsConversationalPrompt()`
-  - `AIReviewControl.Core.cs`: UI mode switching via `SetConversationalMode()`
-  - `AIReviewControl.Analysis.cs`: Separate execution path `PerformConversationalAnalysis()`
-  - `AIReviewControl.EventHandlers.cs`: Dropdown handler creates ObjectInfo with metadata
-  - `ConversationView.xaml.cs`: Message display, follow-up handling, SSMS integration
-- **Metadata Dictionary Structure**
-  ```csharp
-  Metadata = new Dictionary<string, object>
-  {
-      ["Server"] = depObjectInfo.Server,      // e.g., "JB-MAIN-NEW\PCM"
-      ["Database"] = depObjectInfo.Database   // e.g., "PCM"
-  }
-  ```
-- **ObjectInfo Reconstruction** - Metadata → ObjectInfo conversion
-  - Extract Server/Database from metadata dictionary
-  - Add LineCount from code length
-  - Pass to ConversationView.Initialize()
-  - Used for SQL script generation and SSMS integration
-- **SQL Script Headers** - Generated code includes tracking metadata
-  ```sql
-  -- Object: dbo.Product_COST_UPDATE_Results
-  -- Server: JB-MAIN-NEW\PCM
-  -- Database: PCM
-  -- AI-Generated: 2025-11-15 13:55:39
-  -- AI Conversation ID: a9680486-0b0a-413a-9651-a98fad21cb68
-  
-  USE [PCM]
-  GO
-  ```
-- **Two Code Paths Unified** - Consistent AIRequest creation
-  - Path 1: `MainShell.AIIntegration.cs` → Right-click from Object Explorer
-  - Path 2: `MainShell.TabManagement.cs` → Toolbar button from Dependency Analyzer
-  - Both now populate metadata dictionary identically
-  - Both pass through `CreateAIReviewWindow()` → `InitializeWithSessionAsync()`
-- **Embedded Resource Loading** - SQL query caching system
-  - **LoadEmbeddedSql()** method with comprehensive error handling
-  - **Resource Name Format**: `SODA_PLUS_DEPENDENCIES.Sql.{filename}.sql`
-  - **Lazy Loading**: `Lazy<string>` ensures queries loaded once per app lifetime
-  - **Validation**: Checks for null streams and empty content
-  - **Error Messages**: User-friendly troubleshooting steps if resource missing
-- **Connection String Management** - MARS support across projects
-  - **MAIN Project**: `SODA_PLUS_MAIN/Models/ObjectInfo.cs`
-  - **DEPENDENCIES Project**: `SODA_PLUS_DEPENDENCIES/Models/ObjectInfo.cs`
-  - Both now include `MultipleActiveResultSets=True` in connection strings
-  - Prevents nested reader errors during comment filtering
-- **Comment Filtering Architecture** - Parallel processing with semaphore
-  - **Concurrency Limit**: 10 objects processed simultaneously
-  - **SQL Parsing**: `RemoveCommentsFromSql()` strips `--` and `/* */` comments
-  - **Validation**: Text search on cleaned SQL to detect active references
-  - **Fail-Safe**: If filtering fails, keeps all dependencies (no data loss)
-  - **Performance**: Processes 104 objects in ~1300ms (13ms per object)
-- **SQL Query Version History**
-  - **Version 1.0**: Original monolithic query with inline branching
-  - **Version 2.0**: Split into two embedded SQL files
-  - **Version 2.1**: Fixed trigger type detection, added self-reference filter in trigger query
-  - **Version 2.2**: Added self-reference filter in DMV query (complete fix)
-
-### User Experience
-- **Conversational AI Workflow**:
-  1. Open Dependency Analyzer for any stored procedure
-  2. Click 🤖 AI Analysis → 💬 Can This Code Be Split? [BETA]
-  3. Chat-style window opens with initial analysis request
-  4. AI responds with progressive status updates:
-     - Step 1/3: Preparing analysis...
-     - Step 1/3: Generating summary... (if needed)
-     - Step 2/3: Analyzing code structure...
-     - Step 3/3: Results
-  5. AI response shows recommendations
-  6. SQL code blocks extracted and displayed with syntax highlighting
-  7. User can:
-     - Copy SQL code to clipboard
-     - Open in SSMS (automated workflow)
-     - Ask follow-up questions
-     - Export conversation (future feature)
-
-- **Error Handling**:
-  - Missing code: Warning dialog with explanation
-  - Missing metadata: "Unknown" fallback (now fixed!)
-  - API errors: User-friendly error messages in chat
-  - Summary generation failures: Continues with default summary
-
-- **Dependency Analysis Improvements**:
-  - **Before Comment Filtering**: 107 upstream dependencies (42% noise)
-  - **After Comment Filtering**: 62 upstream dependencies (real references only)
-  - **Before Trigger Fix**: Triggers shown in BOTH directions (duplicate noise)
-  - **After Trigger Fix**: Triggers shown ONLY in downstream (correct direction)
-  - **Visual Feedback**: Debug log shows filtering progress and results
-- **Database Object Size Analysis Workflow**:
-  1. Navigate to Database Explorer
-  2. Select a database from the list
-  3. Right-click on the database name
-  4. Select "📊 Analyze Object Sizes..."
-  5. Window opens showing top 20 largest objects
-  6. Results displayed with object type, name, and line count
-  7. Sort by clicking column headers
-  8. Copy selected rows or export to CSV
-  9. Window stays open (non-modal) - continue working
-- **Productivity Benefits**:
-  - Identify complex objects that may need refactoring
-  - Quick assessment of database code complexity
-  - Export results for documentation or analysis
-  - 10x faster than manual SSMS queries (< 5 seconds vs 30-45 seconds)
-- **Enhanced Dependency Analysis Viewing** - Multiple display options
-  - Plain text view (existing Analysis tab) for raw AI responses
-  - Formatted HTML view (new Formatted View tab) for professional presentation
-  - Automatic switching to Analysis tab after generation
-  - Formatted view loads asynchronously with progress indication
-- **Improved Readability** - Structured presentation of complex analysis
-  - Hierarchical headers for different analysis sections
-  - Color-coded blocks for pain points (red warnings) and recommendations (green success)
-  - Proper list formatting for multiple items
-  - Code syntax highlighting for SQL snippets
-  - Responsive design that works in different window sizes
-- **Machine-Specific Window State** - Seamless multi-device experience
-  - Each machine (laptop, desktop, Citrix) remembers its own window position/size
-  - No conflicts when logging in from different machines
-  - Window state restored automatically per machine on next login
-
-### Performance
-- **Efficient Query Execution** - Fast results even for large databases
-  - SQL query limited to top 20 objects (minimal data transfer)
-  - Async execution with `Task.Run()` (non-blocking UI)
-  - Connection timeout: 30 seconds (configurable)
-  - Wait cursor provides visual feedback
-  - DataGrid virtualization for smooth scrolling
-- **Efficient HTML Generation** - Fast rendering of analysis results
-  - Line-by-line parsing of AI responses (handles large outputs)
-  - Minimal DOM manipulation (single `NavigateToString` call)
-  - Asynchronous WebView2 initialization (non-blocking UI)
-  - Memory-efficient string processing with `StringBuilder`
-
-### Security
-- **Connection String Security** - Reuses existing infrastructure
-  - Uses `BuildConnectionStringForDatabase()` from MainShell
-  - Inherits authentication from ServerConfig (Windows or SQL Auth)
-  - Encrypted password support via Windows DPAPI
-  - TrustServerCertificate settings respected
-  - No credential exposure in window or exports
-- **HTML Sanitization** - Safe rendering of AI-generated content
-  - `System.Net.WebUtility.HtmlEncode()` prevents XSS attacks
-  - No JavaScript execution in WebView2 (security boundary)
-  - Safe handling of special characters in dependency names and SQL code
-
-### Documentation
-- **New Documentation Files Created**:
-  - `SODA_PLUS_MAIN/FEATURE_DATABASE_OBJECT_SIZE_ANALYSIS.md` - Complete feature documentation
-    - Implementation summary with all requirements met
-    - Step-by-step usage workflow
-    - Technical details (SQL query, architecture)
-    - User experience comparison (before/after)
-    - Testing checklist
-    - Example output and screenshots
-  - `IMPLEMENTATION_SUMMARY_MachineName_UserUIState.md` - Machine-specific UI state implementation guide
-    - Database migration scripts
-    - API endpoint changes
-    - Client integration details
-    - Testing scenarios for multi-machine environments
-  - Feature fully documented with examples and troubleshooting
-
----
-
-## [1.5.6] - 2025-11-22
-
-### Fixed
-- **Auto-Update Checker**: Fixed version parsing error when Git commit hash is included in version string
-  - Error: `System.FormatException: The input string '4+9398aa92a1f010aac7bd0a99b70ed5852dd505af' was not in a correct format`
-  - Now properly handles formats like `1.5.5+9398aa92a1f010aac7bd0a99b70ed5852dd505af`
-  - Added `CleanVersionString()` helper to remove build metadata (after `+`) and pre-release suffixes (after `-`)
-  - Changed from `Version.Parse()` to `Version.TryParse()` for graceful error handling
-  - Improved logging to show raw and cleaned version strings for debugging
-
-### Improved
-- **Version Comparison**: Enhanced version comparison logic to handle semantic versioning with build metadata
-  - Strips Git commit hashes before parsing (e.g., `1.5.5+abc123` → `1.5.5`)
-  - Strips pre-release tags before parsing (e.g., `1.5.5-beta` → `1.5.5`)
-  - Handles combined formats (e.g., `1.5.5-beta+abc123` → `1.5.5`)
-- **Error Handling**: Update checker now fails gracefully instead of crashing on parse errors
-  - Returns early if version parsing fails
-  - Logs helpful error messages for troubleshooting
-- **Logging**: Added detailed debug output for version checking process
-  - Shows raw version string from assembly
-  - Shows cleaned version string after sanitization
-  - Shows comparison results
-
-### Technical
-- **CleanVersionString() Method**: New helper for semantic version sanitization
-  - Removes everything after `+` (build metadata)
-  - Removes everything after `-` (pre-release suffix)
-  - Returns clean numeric version for `Version.Parse()`
-- **TryParse Pattern**: Safer version parsing throughout
-  - No exceptions thrown on invalid versions
-  - Early return with log message on failure
-  - User workflow never interrupted
-
----
-
-## [1.5.5] - 2025-11-23
-
-### Added
-- **Conversational AI Mode [BETA]** - Interactive chat-style AI analysis with follow-up questions
-  - New prompt type: "💬 Can This Code Be Split?" 
-  - Chat-based UI with progressive analysis steps
-  - Follow-up question support for iterative refinement
-  - SQL code extraction with syntax highlighting
-  - SSMS integration for generated code snippets
-  - Conversation history with user/assistant message tracking
-  - Progress indicators during multi-step analysis
-- **"💬 Can This Code Be Split? [BETA]" Menu Item** - New entry in AI Analysis dropdown
-  - Location: Dependency Analyzer → 🤖 AI Analysis menu
-  - Position: After separator following "🔧 Refactoring"
-  - Tooltip: "Conversational AI analysis to explore splitting complex code into smaller procedures (BETA feature)"
-  - Works with: Stored Procedures, Functions (objects with analyzable code)
-- **Azure Conversation Storage** - Persistent conversation tracking in cloud database
-  - Table: `AIConversations` - Stores conversation metadata
-  - Table: `AIConversationMessages` - Stores individual messages
-  - Fields tracked: Server, Database, Environment, Object Name, Prompt Type
-  - SQL code extraction and storage for deployment tracking
-  - Conversation ID in generated SQL script headers
-- **ConversationView Control** - New WPF control for chat-style interactions
-  - Progressive message display (user questions → AI status → AI responses)
-  - Collapsible SQL code blocks with copy and SSMS integration
-  - Follow-up question textbox with send button
-  - Stop analysis button for cancellation
-  - Export conversation button (future feature)
-  - Auto-scroll to latest message
-- **SQL Query Refactoring** - Improved maintainability and performance
-  - **Embedded SQL Resources** - Queries loaded from `.sql` files instead of inline C# strings
-    - New files: `FetchDependencies_References.sql` (downstream dependencies)
-    - New files: `FetchDependencies_ReferencedBy.sql` (upstream dependencies)
-    - Location: `SODA_PLUS_DEPENDENCIES/Sql/` folder
-    - Build Action: Embedded Resource (loaded once per app lifetime, cached)
-  - **Query Split** - Monolithic query (~700 lines) split into two direction-specific files
-    - `FetchDependencies_References.sql` - Downstream (what THIS object uses)
-    - `FetchDependencies_ReferencedBy.sql` - Upstream (what uses THIS object)
-    - Each file ~350 lines with comprehensive inline documentation
-  - **Version Tracking** - SQL files include version headers
-    - Version: 2.2 (as of 2025-11-15)
-    - Last Modified date tracked in file header
-    - Change log in `SODA_PLUS_DEPENDENCIES/Sql/README.md`
-  - **Performance Optimization** - 50% smaller queries uploaded to SQL Server
-    - Faster query parsing
-    - Better SQL Server plan cache efficiency
-    - Lazy loading with `Lazy<string>` caching
-- **Comment Filtering Enhancements** - Eliminates false positive dependencies
-  - **Intelligent SQL Comment Detection** - Removes objects only referenced in comments
-    - Supports both `--` single-line and `/* */` block comments
-    - Parallel processing (10 objects concurrently) for speed
-    - Graceful degradation if filtering fails (fail-safe design)
-  - **Self-Referencing Trigger Filter** - Eliminates duplicate noise
-    - Detects triggers attached TO the analyzed table
-    - Excludes them from upstream (ReferencedBy) direction
-    - Keeps them in downstream (References) direction
-    - Example: `trg_Family_UPDATE` on `product.Family` no longer shows as upstream dependency
-  - **MARS Support** - Multiple Active Result Sets enabled for nested queries
-    - Added `MultipleActiveResultSets=True` to connection strings
-    - Allows comment filtering to fetch object definitions while main reader is open
-    - Fixed "The connection does not support MultipleActiveResultSets" errors
-
-### Fixed
-- **Critical: Metadata Dictionary Empty Bug** - Server and Database were "Unknown" in conversational mode
-  - **Root Cause**: Two code paths for launching AI Review had inconsistent metadata population
-    - Path 1: Main window right-click → `MainShell.AIIntegration.cs` → Metadata WAS populated ✅
-    - Path 2: Dependency Analyzer toolbar → `MainShell.TabManagement.cs` → Metadata was NOT populated ❌
-  - **Solution**: Added metadata dictionary to `OnAIReviewRequested()` in `MainShell.TabManagement.cs`
-  - **Impact**: Generated SQL scripts now show correct server/database in headers
-  - **Debug Output Added**: Logs metadata count and values for verification
-  - **Files Modified**: `SODA_PLUS_MAIN/Views/MainShell.TabManagement.cs` (line ~325)
-- **AIRequest Metadata Population** - Consistent initialization across all code paths
-  - Both paths now create metadata with `["Server"]` and `["Database"]` keys
-  - Environment variable correctly passed from `_currentEnvironment`
-  - Connection string preserved from ObjectInfo
-- **Prompt Type Enum Parsing** - Correct handling of "CanThisCodeBeSplit" string
-  - Event handler uses exact enum name for reliable parsing
-  - Fallback to Summary if parsing fails (defensive coding)
-- **Trigger Type Detection Bug** - Triggers showing as "TABLE" in upstream dependencies
-  - **Root Cause**: `sys.triggers.type_desc` was returning incorrect values
-  - **Solution**: Hardcoded `'TRIGGER'` in SQL query instead of relying on `type_desc`
-  - **Impact**: Triggers now correctly display as "TRIGGER" instead of "TABLE"
-  - **Files Modified**: `FetchDependencies_ReferencedBy.sql` (Version 2.1)
-- **Duplicate Trigger Noise** - Triggers appearing in BOTH upstream and downstream
-  - **Root Cause 1**: Trigger-specific query wasn't filtering triggers ON the analyzed table
-    - Fixed by adding `WHERE t.parent_id <> object_id(@RootFullName)` filter
-  - **Root Cause 2**: DMV query (`sys.dm_sql_referencing_entities`) also returning self-referencing triggers
-    - Fixed by adding LEFT JOIN to `sys.triggers` and excluding matches
-  - **Impact**: Analyzing `product.Family` now shows triggers ONLY in downstream (not upstream)
-  - **Example**: `trg_Family_UPDATE` appears once (in References) instead of twice
-  - **Files Modified**: `FetchDependencies_ReferencedBy.sql` (Version 2.2)
-- **MultipleActiveResultSets Error** - "The connection does not support MultipleActiveResultSets"
-  - **Root Cause**: Connection created in MAIN project didn't have MARS enabled
-  - **Solution**: Added `MultipleActiveResultSets=True` to `ObjectInfo.GetConnectionString()` in MAIN project
-  - **Impact**: Comment filtering now works without nested reader errors
-  - **Files Modified**: `SODA_PLUS_MAIN/Models/ObjectInfo.cs`
 
 ### Changed
 - **AI Analysis Dropdown Menu** - Reorganized menu structure

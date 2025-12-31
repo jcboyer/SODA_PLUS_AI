@@ -3,7 +3,7 @@
 
 ---
 
-**Version:** 1.6.0 | **Last Updated:** December 23, 2025  
+**Version:** 1.6.0 | **Last Updated:** December 31, 2025  
 **Target Audience:** All Users | **Use Case:** Quick Feature Lookup
 
 ---
@@ -530,9 +530,18 @@ This is your **quick lookup reference** for SODA PLUS features. Use it to:
 | **AI Review** | 🤖 | Opens AI Review window with SQL code | Procedures/Functions only |
 | **Chart** | 📊 | Opens chart window with current data | Always |
 | **Export** | 💾 | Exports dependencies in 4 formats | Always |
+| **Format - Clean** | 💎 | Formats SQL using ScriptDom (fast, strips comments, 30s timeout) | Always ⭐ NEW! |
+| **Format - AI** | 🤖 | Formats SQL using Grok AI (preserves comments, 30-120s adaptive timeout) | Always ⭐ NEW! [BETA] |
 | **Open in SSMS** | 📤 | Auto-opens code in SSMS query window | Always ⭐ NEW! |
 | **Full Window** | 📺 | Opens standalone analyzer window | Always |
 | **Depth** | 1-10 | Sets dependency depth | Always |
+
+**Format Button Details:**
+- **Format - Clean:** Uses Microsoft ScriptDom parser, 100-500ms, removes internal comments, 30-second timeout
+- **Format - AI:** Uses Grok AI, 5-120s adaptive timeout (30s base + complexity), preserves all comments, protects `@Parameter` names
+- **Large SQL Warning:** SQL > 100KB shows warning before formatting ("Format may take up to 30 seconds..." or "...2 minutes...")
+- **Timeout Protection:** Both modes include re-entry protection and graceful timeout handling
+- **User Preferences:** Both modes use your formatting preferences from Tools → SQL Formatting Preferences
 
 ### **Tools Menu** ⭐ NEW!
 
@@ -911,6 +920,15 @@ All exports include:
 **How do I set organization-wide formatting?** ⭐ NEW!
 → SQL Formatting Preferences → Organization Template tab → Save (admins only)
 
+**When should I use Format - AI vs Format - Clean?** ⭐ NEW!
+→ Use **Format - AI** if SQL has internal comments you want to keep, or `@Parameters` you want unchanged. Use **Format - Clean** for speed (< 1s).
+
+**Why did my format timeout after 30 seconds?** ⭐ NEW!
+→ SQL too large/complex for Clean mode. Try **Format - AI** (adaptive 30-120s timeout) or simplify SQL first.
+
+**What happens to comments when I format?** ⭐ NEW!
+→ **Format - Clean** strips internal comments (header comments preserved). **Format - AI** preserves ALL comments.
+
 **How do I logout?**
 → Delete `%APPDATA%\SODA_PLUS\user_session.dat`, restart
 
@@ -927,7 +945,7 @@ All exports include:
 
 ---
 
-**End of Reference Guide** | **Version:** 1.6.0 | **Last Updated:** December 23, 2025  
+**End of Reference Guide** | **Version:** 1.6.0 | **Last Updated:** December 31, 2025  
 **For detailed instructions:** [Full User Guide](SODA_PLUS_User_Guide.md)
 
 ---
@@ -1155,5 +1173,5 @@ END
 
 ---
 
-**End of Reference Guide** | **Version:** 1.6.0 | **Last Updated:** December 23, 2025  
+**End of Reference Guide** | **Version:** 1.6.0 | **Last Updated:** December 31, 2025  
 **For detailed instructions:** [Full User Guide](SODA_PLUS_User_Guide.md)

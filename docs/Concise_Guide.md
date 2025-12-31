@@ -3,7 +3,7 @@
 
 ---
 
-**Version:** 1.0 | **Last Updated:** December 2025  
+**Version:** 1.0 | **Last Updated:** December 31, 2025  
 **Target Audience:** Learning Users | **Estimated Time:** 30 minutes  
 **Purpose:** 80% of what you need to know
 
@@ -540,6 +540,7 @@ Removed:    35 false positives
    - Choose keyword casing (UPPERCASE, lowercase, PascalCase)
    - 20 formatting options available
    - Settings saved to cloud
+   - **Two format modes:** Clean (fast, strips comments) or AI (preserves comments, slower)
    - Format button uses your preferences
 
 ---
@@ -791,6 +792,6 @@ This concise guide **does not cover**:
 
 ---
 
-**End of Concise User Guide** | **Version:** 1.0 | **Last Updated:** December 2025  
+**End of Concise User Guide** | **Version:** 1.0 | **Last Updated:** December 31, 2025  
 **Completed?** 🎉 You now know **80% of SODA PLUS** essentials!  
 **Next:** Explore advanced features or read [Full User Guide](SODA_PLUS_User_Guide.md)

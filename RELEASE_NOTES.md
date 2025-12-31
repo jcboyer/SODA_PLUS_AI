@@ -24,5 +24,5 @@ For full details, see: [docs/RELEASE_NOTES_v1.6.0.md](docs/RELEASE_NOTES_v1.6.0.
 ---
 
 **Version:** 1.6.0  
-**Release Date:** December 24, 2025  
+**Release Date:** December 31, 2025  
 **Download:** https://sodaplusbeta.blob.core.windows.net/downloads/download.html

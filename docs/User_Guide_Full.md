@@ -832,6 +832,7 @@ After saving preferences, the **💎 Format** button in Dependency Analyzer will
    ↓
 7. Client shows success message
 ```
+
 **Loading Preferences:**
 ```
 1. You click 💎 Format button
@@ -1092,6 +1093,9 @@ The Dependency Analyzer features a **powerful multi-tab architecture** that lets
   - Search functionality above code editor
   - Breadcrumb showing selected object path
   - Syntax-highlighted with AvalonEdit
+  - Read-Only
+  - Scrollable
+
 - **Draggable Splitter**: Resize left/right panels as needed
 
 #### **Managing Multiple Analyzer Tabs:**
@@ -1926,4 +1930,4 @@ At the bottom of the AI Review window:
 
 ---
 
-**End of User Guide** | **Version:** 2.5 | **Last Updated:** December 2025
+**End of User Guide** | **Version:** 2.5 | **Last Updated:** December 31, 2025
