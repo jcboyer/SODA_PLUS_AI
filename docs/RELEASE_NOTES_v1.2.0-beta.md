@@ -8,7 +8,7 @@
 
 #### **AI-Assisted Self-Learning Chart Error Correction** 🚀 **BREAKTHROUGH FEATURE!**
 
-SODA PLUS now automatically detects and fixes Mermaid chart rendering errors using AI. When a chart fails to render, the system:
+SODA+ AI now automatically detects and fixes Mermaid chart rendering errors using AI. When a chart fails to render, the system:
 
 - ✅ **Analyzes the error** using Grok AI
 - ✅ **Applies the fix automatically** - no user intervention required

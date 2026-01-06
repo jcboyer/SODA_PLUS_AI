@@ -84,7 +84,7 @@ Remove-Item "$env:APPDATA\SODA_PLUS\user_session.dat"
 ```
 
 ### **2. Login to WPF App**
-- Open SODA PLUS AI
+- Open SODA+ AI
 - Login with your email
 - You should see: "Welcome back, [Name]!"
 
