@@ -1,0 +1,8 @@
+{
+  "releaseDate": "2025-12-31",
+  "archiveUrl": "https://sodaplusbeta.blob.core.windows.net/downloads/archive/SODA_PLUS_AI_1.6.0.msix",
+  "downloadUrl": "https://sodaplusbeta.blob.core.windows.net/downloads/SODA_PLUS_AI_Latest.msix",
+  "installerUrl": "https://sodaplusbeta.blob.core.windows.net/downloads/Install-SODA_Latest.bat",
+  "version": "1.6.0",
+  "releaseNotesUrl": "https://github.com/jcboyer/SODA_PLUS_AI/blob/main/docs/RELEASE_NOTES_v1.6.0.md"
+}
