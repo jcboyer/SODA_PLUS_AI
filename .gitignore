@@ -28,6 +28,7 @@ _ReSharper*/
 *.suo
 *.user
 *.sln.docstates
+*.sln
 
 # Mono Auto Generated Files
 mono_crash.*
