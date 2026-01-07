@@ -1,7 +1,7 @@
 # SODA+ AI Beta License
 
 ## Copyright Notice
-Copyright © 2025 Jerome Charles Boyer (jcboyer)
+Copyright © 2026 Jerome Charles Boyer (jcboyer)
 
 ## Beta Testing License
 
@@ -66,4 +66,4 @@ For licensing questions, contact: https://github.com/jcboyer/SODA_PLUS_AI/issues
 
 **By downloading and using this software, you agree to these terms.**
 
-Last Updated: October 13, 2025
+Last Updated: January 6, 2026
