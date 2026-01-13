@@ -1,7 +1,7 @@
 ﻿# About SODA+ AI
 
 ## Version Information
-**Version:** 1.2.0-beta  
+**Version:** 1.6.0 
 **Release Date:** January 2026  
 **Build:** Release  
 **Target Framework:** .NET 10
@@ -37,9 +37,9 @@ SODA+ AI is an AI-powered SQL Object Dependency Analyzer that helps developers, 
 ## Credits
 
 ### Development Team
-**Lead Developer:** Jerome Charles Boyer  
+**Lead Developer:** Jerome Boyer  
 **Project Type:** Proprietary Software (Beta)  
-**Started:** October 2024
+**Started:** October 2025
 
 ### Technologies
 - .NET 10 / WPF
