@@ -14,7 +14,10 @@ For full details, see: [docs/RELEASE_NOTES_v1.6.0.md](docs/RELEASE_NOTES_v1.6.0.
 ## Documentation
 - [Quick Start Guide](docs/Quick_Start_Guide.md) (5 min)
 - [Concise Guide](docs/Concise_Guide.md) (30 min)
+- [Git Integration Guide](docs/Git_Integration_Guide.md) (Source Control)
 - [Reference Guide](docs/Reference_Guide.md) (Quick Lookup)
+- [Search Guide](docs/Search_Guide.md) (Cross-Database Search)
+- [Project Management Guide](docs/Project_Management_Guide.md) (Projects & Copy Workflows)
 - [Full User Guide](docs/User_Guide_Full.md) (Complete Reference)
 
 ## Support
@@ -24,5 +27,5 @@ For full details, see: [docs/RELEASE_NOTES_v1.6.0.md](docs/RELEASE_NOTES_v1.6.0.
 ---
 
 **Version:** 1.6.0  
-**Release Date:** December 31, 2025  
+**Release Date:** June 26, 2026  
 **Download:** https://sodaplusbeta.blob.core.windows.net/downloads/download.html

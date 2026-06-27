@@ -77,7 +77,9 @@ Every bug report, suggestion, and piece of feedback helps make SODA+ AI better f
 
 **Watch SODA+ AI in action!** See how to analyze SQL Server dependencies in just 2 minutes:
 
-** TBA **
+[![SODA+ AI Demo](https://img.youtube.com/vi/ecZOFDrbr9I/maxresdefault.jpg)](https://youtu.be/ecZOFDrbr9I)
+
+**[▶️ Watch Demo Video (2 min)](https://youtu.be/ecZOFDrbr9I)**
 
 ---
 
@@ -96,13 +98,13 @@ Every bug report, suggestion, and piece of feedback helps make SODA+ AI better f
 
 | Guide | Time | Description |
 |-------|------|-------------|
-| 🚀 [Quick Start Guide](https://sodaplusbeta.blob.core.windows.net/downloads/docs/guides/SODA_PLUS_QuickStart.html) | 5 min | Perfect for first-time users |
-| 📘 [Concise Guide](https://sodaplusbeta.blob.core.windows.net/downloads/docs/guides/SODA_PLUS_Guide_Concise.html) | 30 min | Essential features (80% of what you need) |
-| 🔍 [Reference Guide](https://sodaplusbeta.blob.core.windows.net/downloads/docs/guides/SODA_PLUS_Reference.html) | Instant | Alphabetical feature lookup |
-| 📖 [Full User Guide](https://sodaplusbeta.blob.core.windows.net/downloads/docs/guides/SODA_PLUS_User_Guide.html) | 2-3 hrs | Complete reference with all features |
+| 🚀 [Quick Start Guide](docs/Quick_Start_Guide.md) | 5 min | Perfect for first-time users |
+| 📘 [Concise Guide](docs/Concise_Guide.md) | 30 min | Essential features (80% of what you need) |
+| 🔍 [Reference Guide](docs/Reference_Guide.md) | Instant | Alphabetical feature lookup |
+| 📖 [Full User Guide](docs/User_Guide_Full.md) | 2-3 hrs | Complete reference with all features |
 | 🛠️ [Developer Docs](docs/developers/) | Varies | Version sync, Azure integration |
 
-**Not sure which guide to use?** See: [Documentation Index](https://sodaplusbeta.blob.core.windows.net/downloads/docs/guides/SODA_PLUS_QuickStart.html)
+**Not sure which guide to use?** See: [Which Guide Should I Use?](docs/README.md#which-guide-should-i-use)
 
 ---
 
@@ -189,7 +191,7 @@ For detailed release notes and version history, visit:
 | Resource | Link |
 |----------|------|
 | 📥 **Download** | [Latest Release](https://sodaplusbeta.blob.core.windows.net/downloads/download.html) |
-| 📖 **Documentation** | [User Guides](https://sodaplusbeta.blob.core.windows.net/downloads/docs/guides/SODA_PLUS_QuickStart.html) |
+| 📖 **Documentation** | [User Guides](docs/) |
 | 📄 **Release Notes** | [CHANGELOG](docs/CHANGELOG.md) |
 | 📦 **Previous Versions** | [Release History](docs/RELEASE_HISTORY.md) |
 | 🐛 **Report Issues** | [GitHub Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) |
@@ -257,7 +259,7 @@ We welcome contributions! Here's how you can help:
 
 Need help? We're here for you:
 
-- 📖 **Documentation**: [User Guides](https://sodaplusbeta.blob.core.windows.net/downloads/docs/guides/SODA_PLUS_QuickStart.html)
+- 📖 **Documentation**: [User Guides](docs/)
 - 🔍 **Search Issues**: [Existing Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues)
 - 🐛 **Report Bugs**: [New Issue](https://github.com/jcboyer/SODA_PLUS_AI/issues/new)
 - 💬 **Ask Questions**: [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
@@ -313,6 +315,6 @@ Thank you for using SODA+ AI! Your feedback helps make it better for everyone.
 
 **Made with ❤️ by the SODA+ AI Team**
 
-[Documentation](https://sodaplusbeta.blob.core.windows.net/downloads/docs/guides/SODA_PLUS_QuickStart.html) • [Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) • [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions) • [Release History](docs/RELEASE_HISTORY.md)
+[Documentation](docs/) • [Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) • [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions) • [Release History](docs/RELEASE_HISTORY.md)
 
 </div>
