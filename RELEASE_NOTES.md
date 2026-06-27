@@ -1,10 +1,10 @@
-# SODA+ AI - Release 1.6.0
+# SODA+ AI - Release 1.8.0
 
 ## What's New
 
-<!-- Highlights extracted from RELEASE_NOTES_v1.6.0.md -->
+<!-- Highlights extracted from RELEASE_NOTES_v1.8.0.md -->
 
-For full details, see: [docs/RELEASE_NOTES_v1.6.0.md](docs/RELEASE_NOTES_v1.6.0.md)
+For full details, see: [docs/RELEASE_NOTES_v1.8.0.md](docs/RELEASE_NOTES_v1.8.0.md)
 
 ## Installation
 1. **[📦 Download Latest Release](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)**
@@ -26,6 +26,6 @@ For full details, see: [docs/RELEASE_NOTES_v1.6.0.md](docs/RELEASE_NOTES_v1.6.0.
 
 ---
 
-**Version:** 1.6.0  
-**Release Date:** June 26, 2026  
+**Version:** 1.8.0  
+**Release Date:** June 27, 2026  
 **Download:** https://sodaplusbeta.blob.core.windows.net/downloads/download.html

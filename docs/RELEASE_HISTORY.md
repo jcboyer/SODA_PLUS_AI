@@ -1,4 +1,13 @@
 
+## [1.8.0] - 2026-06-27
+
+### Download
+- [MSIX Package](https://sodaplusbeta.blob.core.windows.net/downloads/archive/SODA_PLUS_AI_1.8.0.msix)
+- [Installer (BAT)](https://sodaplusbeta.blob.core.windows.net/downloads/archive/Install-SODA_1.8.0.bat)
+- [Release Notes](RELEASE_NOTES_v1.8.0.md)
+
+---
+
 ## [1.6.0] - 2025-12-24
 
 ### Download
