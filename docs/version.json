@@ -1,8 +1,8 @@
 {
-  "downloadUrl": "https://sodaplusbeta.blob.core.windows.net/downloads/SODA_PLUS_AI_Latest.msix",
+  "archiveUrl": "https://sodaplusbeta.blob.core.windows.net/downloads/archive/SODA_PLUS_AI_1.8.0.msix",
   "releaseNotesUrl": "https://github.com/jcboyer/SODA_PLUS_AI/blob/main/docs/RELEASE_NOTES_v1.8.0.md",
-  "installerUrl": "https://sodaplusbeta.blob.core.windows.net/downloads/Install-SODA_Latest.bat",
-  "version": "1.8.0",
+  "downloadUrl": "https://sodaplusbeta.blob.core.windows.net/downloads/SODA_PLUS_AI_Latest.msix",
   "releaseDate": "2026-06-27",
-  "archiveUrl": "https://sodaplusbeta.blob.core.windows.net/downloads/archive/SODA_PLUS_AI_1.8.0.msix"
+  "installerUrl": "https://sodaplusbeta.blob.core.windows.net/downloads/Install-SODA_Latest.bat",
+  "version": "1.8.0"
 }

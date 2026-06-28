@@ -7,12 +7,48 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [1.8.0] - 2026-06-27
+
+### Added
+- **Compare Platform Restructuring** - Major overhaul of comparison workflows
+  - Compare Table Data feature for side-by-side table row analysis
+  - Quick Publish for rapid deployment of approved changes
+  - Enhanced schema diff visualization with deployment readiness indicators
+- **SQL Agent Job Dependency Workflows** - Integration with SQL Agent jobs
+  - Graph visualization of Agent job dependencies (DAGs)
+  - Job step script inspection with syntax highlighting
+  - Drift detection between database and Git-backed job definitions
+  - Job execution timeline tracking
+- **Git Integration Hardening** - Production-grade source control
+  - Automatic commit tracking and push verification
+  - Conflict detection and resolution guidance
+  - Git branch strategies (main/dev/feature branch support)
+  - Session-based Git history inspection
+- **Comprehensive Documentation Suite** - 7 user guides covering all features
+  - Search Guide with Agent-aware search patterns
+  - Project Management Guide for workflow optimization
+  - Git Integration Guide for version control workflows
+  - Quick Start, Concise, Reference, and Full User Guides
+- **Enhanced Help System** - Integrated guide discovery in Help menu
+
+### Improved
+- Documentation architecture for cross-product consistency
+- Guide discoverability with improved search patterns
+- Agent job visualization performance and usability
+- Public repository synchronization workflow
+
+### Fixed
+- Git integration edge cases in commit verification
+- Conflict detection in multi-user scenarios
+- Guide rendering in Help system
+
 ## [Unreleased]
 
 ### To Be Added
 - Token counting for accurate cost tracking
 - Batch chart generation
 - Custom fix pattern management
+- Agent Job Drift Detection UI with sync status badges
 
 
 ## [1.6.0] - 2025-12-31
