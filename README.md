@@ -1,4 +1,4 @@
-# SqlLens - SQL Server Dependency Analysis
+# SqlLens - SQL Server Analysis & Visualization
 
 [![Download Latest](https://img.shields.io/badge/Download-Latest%20Release-blueviolet?style=for-the-badge&logo=download)](https://sqllens.blob.core.windows.net/downloads/download.html)
 [![Latest Version](https://img.shields.io/badge/dynamic/json?url=https://sqllens.blob.core.windows.net/downloads/version.json&query=$.latestVersion&label=Version&style=for-the-badge&color=blue)](docs/CHANGELOG.md)
