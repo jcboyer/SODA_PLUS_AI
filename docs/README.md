@@ -1,4 +1,4 @@
-# SODA+ AI Documentation
+# SqlLens Documentation
 
 ## 📚 User Guides
 
@@ -134,8 +134,8 @@ Complete documentation with all features and workflows.
 
 ## 🆘 Support
 
-- **Issues**: [GitHub Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
+- **Issues**: [GitHub Issues](https://github.com/jcboyer/SqlLens/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/jcboyer/SqlLens/discussions)
 
 ---
 
