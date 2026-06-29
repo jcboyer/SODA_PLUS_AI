@@ -1120,7 +1120,7 @@ END
 - **Solution:**
   - Install SSMS 18, 19, 20, or 21
   - Download from: https://aka.ms/ssmsfullsetup
-  - Restart SODA+ after installation
+  - Restart SqlLens after installation
 
 #### **Error:** "Automation Failed"
 - **Cause:** SSMS window activation or keyboard events blocked
