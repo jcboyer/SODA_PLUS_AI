@@ -1,11 +1,11 @@
-# SODA+ AI - SQL Object Dependency Analyzer
+# SqlLens - SQL Server Analysis & Visualization
 ## Step-by-Step User Guide
 
 ---
 
 ## 📑 **Table of Contents**
 
-> 🔗 For GitHub repository workflows (mappings, compare/drift, Agent Job script Active/Archive, Repo Changes CSV), see the [Git Integration Guide](SODA_PLUS_Git_Integration_Guide.md).
+> 🔗 For GitHub repository workflows (mappings, compare/drift, Agent Job script Active/Archive, Repo Changes CSV), see the [Git Integration Guide](SqlLens_Git_Integration_Guide.md).
 
 ### **📚 Getting Started**
 - [Step 0: Initial Login & Registration](#step-0-initial-login--registration-new) ⭐ **NEW!**
@@ -45,7 +45,7 @@
 
 ### **Step 0: Initial Login & Registration** (NEW! 🎯)
 
-When you first launch SODA+ AI AI, you'll be prompted to login or register to access AI-powered features.
+When you first launch SqlLens AI, you'll be prompted to login or register to access AI-powered features.
 
 #### **Why Login?**
 - **Secure API Key Management** - Your Grok AI API key is securely stored and encrypted
@@ -93,7 +93,7 @@ When you first launch SODA+ AI AI, you'll be prompted to login or register to ac
    🔒 Secure session established!
    ```
 5. **Session Saved Locally:**
-   - Encrypted file stored in `%APPDATA%\SODA_PLUS\user_session.dat`
+   - Encrypted file stored in `%APPDATA%\SqlLens\user_session.dat`
    - Uses Windows DPAPI (Data Protection API)
    - Only readable by your Windows user account
    - Auto-login on next application launch
@@ -134,7 +134,7 @@ When you first launch SODA+ AI AI, you'll be prompted to login or register to ac
 - **Workaround:** Login should still work, but report the issue
 
 **Issue: Session file corrupted**
-- **Solution:** Delete `%APPDATA%\SODA_PLUS\user_session.dat`
+- **Solution:** Delete `%APPDATA%\SqlLens\user_session.dat`
 - Login again to recreate session
 
 ---
@@ -142,7 +142,7 @@ When you first launch SODA+ AI AI, you'll be prompted to login or register to ac
 ### **Getting Started**
 
 #### **Step 1: Launch the Application**
-1. Run SODA_PLUS_MAIN.exe
+1. Run SqlLens.Desktop.exe
 2. **If first launch:** Login/Registration dialog appears (see Step 0)
 3. **If returning user:** Auto-login from saved session
 4. The application will then prompt you to select an environment
@@ -176,7 +176,7 @@ The main window has 4 key areas:
 
 ### **Step 3: Connect to Servers** (ENHANCED! 🎯)
 
-SODA+ AI now features **enhanced server management** with support for both Windows and SQL Server authentication, encrypted credential storage, and per-environment server configurations.
+SqlLens now features **enhanced server management** with support for both Windows and SQL Server authentication, encrypted credential storage, and per-environment server configurations.
 
 #### **New Server Configuration Features:**
 - ✅ **Dual Authentication Support** - Windows or SQL Server authentication
@@ -220,7 +220,7 @@ SODA+ AI now features **enhanced server management** with support for both Windo
   - If checked: Password saved using Windows DPAPI encryption
   - If unchecked: Must re-enter password each connection
   - **Security:** Password can only be decrypted by your Windows user account
-  - **Storage location:** `%APPDATA%\SODA_PLUS\appsettings.user.json` (encrypted)
+  - **Storage location:** `%APPDATA%\SqlLens\appsettings.user.json` (encrypted)
 
 **Connection Options:**
 - ☑️ **Trust server certificate** (Default: ON)
@@ -293,7 +293,7 @@ Connection Options:
 ```
 **After clicking Connect:**
 - Password encrypted using Windows DPAPI
-- Saved to `%APPDATA%\SODA_PLUS\appsettings.user.json`
+- Saved to `%APPDATA%\SqlLens\appsettings.user.json`
 - Only your Windows account can decrypt it
 - Next time you connect, password is automatically used
 
@@ -574,7 +574,7 @@ Results:
 
 ### **Step 6a: SQL Formatting Preferences** (NEW! 💎)
 
-SODA+ AI includes a **powerful SQL formatting system** that allows you to customize how SQL code is formatted when you click the **💎 Format** button in the Dependency Analyzer.
+SqlLens includes a **powerful SQL formatting system** that allows you to customize how SQL code is formatted when you click the **💎 Format** button in the Dependency Analyzer.
 
 #### **Why Use SQL Formatting Preferences?**
 - ✅ **Consistent code style** across your team or organization
@@ -741,7 +741,7 @@ If you have **IsOrganizationAdmin** role, you'll see a second tab:
 
 #### **Hierarchical Configuration:**
 
-SODA+ AI uses a **3-tier hierarchy** for SQL formatting:
+SqlLens uses a **3-tier hierarchy** for SQL formatting:
 
 ```
 1. Hard-Coded Defaults (Built-in)
@@ -1575,7 +1575,7 @@ When you select an AI analysis option, a **dedicated AI Review window** opens wi
 ### **Step 10: Dependency Charting** (NEW!) 📊
 
 #### **What is Dependency Charting?**
-Dependency Charting visualizes the relationships between database objects using **Mermaid diagrams**. SODA+ AI offers **three powerful charting options** to fit your needs:
+Dependency Charting visualizes the relationships between database objects using **Mermaid diagrams**. SqlLens offers **three powerful charting options** to fit your needs:
 
 1. **Quick Chart (Self-Contained)** - Fast, database metadata-only
 2. **AI-Enhanced Chart** - Intelligent analysis with optimized layouts
