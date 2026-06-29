@@ -1,6 +1,6 @@
 ---
 name: Question
-about: Ask a question about using SODA+ AI
+about: Ask a question about using SqlLens
 title: '[QUESTION] '
 labels: question
 assignees: ''
@@ -19,13 +19,13 @@ assignees: ''
 
 
 ## 📖 Documentation Checked
-- [ ] [User Guide](../SODA_PLUS_User_Guide.md)
+- [ ] [User Guide](../SqlLens_User_Guide.md)
 - [ ] [Installation Guide](../INSTALLATION.md)
 - [ ] [Troubleshooting Guide](../TROUBLESHOOTING.md)
-- [ ] [Existing Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues)
+- [ ] [Existing Issues](https://github.com/jcboyer/SqlLens/issues)
 
 ## 💻 Environment (if relevant)
 - **Windows Version:** [e.g., Windows 11]
 - **SQL Server Version:** [e.g., SQL Server 2019]
-- **SODA+ AI Version:** [e.g., 1.0.0-beta]
+- **SqlLens Version:** [e.g., 1.0.0-beta]
 
