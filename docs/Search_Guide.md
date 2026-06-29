@@ -1,4 +1,4 @@
-﻿# 🔍 SODA+ AI - Cross-Database Search Guide
+﻿# 🔍 SqlLens - Cross-Database Search Guide
 ## Search Objects Across Multiple Databases and Servers
 
 ---
@@ -227,7 +227,7 @@ Results:
 
 ### **SQL Agent Jobs** ⭐ NEW!
 
-When enabled in the search dialog, SODA+ AI also searches **SQL Agent Jobs** on the **current server**.
+When enabled in the search dialog, SqlLens also searches **SQL Agent Jobs** on the **current server**.
 
 **How it works:**
 - Searches Agent Job metadata and step content in `msdb`
@@ -244,7 +244,7 @@ When enabled in the search dialog, SODA+ AI also searches **SQL Agent Jobs** on 
 - Find jobs referencing a database, server, or integration endpoint
 - Trace from a job result into related stored procedures for dependency analysis
 
-For Git persistence, Active/Archive handling, and Repo Changes reporting, see the [Git Integration Guide](SODA_PLUS_Git_Integration_Guide.md).
+For Git persistence, Active/Archive handling, and Repo Changes reporting, see the [Git Integration Guide](SqlLens_Git_Integration_Guide.md).
 
 **Table Definition Search (Advanced):**
 
@@ -964,7 +964,7 @@ Example Results:
 1. Open the matching Agent Job result
 2. Review the Agent dependency graph
 3. Open linked stored procedures in the Dependency Analyzer
-4. If needed, continue with Git-side save/archive/report workflows via the [Git Integration Guide](SODA_PLUS_Git_Integration_Guide.md)
+4. If needed, continue with Git-side save/archive/report workflows via the [Git Integration Guide](SqlLens_Git_Integration_Guide.md)
 
 ---
 
@@ -1174,16 +1174,16 @@ Speed: 🐢🐢 45-60 seconds
 ## Additional Resources
 
 **Related Features:**
-- [Object Search](SODA_PLUS_Guide_Concise.md#use-object-search) - Search within current database
-- [Dependency Analyzer](SODA_PLUS_User_Guide.md#step-8-review-analysis-results) - Analyze search results
-- [Multi-Tab Workflow](SODA_PLUS_Guide_Concise.md#multi-tab-workflow) - Work with multiple objects
-- [Git Integration Guide](SODA_PLUS_Git_Integration_Guide.md) - Save Agent workflows to Git, manage Active/Archive, review Repo Changes
+- [Object Search](SqlLens_Guide_Concise.md#use-object-search) - Search within current database
+- [Dependency Analyzer](SqlLens_User_Guide.md#step-8-review-analysis-results) - Analyze search results
+- [Multi-Tab Workflow](SqlLens_Guide_Concise.md#multi-tab-workflow) - Work with multiple objects
+- [Git Integration Guide](SqlLens_Git_Integration_Guide.md) - Save Agent workflows to Git, manage Active/Archive, review Repo Changes
 
 **Documentation:**
-- [Quick Start Guide](SODA_PLUS_QuickStart.md) - Getting started
-- [Concise Guide](SODA_PLUS_Guide_Concise.md) - Essential features
-- [Reference Guide](SODA_PLUS_Reference.md) - Quick lookup
-- [Full User Guide](SODA_PLUS_User_Guide.md) - Complete reference
+- [Quick Start Guide](SqlLens_QuickStart.md) - Getting started
+- [Concise Guide](SqlLens_Guide_Concise.md) - Essential features
+- [Reference Guide](SqlLens_Reference.md) - Quick lookup
+- [Full User Guide](SqlLens_User_Guide.md) - Complete reference
 
 ---
 
@@ -1215,4 +1215,4 @@ Speed: 🐢🐢 45-60 seconds
 ---
 
 **End of Search Feature Guide** | **Version:** 1.0 | **Last Updated:** November 2025  
-**For more help:** See [Full User Guide](SODA_PLUS_User_Guide.md)
+**For more help:** See [Full User Guide](SqlLens_User_Guide.md)
