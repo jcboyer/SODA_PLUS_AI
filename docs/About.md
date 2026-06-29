@@ -1,4 +1,4 @@
-﻿# About SODA+ AI
+﻿# About SqlLens
 
 ## Version Information
 **Version:** 1.6.0 
@@ -9,7 +9,7 @@
 ---
 
 ## Description
-SODA+ AI is an AI-powered SQL Object Dependency Analyzer that helps developers, DBAs, and consultants understand, document, and maintain complex database systems.
+SqlLens is an AI-powered SQL Server Analysis & Visualization that helps developers, DBAs, and consultants understand, document, and maintain complex database systems.
 
 **Key Capabilities:**
 - Interactive dependency analysis with drill-down navigation
@@ -23,9 +23,9 @@ SODA+ AI is an AI-powered SQL Object Dependency Analyzer that helps developers, 
 ## Community & Support
 
 ### GitHub Resources
-- **Community Discussions:** https://github.com/jcboyer/SODA_PLUS_AI/discussions
-- **Issue Tracking:** https://github.com/jcboyer/SODA_PLUS_AI/issues
-- **Source Code:** https://github.com/jcboyer/SODA_PLUS_AI
+- **Community Discussions:** https://github.com/jcboyer/SqlLens/discussions
+- **Issue Tracking:** https://github.com/jcboyer/SqlLens/issues
+- **Source Code:** https://github.com/jcboyer/SqlLens
 
 ### Getting Help
 - Quick Start Guide (Help → Quick Start)
@@ -54,7 +54,7 @@ SODA+ AI is an AI-powered SQL Object Dependency Analyzer that helps developers, 
 
 ### License Information
 
-**Full License:** https://github.com/jcboyer/SODA_PLUS_AI/blob/main/LICENSE.md
+**Full License:** https://github.com/jcboyer/SqlLens/blob/main/LICENSE.md
 
 **Copyright © 2024-2026 Jerome Charles Boyer**
 
@@ -63,7 +63,7 @@ See the LICENSE file for complete terms and conditions.
 ---
 
 ## Beta Program
-**Thank you for participating in the SODA+ AI beta!**
+**Thank you for participating in the SqlLens beta!**
 
 **Current Status:** Beta Testing  
 **Beta Started:** October 2025  
@@ -76,10 +76,10 @@ See the LICENSE file for complete terms and conditions.
 3. Share Success Stories - Post in GitHub Discussions
 
 ### After Beta
-Following the beta period, SODA+ AI will transition to a commercial licensing model to support ongoing development and AI service costs.
+Following the beta period, SqlLens will transition to a commercial licensing model to support ongoing development and AI service costs.
 
 ---
 
-**Thank you for using SODA+ AI!** 🎉
+**Thank you for using SqlLens!** 🎉
 
 *Last Updated: January 2026*
