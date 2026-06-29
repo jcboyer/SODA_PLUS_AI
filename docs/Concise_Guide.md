@@ -1,4 +1,4 @@
-# 📘 SODA+ AI - Concise User Guide
+# 📘 SqlLens - Concise User Guide
 ## Essential Features in 30 Minutes
 
 ---
@@ -38,9 +38,9 @@
 
 ## About This Guide
 
-This guide covers **essential SODA+ AI features** in 30 minutes. It's the middle ground between:
-- 🚀 [Quick Start](SODA_PLUS_QuickStart.md) - Too brief (5 min)
-- 📖 [Full Guide](SODA_PLUS_User_Guide.md) - Too detailed (2-3 hours)
+This guide covers **essential SqlLens features** in 30 minutes. It's the middle ground between:
+- 🚀 [Quick Start](SqlLens_QuickStart.md) - Too brief (5 min)
+- 📖 [Full Guide](SqlLens_User_Guide.md) - Too detailed (2-3 hours)
 
 **You'll learn:**
 - ✅ Core dependency analysis workflow
@@ -54,7 +54,7 @@ This guide covers **essential SODA+ AI features** in 30 minutes. It's the middle
 - ❌ Configuration file editing
 - ❌ Alternative workflows
 
-**For those topics**, see the [Full User Guide](SODA_PLUS_User_Guide.md).
+**For those topics**, see the [Full User Guide](SqlLens_User_Guide.md).
 
 ---
 
@@ -64,7 +64,7 @@ This guide covers **essential SODA+ AI features** in 30 minutes. It's the middle
 
 **First Time Users:**
 
-1. Launch `SODA_PLUS_MAIN.exe`
+1. Launch `SqlLens.Desktop.exe`
 2. **Register** tab appears:
    - Email: `your.email@company.com`
    - Display Name: `Your Name`
@@ -81,7 +81,7 @@ This guide covers **essential SODA+ AI features** in 30 minutes. It's the middle
 
 **✅ Done!** You're logged in with secure API key assignment.
 
-> **📖 For details:** See [Step 0: Initial Login](SODA_PLUS_User_Guide.md#step-0-initial-login--registration-new)
+> **📖 For details:** See [Step 0: Initial Login](SqlLens_User_Guide.md#step-0-initial-login--registration-new)
 
 ---
 
@@ -127,7 +127,7 @@ Connection Options:
 
 **✅ Connected!** Server appears in Server Explorer.
 
-> **📖 For SQL Auth details:** See [Step 3: Connect to Servers](SODA_PLUS_User_Guide.md#step-3-connect-to-servers-enhanced)
+> **📖 For SQL Auth details:** See [Step 3: Connect to Servers](SqlLens_User_Guide.md#step-3-connect-to-servers-enhanced)
 
 ---
 
@@ -191,7 +191,7 @@ Connection Options:
 
 **✅ Now you understand:** Upstream = needs, Downstream = impact, Call Order = sequence.
 
-> **📖 For deep dive:** See [Step 8: Review Analysis Results](SODA_PLUS_User_Guide.md#step-8-review-analysis-results)
+> **📖 For deep dive:** See [Step 8: Review Analysis Results](SqlLens_User_Guide.md#step-8-review-analysis-results)
 
 ---
 
@@ -224,7 +224,7 @@ Connection Options:
 
 **✅ Tip:** Use search for 90% of your object navigation!
 
-> **📖 For search features:** See [Step 6: Search for Objects](SODA_PLUS_User_Guide.md#step-6-search-for-objects-new-)
+> **📖 For search features:** See [Step 6: Search for Objects](SqlLens_User_Guide.md#step-6-search-for-objects-new-)
 
 ---
 
@@ -261,7 +261,7 @@ Connection Options:
 
 **✅ Workflow:** Drill down → New tabs → Compare → Close unused tabs
 
-> **📖 For tab patterns:** See [Step 8: Common Multi-Tab Patterns](SODA_PLUS_User_Guide.md#common-multi-tab-patterns)
+> **📖 For tab patterns:** See [Step 8: Common Multi-Tab Patterns](SqlLens_User_Guide.md#common-multi-tab-patterns)
 
 ---
 
@@ -334,7 +334,7 @@ Removed:    35 false positives
 
 ✅ **Use search for:** Finding objects by name OR content, impact analysis, code audits, GDPR compliance
 
-> **📖 For complete guide:** See [Cross-Database Search Guide](SODA_PLUS_Search_Guide.md)
+> **📖 For complete guide:** See [Cross-Database Search Guide](SqlLens_Search_Guide.md)
 
 ---
 
@@ -378,7 +378,7 @@ Removed:    35 false positives
 
 **✅ Use charts for:** Documentation, presentations, code reviews, impact analysis
 
-> **📖 For all chart types:** See [Step 10: Dependency Charting](SODA_PLUS_User_Guide.md#step-10-dependency-charting-new-)
+> **📖 For all chart types:** See [Step 10: Dependency Charting](SqlLens_User_Guide.md#step-10-dependency-charting-new-)
 
 ---
 
@@ -411,7 +411,7 @@ Removed:    35 false positives
 
 **✅ Start with:** Summary analysis to understand code quality
 
-> **📖 For all AI types:** See [Step 11: AI Analysis Types](SODA_PLUS_User_Guide.md#step-11-working-with-ai-analysis-types)
+> **📖 For all AI types:** See [Step 11: AI Analysis Types](SqlLens_User_Guide.md#step-11-working-with-ai-analysis-types)
 
 ---
 
@@ -435,7 +435,7 @@ Removed:    35 false positives
 
 **✅ Use exports for:** Impact documentation, reports, version control
 
-> **📖 For export formats:** See [Step 8b: Export Button](SODA_PLUS_User_Guide.md#-export-button-new)
+> **📖 For export formats:** See [Step 8b: Export Button](SqlLens_User_Guide.md#-export-button-new)
 
 ---
 
@@ -619,7 +619,7 @@ Removed:    35 false positives
 - ✅ Test authentication settings
 - ✅ Partial results OK - successful servers still show results
 
-> **📖 For more errors:** See [Full Guide: Help and Support](SODA_PLUS_User_Guide.md#help-and-support)
+> **📖 For more errors:** See [Full Guide: Help and Support](SqlLens_User_Guide.md#help-and-support)
 
 ---
 
@@ -652,8 +652,8 @@ This concise guide **does not cover**:
 - ❌ Manual configuration
 
 **For these topics**, see:
-- 📖 **[Full User Guide](SODA_PLUS_User_Guide.md)** - Complete reference (2-3 hours)
-- 🔍 **[Reference Guide](SODA_PLUS_Reference.md)** - Quick lookup
+- 📖 **[Full User Guide](SqlLens_User_Guide.md)** - Complete reference (2-3 hours)
+- 🔍 **[Reference Guide](SqlLens_Reference.md)** - Quick lookup
 
 ---
 
@@ -748,19 +748,19 @@ This concise guide **does not cover**:
 
 ### **Read Full Documentation:**
 
-**📖 [Full User Guide](SODA_PLUS_User_Guide.md)** (2-3 hours)
+**📖 [Full User Guide](SqlLens_User_Guide.md)** (2-3 hours)
 - All 13 steps in detail
 - Advanced workflows
 - Complete troubleshooting
 - Configuration reference
 
-**🔍 [Reference Guide](SODA_PLUS_Reference.md)** (Quick Lookup)
+**🔍 [Reference Guide](SqlLens_Reference.md)** (Quick Lookup)
 - Alphabetical feature index
 - All keyboard shortcuts
 - Context menu reference
 - Common error messages
 
-**🚀 [Quick Start Guide](SODA_PLUS_QuickStart.md)** (5 min)
+**🚀 [Quick Start Guide](SqlLens_QuickStart.md)** (5 min)
 - Share with new team members
 - First-time setup walkthrough
 - Visual quick reference
@@ -772,9 +772,9 @@ This concise guide **does not cover**:
 **You are here:** 📘 Concise User Guide
 
 **Other Guides:**
-- 🚀 **[Quick Start Guide](SODA_PLUS_QuickStart.md)** - 5-minute setup
-- 🔍 **[Reference Guide](SODA_PLUS_Reference.md)** - Quick lookup
-- 📖 **[Full User Guide](SODA_PLUS_User_Guide.md)** - Complete reference
+- 🚀 **[Quick Start Guide](SqlLens_QuickStart.md)** - 5-minute setup
+- 🔍 **[Reference Guide](SqlLens_Reference.md)** - Quick lookup
+- 📖 **[Full User Guide](SqlLens_User_Guide.md)** - Complete reference
 
 ---
 
@@ -793,5 +793,5 @@ This concise guide **does not cover**:
 ---
 
 **End of Concise User Guide** | **Version:** 1.0 | **Last Updated:** December 31, 2025  
-**Completed?** 🎉 You now know **80% of SODA+ AI** essentials!  
-**Next:** Explore advanced features or read [Full User Guide](SODA_PLUS_User_Guide.md)
+**Completed?** 🎉 You now know **80% of SqlLens** essentials!  
+**Next:** Explore advanced features or read [Full User Guide](SqlLens_User_Guide.md)
