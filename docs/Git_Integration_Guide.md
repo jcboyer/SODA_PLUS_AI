@@ -1,4 +1,4 @@
-# 🔗 SODA+ AI - Git Integration Guide
+# 🔗 SqlLens - Git Integration Guide
 ## Source Control, Drift Detection, and Agent Job Script Workflows
 
 ---
@@ -14,7 +14,7 @@
 
 ## Why Git Integration Matters
 
-SODA+ AI Git integration is designed to make your database workflow auditable and repeatable:
+SqlLens Git integration is designed to make your database workflow auditable and repeatable:
 
 - Keep SQL objects in a repository as a source-of-truth reference
 - Compare deployed SQL with Git versions to detect drift
@@ -27,7 +27,7 @@ If your team treats Git as the contract and databases as runtime state, these fe
 
 ## What This Guide Covers
 
-1. Connecting SODA+ AI to GitHub
+1. Connecting SqlLens to GitHub
 2. Repository and mapping concepts
 3. Database ↔ Git comparison and drift
 4. SQL Agent Job script lifecycle (Active/Archive)
@@ -42,12 +42,12 @@ Before using Git features:
 
 - A GitHub PAT with repo read/write scope
 - Access to the target organization/repositories
-- A selected environment, server, and database in SODA+ AI
+- A selected environment, server, and database in SqlLens
 - Team conventions for repository naming and branch usage
 
 ---
 
-## 1) Connect GitHub in SODA+ AI
+## 1) Connect GitHub in SqlLens
 
 From the **GitHub** menu:
 
@@ -182,9 +182,9 @@ This keeps deployment evidence and runtime configuration aligned.
 
 ## Related Guides
 
-- [Quick Start](SODA_PLUS_QuickStart.md)
-- [User Guide](SODA_PLUS_User_Guide.md)
-- [Reference Guide](SODA_PLUS_Reference.md)
-- [Cross-Database Search Guide](SODA_PLUS_Search_Guide.md)
-- [Project Management Guide](SODA_PLUS_ProjectManagement_Guide.md)
+- [Quick Start](SqlLens_QuickStart.md)
+- [User Guide](SqlLens_User_Guide.md)
+- [Reference Guide](SqlLens_Reference.md)
+- [Cross-Database Search Guide](SqlLens_Search_Guide.md)
+- [Project Management Guide](SqlLens_ProjectManagement_Guide.md)
 
