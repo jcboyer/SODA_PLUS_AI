@@ -1,4 +1,4 @@
-# 🔍 SODA+ AI - Reference Guide
+# 🔍 SqlLens - Reference Guide
 ## Quick Lookup for Features, Commands & Shortcuts
 
 ---
@@ -25,15 +25,15 @@
 
 ## About This Guide
 
-This is your **quick lookup reference** for SODA+ AI features. Use it to:
+This is your **quick lookup reference** for SqlLens features. Use it to:
 - ✅ Find features alphabetically
 - ✅ Look up keyboard shortcuts
 - ✅ Check context menu options
 - ✅ Compare analysis types
 - ✅ Troubleshoot errors
 
-**For detailed instructions**, see the [Full User Guide](SODA_PLUS_User_Guide.md).
-For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git_Integration_Guide.md).
+**For detailed instructions**, see the [Full User Guide](SqlLens_User_Guide.md).
+For Git/source-control operations, see the [Git Integration Guide](SqlLens_Git_Integration_Guide.md).
 
 ---
 
@@ -44,40 +44,40 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 **Add Server**
 - **Location:** Right-click Server Explorer → Add Server...
 - **Shortcut:** Double-click "+ Add Server..." node
-- **See:** [Step 3: Connect to Servers](SODA_PLUS_User_Guide.md#step-3-connect-to-servers-enhanced)
+- **See:** [Step 3: Connect to Servers](SqlLens_User_Guide.md#step-3-connect-to-servers-enhanced)
 
 **AI Analysis**
 - **Location:** Right-click Procedure/Function → AI Analysis
 - **Types:** Summary, Improvements, Security, Performance, Best Practices
-- **See:** [Step 9: AI Code Analysis](SODA_PLUS_User_Guide.md#step-9-ai-code-analysis---new-enhanced-workflow-)
+- **See:** [Step 9: AI Code Analysis](SqlLens_User_Guide.md#step-9-ai-code-analysis---new-enhanced-workflow-)
 
 **AI Review Button** (Toolbar)
 - **Location:** Dependency Analyzer toolbar (left side)
 - **Action:** Opens AI Review window with SQL code pre-loaded
 - **Icon:** 🤖
-- **See:** [Step 8b: Toolbar Actions](SODA_PLUS_User_Guide.md#step-8b-dependency-analyzer-toolbar-actions-new)
+- **See:** [Step 8b: Toolbar Actions](SqlLens_User_Guide.md#step-8b-dependency-analyzer-toolbar-actions-new)
 
 **Analyze Dependencies**
 - **Location:** Right-click any object → Analyze Dependencies
 - **Shortcut:** Single-click object, then Analyze menu
-- **See:** [Step 7: Analyze Database Objects](SODA_PLUS_User_Guide.md#step-7-analyze-database-objects-enhanced)
+- **See:** [Step 7: Analyze Database Objects](SqlLens_User_Guide.md#step-7-analyze-database-objects-enhanced)
 
 **Auto-Login**
 - **Feature:** Automatic login from saved session
-- **File:** `%APPDATA%\SODA_PLUS\user_session.dat`
-- **See:** [Step 0: Initial Login](SODA_PLUS_User_Guide.md#step-0-initial-login--registration-new)
+- **File:** `%APPDATA%\SqlLens\user_session.dat`
+- **See:** [Step 0: Initial Login](SqlLens_User_Guide.md#step-0-initial-login--registration-new)
 
 ### B
 
 **Best Practices Analysis**
 - **Type:** AI Analysis option
 - **Focus:** Code quality, standards, documentation
-- **See:** [Step 11: AI Analysis Types](SODA_PLUS_User_Guide.md#step-11-working-with-ai-analysis-types)
+- **See:** [Step 11: AI Analysis Types](SqlLens_User_Guide.md#step-11-working-with-ai-analysis-types)
 
 **Breadcrumb** (Code Viewer)
 - **Location:** Above code editor in right panel
 - **Shows:** Server.Database.Schema.Object path
-- **See:** [Step 8: RIGHT PANEL](SODA_PLUS_User_Guide.md#right-panel-sql-code-viewer)
+- **See:** [Step 8: RIGHT PANEL](SqlLens_User_Guide.md#right-panel-sql-code-viewer)
 
 ### C
 
@@ -85,18 +85,18 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 - **Location:** Left panel sub-tab in analyzer
 - **Action:** Shows execution order of dependencies
 - **Button:** "Generate Call Order"
-- **See:** [Step 8: Call Order Sub-Tab](SODA_PLUS_User_Guide.md#3--call-order-sub-tab)
+- **See:** [Step 8: Call Order Sub-Tab](SqlLens_User_Guide.md#3--call-order-sub-tab)
 
 **Chart Analysis**
 - **Location:** Right-click Procedure/Function/View → Chart Analysis
 - **Types:** Quick Chart, AI-Enhanced Chart, Logic Flowchart
-- **See:** [Step 10: Dependency Charting](SODA_PLUS_User_Guide.md#step-10-dependency-charting-new-)
+- **See:** [Step 10: Dependency Charting](SqlLens_User_Guide.md#step-10-dependency-charting-new-)
 
 **Chart Button** (Toolbar)
 - **Location:** Dependency Analyzer toolbar
 - **Action:** Opens chart window with current analyzer data
 - **Icon:** 📊
-- **See:** [Step 8b: Chart Button](SODA_PLUS_User_Guide.md#-chart-button)
+- **See:** [Step 8b: Chart Button](SqlLens_User_Guide.md#-chart-button)
 
 **Chart Direction** ⭐ NEW!
 - **Location:** Chart Window toolbar
@@ -113,7 +113,7 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 - **Location:** Environment Status Bar (top-right)
 - **Action:** Closes entire application and all windows
 - **Color:** Red button
-- **See:** [Main Interface: Environment Status Bar](SODA_PLUS_User_Guide.md#environment-status-bar-new)
+- **See:** [Main Interface: Environment Status Bar](SqlLens_User_Guide.md#environment-status-bar-new)
 
 **Copy Name**
 - **Location:** Right-click any object → Copy Name
@@ -129,13 +129,13 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
   - 20x faster (parallel processing)
   - AI-powered relevance filtering
   - Multi-server support
-- **See:** [Cross-Database Search Guide](SODA_PLUS_Search_Guide.md)
+- **See:** [Cross-Database Search Guide](SqlLens_Search_Guide.md)
 
 **Custom Prompts**
 - **Location:** Bottom of AI Review window
 - **Action:** Send custom questions to AI
 - **Button:** "🚀 Send Custom"
-- **See:** [Step 12: Custom Prompts](SODA_PLUS_User_Guide.md#custom-prompts)
+- **See:** [Step 12: Custom Prompts](SqlLens_User_Guide.md#custom-prompts)
 
 ### D
 
@@ -143,12 +143,12 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 - **Location:** Middle-left panel
 - **Shows:** Databases on selected server
 - **Action:** Click database to load objects
-- **See:** [Step 5: Select a Database](SODA_PLUS_User_Guide.md#step-5-select-a-database)
+- **See:** [Step 5: Select a Database](SqlLens_User_Guide.md#step-5-select-a-database)
 
 **Dependency Analyzer**
 - **Component:** Main analysis control with tabs
 - **Panels:** Left (sub-tabs), Right (code viewer)
-- **See:** [Step 8: Review Analysis Results](SODA_PLUS_User_Guide.md#step-8-review-analysis-results)
+- **See:** [Step 8: Review Analysis Results](SqlLens_User_Guide.md#step-8-review-analysis-results)
 
 **Dependency Direction** ⭐ NEW!
 - **Location:** Chart Window toolbar (ComboBox)
@@ -167,12 +167,12 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 - **Tab:** Sub-tab in left panel
 - **Shows:** Objects that depend ON selected object
 - **Use:** Impact analysis before changes
-- **See:** [Step 8: Downstream Sub-Tab](SODA_PLUS_User_Guide.md#1--downstream-dependencies-sub-tab)
+- **See:** [Step 8: Downstream Sub-Tab](SqlLens_User_Guide.md#1--downstream-dependencies-sub-tab)
 
 **Drill-Down Analysis**
 - **Action:** Right-click dependency → Analyze Dependencies
 - **Result:** Opens new tab for that object
-- **See:** [Step 8a: Drill-Down](SODA_PLUS_User_Guide.md#step-8a-drill-down-dependency-analysis-new)
+- **See:** [Step 8a: Drill-Down](SqlLens_User_Guide.md#step-8a-drill-down-dependency-analysis-new)
 
 ### E
 
@@ -180,13 +180,13 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 - **Options:** SANDBOX (green), TEST (orange), PROD (red)
 - **When:** On application startup
 - **Locked:** Per session (restart to change)
-- **See:** [Step 2: Environment Selection](SODA_PLUS_User_Guide.md#step-2-environment-selection)
+- **See:** [Step 2: Environment Selection](SqlLens_User_Guide.md#step-2-environment-selection)
 
 **Export Button** (Toolbar)
 - **Location:** Dependency Analyzer toolbar
 - **Formats:** CSV, JSON, Markdown, Text
 - **Icon:** 💾
-- **See:** [Step 8b: Export Button](SODA_PLUS_User_Guide.md#-export-button-new)
+- **See:** [Step 8b: Export Button](SqlLens_User_Guide.md#-export-button-new)
 
 **Export Definition**
 - **Location:** Right-click any object → Export Definition
@@ -204,13 +204,13 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 **Formatted View Tab**
 - **Location:** AI Review window (3rd tab)
 - **Features:** HTML rendering, syntax highlighting, collapsible sections
-- **See:** [Step 9: Formatted View](SODA_PLUS_User_Guide.md#-formatted-view-tab---new-)
+- **See:** [Step 9: Formatted View](SqlLens_User_Guide.md#-formatted-view-tab---new-)
 
 **Full Window Button** (Toolbar)
 - **Location:** Dependency Analyzer toolbar (far right)
 - **Action:** Opens standalone analyzer window
 - **Icon:** 📺
-- **See:** [Step 8b: Full Window Button](SODA_PLUS_User_Guide.md#-full-window-button-new)
+- **See:** [Step 8b: Full Window Button](SqlLens_User_Guide.md#-full-window-button-new)
 
 **Functions** (Object Type)
 - **Location:** Object Explorer → Functions
@@ -228,12 +228,12 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 **Login**
 - **When:** First launch or after logout
 - **Required:** Email address
-- **See:** [Step 0: Login Process](SODA_PLUS_User_Guide.md#login-process)
+- **See:** [Step 0: Login Process](SqlLens_User_Guide.md#login-process)
 
 **Logic Flowchart**
 - **Type:** Chart option for control flow visualization
 - **Available For:** Procedures, Functions, Views
-- **See:** [Step 10: Logic Flowchart](SODA_PLUS_User_Guide.md#-logic-flowchart---control-flow-visualization)
+- **See:** [Step 10: Logic Flowchart](SqlLens_User_Guide.md#-logic-flowchart---control-flow-visualization)
 
 ### M
 
@@ -241,12 +241,12 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 - **Location:** Bottom of main window
 - **Shows:** Real-time feedback, errors, operations
 - **Toggle:** View → Toggle Messages
-- **See:** [Advanced Features: Message Panel](SODA_PLUS_User_Guide.md#message-panel)
+- **See:** [Advanced Features: Message Panel](SqlLens_User_Guide.md#message-panel)
 
 **Multi-Tab Architecture**
 - **Feature:** Multiple analyzer tabs (max 10)
 - **Switch:** Click tab header or Ctrl+Tab
-- **See:** [Step 8: Multi-Tab Architecture](SODA_PLUS_User_Guide.md#dependency-analysis---multi-tab-architecture)
+- **See:** [Step 8: Multi-Tab Architecture](SqlLens_User_Guide.md#dependency-analysis---multi-tab-architecture)
 
 ### O
 
@@ -254,13 +254,13 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 - **Location:** Bottom-left panel
 - **Shows:** Tables, Views, Procedures, Functions
 - **Search:** 🔍 Search box above tree
-- **See:** [Step 6: Search for Objects](SODA_PLUS_User_Guide.md#step-6-search-for-objects-new-)
+- **See:** [Step 6: Search for Objects](SqlLens_User_Guide.md#step-6-search-for-objects-new-)
 
 **Object Search**
 - **Location:** Above Object Explorer tree
 - **Features:** Real-time filtering, auto-expand, smart matching
 - **Clear:** Click ✖ or press Escape
-- **See:** [Step 6: Object Search](SODA_PLUS_User_Guide.md#step-6-search-for-objects-new-)
+- **See:** [Step 6: Object Search](SqlLens_User_Guide.md#step-6-search-for-objects-new-)
 
 **Open in SSMS** ⭐ NEW!
 - **Location:** Dependency Analyzer toolbar (after Export button)
@@ -288,7 +288,7 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 **Performance Analysis**
 - **Type:** AI Analysis option
 - **Focus:** Bottlenecks, indexes, query optimization
-- **See:** [Step 11: Performance Analysis](SODA_PLUS_User_Guide.md#performance-analysis)
+- **See:** [Step 11: Performance Analysis](SqlLens_User_Guide.md#performance-analysis)
 
 **Procedures** (Object Type)
 - **Location:** Object Explorer → Stored Procedures
@@ -301,7 +301,7 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 - **Type:** Fast dependency visualization (< 1 sec)
 - **No AI:** Uses database metadata only
 - **Available For:** Procedures, Functions, Views
-- **See:** [Step 10: Quick Chart](SODA_PLUS_User_Guide.md#-quick-chart-self-contained---recommended-for-most-scenarios)
+- **See:** [Step 10: Quick Chart](SqlLens_User_Guide.md#-quick-chart-self-contained---recommended-for-most-scenarios)
 
 ### R
 
@@ -313,12 +313,12 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 **Refactoring Suggestions**
 - **Type:** AI Analysis option
 - **Focus:** Code restructuring, complexity reduction
-- **See:** [Step 11: Refactoring](SODA_PLUS_User_Guide.md#refactoring-suggestions)
+- **See:** [Step 11: Refactoring](SqlLens_User_Guide.md#refactoring-suggestions)
 
 **Registration**
 - **When:** First-time users
 - **Required:** Email, Display Name
-- **See:** [Step 0: Registration Process](SODA_PLUS_User_Guide.md#registration-process)
+- **See:** [Step 0: Registration Process](SqlLens_User_Guide.md#registration-process)
 
 **Remove Server**
 - **Location:** Right-click server → Remove Server
@@ -336,19 +336,19 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 **Security Analysis**
 - **Type:** AI Analysis option
 - **Focus:** SQL injection, permissions, vulnerabilities
-- **See:** [Step 11: Security Analysis](SODA_PLUS_User_Guide.md#security-analysis)
+- **See:** [Step 11: Security Analysis](SqlLens_User_Guide.md#security-analysis)
 
 **Server Explorer**
 - **Location:** Top-left panel
 - **Shows:** SQL Servers in current environment
 - **Add:** Right-click → Add Server...
-- **See:** [Step 3: Connect to Servers](SODA_PLUS_User_Guide.md#step-3-connect-to-servers-enhanced)
+- **See:** [Step 3: Connect to Servers](SqlLens_User_Guide.md#step-3-connect-to-servers-enhanced)
 
 **Session Management**
 - **Auto-Login:** From saved session file
-- **File:** `%APPDATA%\SODA_PLUS\user_session.dat`
+- **File:** `%APPDATA%\SqlLens\user_session.dat`
 - **Encryption:** Windows DPAPI
-- **See:** [Step 0: Session Features](SODA_PLUS_User_Guide.md#session-features)
+- **See:** [Step 0: Session Features](SqlLens_User_Guide.md#session-features)
 
 **SQL Formatting Preferences** ⭐ NEW!
 - **Location:** Tools menu → SQL Formatting Preferences
@@ -359,18 +359,18 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 - **Storage:** Azure Functions + Database
 - **Security:** Session-based authentication
 - **Integration:** Format button in Dependency Analyzer uses preferences
-- **See:** [Step 6a: SQL Formatting Preferences](SODA_PLUS_User_Guide.md#step-6a-sql-formatting-preferences-new)
+- **See:** [Step 6a: SQL Formatting Preferences](SqlLens_User_Guide.md#step-6a-sql-formatting-preferences-new)
 
 **SQL Code Viewer**
 - **Location:** Right panel in analyzer
 - **Features:** Syntax highlighting, search, breadcrumb
 - **Updates:** Dynamically when selecting dependencies
-- **See:** [Step 8: RIGHT PANEL](SODA_PLUS_User_Guide.md#right-panel-sql-code-viewer)
+- **See:** [Step 8: RIGHT PANEL](SqlLens_User_Guide.md#right-panel-sql-code-viewer)
 
 **Summary Analysis**
 - **Type:** AI Analysis option
 - **Focus:** Quick overview, key observations
-- **See:** [Step 11: Summary Analysis](SODA_PLUS_User_Guide.md#summary-analysis)
+- **See:** [Step 11: Summary Analysis](SqlLens_User_Guide.md#summary-analysis)
 
 ### T
 
@@ -383,7 +383,7 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 - **Max:** 10 tabs simultaneously
 - **Switch:** Ctrl+Tab or click tab header
 - **Close:** Click ✖ on tab
-- **See:** [Step 8: Managing Tabs](SODA_PLUS_User_Guide.md#managing-multiple-analyzer-tabs)
+- **See:** [Step 8: Managing Tabs](SqlLens_User_Guide.md#managing-multiple-analyzer-tabs)
 
 **Test Connection**
 - **Location:** Add Server dialog
@@ -396,7 +396,7 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 - **Tab:** Sub-tab in left panel
 - **Shows:** Objects that selected object depends ON
 - **Use:** Understanding requirements
-- **See:** [Step 8: Upstream Sub-Tab](SODA_PLUS_User_Guide.md#2--upstream-dependencies-sub-tab)
+- **See:** [Step 8: Upstream Sub-Tab](SqlLens_User_Guide.md#2--upstream-dependencies-sub-tab)
 
 ### V
 
@@ -412,7 +412,7 @@ For Git/source-control operations, see the [Git Integration Guide](SODA_PLUS_Git
 - **Type:** SQL Server connection option (default)
 - **Recommended:** Yes, most secure
 - **Storage:** No password needed
-- **See:** [Step 3: Authentication](SODA_PLUS_User_Guide.md#option-1-windows-authentication-default)
+- **See:** [Step 3: Authentication](SqlLens_User_Guide.md#option-1-windows-authentication-default)
 
 ---
 
@@ -662,63 +662,63 @@ All exports include:
 **Error:** "Cannot connect to server"
 - **Cause:** Server name incorrect or server offline
 - **Solution:** Verify server name, check SQL Server is running
-- **See:** [Step 3: Adding Server](SODA_PLUS_User_Guide.md#step-3-connect-to-servers-enhanced)
+- **See:** [Step 3: Adding Server](SqlLens_User_Guide.md#step-3-connect-to-servers-enhanced)
 
 **Error:** "Login failed for user"
 - **Cause:** Authentication credentials incorrect
 - **Solution:** Try Windows Authentication, verify SQL login
-- **See:** [Step 3: Authentication](SODA_PLUS_User_Guide.md#authentication-section)
+- **See:** [Step 3: Authentication](SqlLens_User_Guide.md#authentication-section)
 
 **Error:** "Trust server certificate required"
 - **Cause:** Self-signed certificate not trusted
 - **Solution:** Enable "Trust server certificate" in connection options
-- **See:** [Step 3: Connection Options](SODA_PLUS_User_Guide.md#connection-options)
+- **See:** [Step 3: Connection Options](SqlLens_User_Guide.md#connection-options)
 
 ### **Analysis Errors**
 
 **Error:** "No SQL code available for AI analysis"
 - **Cause:** Object definition cannot be retrieved
 - **Solution:** Verify permissions, check object exists
-- **See:** [Step 10: Troubleshooting Charts](SODA_PLUS_User_Guide.md#troubleshooting-charts)
+- **See:** [Step 10: Troubleshooting Charts](SqlLens_User_Guide.md#troubleshooting-charts)
 
 **Error:** "Maximum 10 tabs reached"
 - **Cause:** Too many analyzer tabs open
 - **Solution:** Close unused tabs with ✖ button
-- **See:** [Step 8: Managing Tabs](SODA_PLUS_User_Guide.md#managing-multiple-analyzer-tabs)
+- **See:** [Step 8: Managing Tabs](SqlLens_User_Guide.md#managing-multiple-analyzer-tabs)
 
 **Error:** "API key unavailable"
 - **Cause:** AI features require API key configuration
 - **Solution:** Contact administrator or register for API key
-- **See:** [Step 0: Troubleshooting Login](SODA_PLUS_User_Guide.md#troubleshooting-login)
+- **See:** [Step 0: Troubleshooting Login](SqlLens_User_Guide.md#troubleshooting-login)
 
 ### **Chart Errors**
 
 **Error:** "Render failed - SVG file not created"
 - **Cause:** MermaidRenderer.exe not found or Mermaid code invalid
 - **Solution:** Check installation, verify Mermaid syntax
-- **See:** [Step 10: Troubleshooting Charts](SODA_PLUS_User_Guide.md#troubleshooting-charts)
+- **See:** [Step 10: Troubleshooting Charts](SqlLens_User_Guide.md#troubleshooting-charts)
 
 **Error:** "WebView2 initialization failed"
 - **Cause:** WebView2 Runtime not installed
 - **Solution:** Install [Microsoft Edge WebView2 Runtime](https://go.microsoft.com/fwlink/p/?LinkId=2124703)
-- **See:** [Step 9: Troubleshooting Formatted View](SODA_PLUS_User_Guide.md#troubleshooting-formatted-view)
+- **See:** [Step 9: Troubleshooting Formatted View](SqlLens_User_Guide.md#troubleshooting-formatted-view)
 
 ### **Session Errors**
 
 **Error:** "User not found"
 - **Cause:** Email not registered
 - **Solution:** Register first using Register tab
-- **See:** [Step 0: Registration](SODA_PLUS_User_Guide.md#registration-process)
+- **See:** [Step 0: Registration](SqlLens_User_Guide.md#registration-process)
 
 **Error:** "No API keys available"
 - **Cause:** All API keys assigned
 - **Solution:** Contact administrator to add more keys
-- **See:** [Step 0: Troubleshooting Login](SODA_PLUS_User_Guide.md#troubleshooting-login)
+- **See:** [Step 0: Troubleshooting Login](SqlLens_User_Guide.md#troubleshooting-login)
 
 **Error:** "Session file corrupted"
 - **Cause:** Session file damaged
-- **Solution:** Delete `%APPDATA%\SODA_PLUS\user_session.dat`, re-login
-- **See:** [Step 0: Troubleshooting Login](SODA_PLUS_User_Guide.md#troubleshooting-login)
+- **Solution:** Delete `%APPDATA%\SqlLens\user_session.dat`, re-login
+- **See:** [Step 0: Troubleshooting Login](SqlLens_User_Guide.md#troubleshooting-login)
 
 ### **Search Errors** ⭐ NEW!
 
@@ -729,7 +729,7 @@ All exports include:
   - Verify object types are checked (Tables/Views/Procedures/Functions)
   - Try broader search term
   - Enable "Search inside code" for comprehensive search
-- **See:** [Cross-Database Search Guide](SODA_PLUS_Search_Guide.md)
+- **See:** [Cross-Database Search Guide](SqlLens_Search_Guide.md)
 
 **Error:** "Multi-server search failed on some servers"
 - **Cause:** Connection or permission issues on specific servers
@@ -738,7 +738,7 @@ All exports include:
   - Verify connection to failed servers
   - Test authentication settings
   - Partial results from successful servers still available
-- **See:** [Cross-Database Search Guide](SODA_PLUS_Search_Guide.md)
+- **See:** [Cross-Database Search Guide](SqlLens_Search_Guide.md)
 
 **Error:** "AI filtering unavailable"
 - **Cause:** No valid user session or Grok API key not assigned
@@ -746,7 +746,7 @@ All exports include:
   - Check you're logged in with valid session
   - Verify "Search inside code" is enabled (required for AI filtering)
   - Contact administrator to verify API key assignment
-- **See:** [Cross-Database Search Guide](SODA_PLUS_Search_Guide.md)
+- **See:** [Cross-Database Search Guide](SqlLens_Search_Guide.md)
 
 **Error:** "Permission denied accessing database"
 - **Cause:** User lacks VIEW DEFINITION permission on database
@@ -754,7 +754,7 @@ All exports include:
   - Contact database administrator
   - Request VIEW DEFINITION permission
   - Or exclude that database from search
-- **See:** [Cross-Database Search Guide](SODA_PLUS_Search_Guide.md)
+- **See:** [Cross-Database Search Guide](SqlLens_Search_Guide.md)
 
 ---
 
@@ -762,7 +762,7 @@ All exports include:
 
 ### **User Configuration File**
 
-**Location:** `%APPDATA%\SODA_PLUS\appsettings.user.json`
+**Location:** `%APPDATA%\SqlLens\appsettings.user.json`
 
 **Structure:**
 ```json
@@ -804,7 +804,7 @@ All exports include:
 
 ### **Session File**
 
-**Location:** `%APPDATA%\SODA_PLUS\user_session.dat`
+**Location:** `%APPDATA%\SqlLens\user_session.dat`
 
 **Contents:**
 - User email
@@ -931,7 +931,7 @@ All exports include:
 → **Format - Clean** strips internal comments (header comments preserved). **Format - AI** preserves ALL comments.
 
 **How do I logout?**
-→ Delete `%APPDATA%\SODA_PLUS\user_session.dat`, restart
+→ Delete `%APPDATA%\SqlLens\user_session.dat`, restart
 
 ---
 
@@ -940,14 +940,14 @@ All exports include:
 **You are here:** 🔍 Reference Guide
 
 **Other Guides:**
-- 🚀 **[Quick Start Guide](SODA_PLUS_QuickStart.md)** - 5-minute setup
-- 📘 **[Concise Guide](SODA_PLUS_Guide_Concise.md)** - 30-minute essentials
-- 📖 **[Full User Guide](SODA_PLUS_User_Guide.md)** - Complete reference
+- 🚀 **[Quick Start Guide](SqlLens_QuickStart.md)** - 5-minute setup
+- 📘 **[Concise Guide](SqlLens_Guide_Concise.md)** - 30-minute essentials
+- 📖 **[Full User Guide](SqlLens_User_Guide.md)** - Complete reference
 
 ---
 
 **End of Reference Guide** | **Version:** 1.6.0 | **Last Updated:** December 31, 2025  
-**For detailed instructions:** [Full User Guide](SODA_PLUS_User_Guide.md)
+**For detailed instructions:** [Full User Guide](SqlLens_User_Guide.md)
 
 ---
 
@@ -996,7 +996,7 @@ All exports include:
 | **Keyboard Automation** | Uses Windows API (`keybd_event`) for Ctrl+N, Ctrl+V |
 | **Connection Preservation** | Uses existing SSMS connection (no re-auth) |
 | **USE Statement** | Auto-adds `USE [Database]` with GO separator |
-| **Temp Files** | Creates timestamped .sql files in `%TEMP%\SODA_PLUS_SSMS\` |
+| **Temp Files** | Creates timestamped .sql files in `%TEMP%\SqlLens_SSMS\` |
 | **Graceful Fallback** | Shows manual instructions if automation fails |
 | **Window Activation** | Brings SSMS to front (restores if minimized) |
 
@@ -1091,9 +1091,9 @@ Would you like to download SSMS?
 
 ### Temp File Format
 
-**Location:** `%TEMP%\SODA_PLUS_SSMS\{ObjectName}_{Timestamp}.sql`
+**Location:** `%TEMP%\SqlLens_SSMS\{ObjectName}_{Timestamp}.sql`
 
-**Example:** `C:\Users\YourName\AppData\Local\Temp\SODA_PLUS_SSMS\dbo_GetCustomer_20250112_150000.sql`
+**Example:** `C:\Users\YourName\AppData\Local\Temp\SqlLens_SSMS\dbo_GetCustomer_20250112_150000.sql`
 
 **Content:**
 ```sql
@@ -1147,7 +1147,7 @@ END
 ### Security & Privacy
 
 **What's Stored:**
-- Temp .sql files in `%TEMP%\SODA_PLUS_SSMS\`
+- Temp .sql files in `%TEMP%\SqlLens_SSMS\`
 - Files remain after SSMS closes (can save/reopen)
 - Readable only by current Windows user
 
@@ -1168,11 +1168,11 @@ END
 **You are here:** 🔍 Reference Guide
 
 **Other Guides:**
-- 🚀 **[Quick Start Guide](SODA_PLUS_QuickStart.md)** - 5-minute setup
-- 📘 **[Concise Guide](SODA_PLUS_Guide_Concise.md)** - 30-minute essentials
-- 📖 **[Full User Guide](SODA_PLUS_User_Guide.md)** - Complete reference
+- 🚀 **[Quick Start Guide](SqlLens_QuickStart.md)** - 5-minute setup
+- 📘 **[Concise Guide](SqlLens_Guide_Concise.md)** - 30-minute essentials
+- 📖 **[Full User Guide](SqlLens_User_Guide.md)** - Complete reference
 
 ---
 
 **End of Reference Guide** | **Version:** 1.6.0 | **Last Updated:** December 31, 2025  
-**For detailed instructions:** [Full User Guide](SODA_PLUS_User_Guide.md)
+**For detailed instructions:** [Full User Guide](SqlLens_User_Guide.md)
