@@ -1,4 +1,4 @@
-# 🔧 Troubleshooting Guide - SODA+ AI
+# 🔧 Troubleshooting Guide - SqlLens
 
 ## Common Issues
 
@@ -7,16 +7,16 @@
 **Solutions:**
 
 1. **Check Antivirus**
-   - Add `SODA_PLUS_MAIN.exe` to exceptions
+   - Add `SqlLens.Desktop.exe` to exceptions
    
 2. **Unblock File**
-   - Right-click `SODA_PLUS_MAIN.exe`
+   - Right-click `SqlLens.Desktop.exe`
    - Select **Properties**
    - Check **Unblock**
    - Click **OK**
 
 3. **Run as Administrator**
-   - Right-click `SODA_PLUS_MAIN.exe`
+   - Right-click `SqlLens.Desktop.exe`
    - Select **Run as administrator**
 
 ---
@@ -55,12 +55,12 @@ GRANT VIEW DEFINITION TO [YourLoginName];
 
 ## Still Having Issues?
 
-[🐛 Report Bug on GitHub](https://github.com/jcboyer/SODA_PLUS_AI/issues/new?template=bug_report.md)
+[🐛 Report Bug on GitHub](https://github.com/jcboyer/SqlLens/issues/new?template=bug_report.md)
 
 ---
 
 <div align="center">
 
-**Thank you for using SODA+ AI!**
+**Thank you for using SqlLens!**
 
 </div>
