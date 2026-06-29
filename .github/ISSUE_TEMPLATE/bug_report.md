@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-about: Report a bug or issue with SODA+ AI
+about: Report a bug or issue with SqlLens
 title: '[BUG] '
 labels: bug
 assignees: ''
@@ -22,7 +22,7 @@ assignees: ''
 
 ## 💻 System Information
 - **Windows Version:** [e.g., Windows 11]
-- **SODA+ AI Version:** [e.g., 1.0.1-beta]
+- **SqlLens Version:** [e.g., 1.0.1-beta]
 - **SQL Server Version:** [e.g., SQL Server 2019]
 
 ## 📸 Screenshots
