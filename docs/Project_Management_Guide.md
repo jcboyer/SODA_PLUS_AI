@@ -1,4 +1,4 @@
-﻿# 📁 SODA+ AI - Project Management Guide
+﻿# 📁 SqlLens - Project Management Guide
 ## Organize, Save, and Copy Your Database Objects Across Environments
 
 ---
@@ -34,7 +34,7 @@
 
 ## Overview
 
-**Project Management** in SODA+ AI allows you to organize and save collections of database objects (procedures, tables, views, functions) into persistent projects. Think of projects as **folders** or **bookmarks** for your database work.
+**Project Management** in SqlLens allows you to organize and save collections of database objects (procedures, tables, views, functions) into persistent projects. Think of projects as **folders** or **bookmarks** for your database work.
 
 **What makes it special:**
 - ✅ **Persistent** - Projects are saved to the cloud and available across sessions
@@ -156,7 +156,7 @@ Description: Optional
 **Method 1: From Analyzer Toolbar** (Most Common)
 
 1. **Analyze an Object**
-   - Open any stored procedure, table, or view in SODA+ AI
+   - Open any stored procedure, table, or view in SqlLens
    - Example: Right-click `dbo.usp_GetCustomerOrders` → Analyze
 
 2. **Click "📁 Add to Project"**
@@ -798,7 +798,7 @@ Actual: DEV-SQL-01 (unchanged)
 
 ## Summary
 
-**Project Management in SODA+ AI provides:**
+**Project Management in SqlLens provides:**
 - ✅ **Persistent Collections** - Save groups of related database objects
 - ✅ **Quick Access** - Open all project objects with one click
 - ✅ **Cross-Environment** - Copy projects from DEV → TEST → PROD
@@ -819,7 +819,7 @@ Actual: DEV-SQL-01 (unchanged)
 4. Try copying a project to TEST
 5. Open All Objects to verify
 
-**Questions?** Check the [SODA+ AI User Guide](SODA_PLUS_User_Guide.md) or contact support.
+**Questions?** Check the [SqlLens User Guide](SqlLens_User_Guide.md) or contact support.
 
 ---
 
