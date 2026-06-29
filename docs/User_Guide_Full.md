@@ -163,7 +163,7 @@ When you first launch SqlLens AI, you'll be prompted to login or register to acc
 
 ### **Main Interface Overview**
 
-![SODA+ Main Interface](../Screenshots/MainInterface_PUBLIC_GUIDE.png)
+![SqlLens Main Interface](../Screenshots/MainInterface_PUBLIC_GUIDE.png)
 *Figure 2: Main application window showing Server/Database/Object Explorer (left), Analysis area (center), and Messages (bottom)*
 
 The main window has 4 key areas:
