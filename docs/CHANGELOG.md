@@ -1,6 +1,6 @@
 # CHANGELOG
 
-All notable changes to SODA+ AI will be documented in this file.
+All notable changes to SqlLens will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -81,7 +81,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - "AI formatting may take up to 2 minutes..." (AI mode)
     - Graceful timeout with 2-second message display
 - **Local File-First Formatter Options (40-100x Faster)** - Performance optimization
-  - Reads from `%APPDATA%\SODA_PLUS_AI\SqlFormatterOptions.json` first (< 5ms)
+  - Reads from `%APPDATA%\SqlLens\SqlFormatterOptions.json` first (< 5ms)
   - Falls back to Azure if local file missing (50-200ms)
   - Automatic file save when preferences updated
   - Shared location accessible to both WPF app and SSMS extension
@@ -181,7 +181,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **Root Cause**: `ExtractHeaderComments()` collected `USE`, `SET ANSI_NULLS`, `SET QUOTED_IDENTIFIER`, and `GO` as "headers"
   - **Solution**: Skip SSMS-specific statements during header extraction - ScriptDom regenerates them
   - **Impact**: Formatted SQL is clean and ready to execute without duplicate metadata
-  - **Files Modified**: `SODA_PLUS_COMMON\SqlFormatter.cs` - Updated `ExtractHeaderComments()` method
+  - **Files Modified**: `SqlLens_COMMON\SqlFormatter.cs` - Updated `ExtractHeaderComments()` method
 
 ### Security
 - **Session-Based Authentication** - All configuration API calls require valid session token
@@ -208,7 +208,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Technical
 - **Callback Pattern** - Avoids circular dependencies between projects
-  - SODA_PLUS_DEPENDENCIES cannot reference SODA_PLUS_MAIN
+  - SqlLens_DEPENDENCIES cannot reference SqlLens.Desktop
   - DependencyAnalyzerControl accepts `Func<Task<SqlFormatterOptions?>>` callback
   - MainShell provides implementation that accesses ConfigurationSyncService
   - Clean architecture: dependencies flow in one direction
@@ -253,7 +253,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Applied to both `FormatClean_Click()` and `FormatAI_Click()`
   - Debug logging shows re-entry attempts for troubleshooting
 - **Azure Functions Deployment** - Configuration API deployed separately from main app
-  - Deployment script: `SODA_PLUS_AZURE_FUNCTIONS\deploy-function-app.ps1`
+  - Deployment script: `SqlLens_AZURE_FUNCTIONS\deploy-function-app.ps1`
   - Restart required after deployment: `az functionapp restart`
   - Configuration endpoints: /api/configuration/*
 - **Database Migration** - Schema deployed with initial migration scripts
@@ -272,7 +272,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **Local file read**: < 5ms (typical: 2-3ms)
   - **Azure API call**: 50-200ms (typical: 100ms)
   - **Speed improvement**: 20-100x faster after first save
-  - **File location**: `C:\Users\{username}\AppData\Roaming\SODA_PLUS_AI\SqlFormatterOptions.json`
+  - **File location**: `C:\Users\{username}\AppData\Roaming\SqlLens\SqlFormatterOptions.json`
 - **Dialog Load Time** - < 1 second for default settings
   - Live preview renders in < 100ms per change
   - AvalonEdit syntax highlighting optimized
@@ -303,7 +303,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   3. Adjust 20 formatting options with live preview
   4. Click "Save My Preferences" (or "Save as Organization Template" for admins)
   5. Settings saved to Azure (UserConfigurationOverrides table)
-  6. Local file created at `%APPDATA%\SODA_PLUS_AI\SqlFormatterOptions.json`
+  6. Local file created at `%APPDATA%\SqlLens\SqlFormatterOptions.json`
   7. Open Dependency Analyzer for any stored procedure
   8. Click 💎 Format - Clean or 🤖 Format - AI
   9. SQL formatted using YOUR saved preferences
@@ -394,7 +394,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Returns `BIGINT` (Int64) results with safe conversion to Int32
   - Counts physical lines in stored procedures, functions, and views
 - **SharedAIService Consolidation** - Eliminated AI logic redundancy across projects
-  - Created `SharedAIService.cs` in `SODA_PLUS_DEPENDENCIES\Services` consolidating AI functionality from `ChartWindow.AIService.cs` and `AISessionService.cs`
+  - Created `SharedAIService.cs` in `SqlLens_DEPENDENCIES\Services` consolidating AI functionality from `ChartWindow.AIService.cs` and `AISessionService.cs`
   - Includes prompt building, API calls, response parsing, logging, and Mermaid processing
   - Centralized AI service for `ChartWindow`, `AISessionService`, and future consumers
 - **WebView2 Formatted Display for ChartWindow** - Professional HTML rendering of AI dependency analysis
@@ -423,8 +423,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Updated `ChartWindow.ChartGeneration.cs` to use `SharedAIService` for all AI operations
   - Added `SharedAIService` field and initialization in `ChartWindow.xaml.cs`
 - **Service Consolidation** - Moved shared services to common project
-  - Relocated `ApiService.cs` from `SODA_PLUS_CHARTING\Services` to `SODA_PLUS_DEPENDENCIES\Services`
-  - Relocated `GrokKeyProvider.cs` from `SODA_PLUS_CHARTING\Services` to `SODA_PLUS_DEPENDENCIES\Services`
+  - Relocated `ApiService.cs` from `SqlLens_CHARTING\Services` to `SqlLens_DEPENDENCIES\Services`
+  - Relocated `GrokKeyProvider.cs` from `SqlLens_CHARTING\Services` to `SqlLens_DEPENDENCIES\Services`
   - Updated all consuming code (`AISessionService.cs`, `SharedAIService.cs`) to reference new locations
 - **Dependency Analysis Display** - Enhanced user experience for AI results
   - "Analysis Only (AI)" now displays in both plain text (Analysis tab) and formatted HTML (Formatted View tab)
@@ -483,9 +483,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - CSS styling with modern design (Segoe UI font, responsive layout, color schemes)
   - JavaScript-free implementation (pure HTML/CSS for security)
 - **Project Dependencies** - Updated references for shared services
-  - `SODA_PLUS_CHARTING.csproj` now references `SODA_PLUS_DEPENDENCIES` for `SharedAIService`
-  - `SODA_PLUS_AI_REVIEW.csproj` updated to reference services from `SODA_PLUS_DEPENDENCIES`
-  - NuGet package `Microsoft.Web.WebView2` added to `SODA_PLUS_CHARTING` project
+  - `SqlLens_CHARTING.csproj` now references `SqlLens_DEPENDENCIES` for `SharedAIService`
+  - `SqlLens_REVIEW.csproj` updated to reference services from `SqlLens_DEPENDENCIES`
+  - NuGet package `Microsoft.Web.WebView2` added to `SqlLens_CHARTING` project
 - **Machine-Specific UI State Architecture** - Database schema and API changes
   - Database: Added `MachineName NVARCHAR(255) NOT NULL` column with composite unique key `(UserId, MachineName)`
   - Azure Functions: Updated `ICloudStorageService` and `CloudStorageService` with `machineName` parameter
@@ -540,7 +540,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Documentation
 - **New Documentation Files Created**:
-  - `SODA_PLUS_MAIN/FEATURE_DATABASE_OBJECT_SIZE_ANALYSIS.md` - Complete feature documentation
+  - `SqlLens.Desktop/FEATURE_DATABASE_OBJECT_SIZE_ANALYSIS.md` - Complete feature documentation
     - Implementation summary with all requirements met
     - Step-by-step usage workflow
     - Technical details (SQL query, architecture)
@@ -624,7 +624,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **Embedded SQL Resources** - Queries loaded from `.sql` files instead of inline C# strings
     - New files: `FetchDependencies_References.sql` (downstream dependencies)
     - New files: `FetchDependencies_ReferencedBy.sql` (upstream dependencies)
-    - Location: `SODA_PLUS_DEPENDENCIES/Sql/` folder
+    - Location: `SqlLens_DEPENDENCIES/Sql/` folder
     - Build Action: Embedded Resource (loaded once per app lifetime, cached)
   - **Query Split** - Monolithic query (~700 lines) split into two direction-specific files
     - `FetchDependencies_References.sql` - Downstream (what THIS object uses)
@@ -633,7 +633,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **Version Tracking** - SQL files include version headers
     - Version: 2.2 (as of 2025-11-15)
     - Last Modified date tracked in file header
-    - Change log in `SODA_PLUS_DEPENDENCIES/Sql/README.md`
+    - Change log in `SqlLens_DEPENDENCIES/Sql/README.md`
   - **Performance Optimization** - 50% smaller queries uploaded to SQL Server
     - Faster query parsing
     - Better SQL Server plan cache efficiency
@@ -728,13 +728,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Both pass through `CreateAIReviewWindow()` → `InitializeWithSessionAsync()`
 - **Embedded Resource Loading** - SQL query caching system
   - **LoadEmbeddedSql()** method with comprehensive error handling
-  - **Resource Name Format**: `SODA_PLUS_DEPENDENCIES.Sql.{filename}.sql`
+  - **Resource Name Format**: `SqlLens_DEPENDENCIES.Sql.{filename}.sql`
   - **Lazy Loading**: `Lazy<string>` ensures queries loaded once per app lifetime
   - **Validation**: Checks for null streams and empty content
   - **Error Messages**: User-friendly troubleshooting steps if resource missing
 - **Connection String Management** - MARS support across projects
-  - **MAIN Project**: `SODA_PLUS_MAIN/Models/ObjectInfo.cs`
-  - **DEPENDENCIES Project**: `SODA_PLUS_DEPENDENCIES/Models/ObjectInfo.cs`
+  - **MAIN Project**: `SqlLens.Desktop/Models/ObjectInfo.cs`
+  - **DEPENDENCIES Project**: `SqlLens_DEPENDENCIES/Models/ObjectInfo.cs`
   - Both now include `MultipleActiveResultSets=True` in connection strings
   - Prevents nested reader errors during comment filtering
 - **Comment Filtering Architecture** - Parallel processing with semaphore
@@ -837,7 +837,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Documentation
 - **New Documentation Files Created**:
-  - `SODA_PLUS_MAIN/FEATURE_DATABASE_OBJECT_SIZE_ANALYSIS.md` - Complete feature documentation
+  - `SqlLens.Desktop/FEATURE_DATABASE_OBJECT_SIZE_ANALYSIS.md` - Complete feature documentation
     - Implementation summary with all requirements met
     - Step-by-step usage workflow
     - Technical details (SQL query, architecture)
@@ -855,19 +855,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Links
 
-- [1.6.0] - https://github.com/jcboyer/SODA_PLUS_AI_PRE_PROD/compare/v1.5.7...v1.6.0
-- [1.5.7] - https://github.com/jcboyer/SODA_PLUS_AI_PRE_PROD/compare/v1.5.6...v1.5.7
-- [1.5.6] - https://github.com/jcboyer/SODA_PLUS_AI_PRE_PROD/compare/v1.5.5...v1.5.6
-- [1.5.5] - https://github.com/jcboyer/SODA_PLUS_AI_PRE_PROD/compare/v1.5.2...v1.5.5
-- [1.5.2] - https://github.com/jcboyer/SODA_PLUS_AI_PRE_PROD/compare/v1.5.1...v1.5.2
-- [1.5.1] - https://github.com/jcboyer/SODA_PLUS_AI_PRE_PROD/compare/v1.5.0-beta...v1.5.1
-- [1.5.0-beta] - https://github.com/jcboyer/SODA_PLUS_AI_PRE_PROD/releases/tag/v1.5.0-beta
-- [1.1.0-beta] - https://github.com/jcboyer/SODA_PLUS_AI_PRE_PROD/releases/tag/v1.1.0-beta
-- [1.0.0-beta] - https://github.com/jcboyer/SODA_PLUS_AI_PRE_PROD/releases/tag/v1.0.0-beta
-- [Unreleased] - https://github.com/jcboyer/SODA_PLUS_AI_PRE_PROD/compare/v1.6.0...HEAD
+- [1.6.0] - https://github.com/jcboyer/SqlLens_PRE_PROD/compare/v1.5.7...v1.6.0
+- [1.5.7] - https://github.com/jcboyer/SqlLens_PRE_PROD/compare/v1.5.6...v1.5.7
+- [1.5.6] - https://github.com/jcboyer/SqlLens_PRE_PROD/compare/v1.5.5...v1.5.6
+- [1.5.5] - https://github.com/jcboyer/SqlLens_PRE_PROD/compare/v1.5.2...v1.5.5
+- [1.5.2] - https://github.com/jcboyer/SqlLens_PRE_PROD/compare/v1.5.1...v1.5.2
+- [1.5.1] - https://github.com/jcboyer/SqlLens_PRE_PROD/compare/v1.5.0-beta...v1.5.1
+- [1.5.0-beta] - https://github.com/jcboyer/SqlLens_PRE_PROD/releases/tag/v1.5.0-beta
+- [1.1.0-beta] - https://github.com/jcboyer/SqlLens_PRE_PROD/releases/tag/v1.1.0-beta
+- [1.0.0-beta] - https://github.com/jcboyer/SqlLens_PRE_PROD/releases/tag/v1.0.0-beta
+- [Unreleased] - https://github.com/jcboyer/SqlLens_PRE_PROD/compare/v1.6.0...HEAD
 
 ---
 
 **Maintained by:** Jerome Boyer  
 **Last Updated:** 2025-12-23
-**Repository:** https://github.com/jcboyer/SODA_PLUS_AI_PRE_PROD
+**Repository:** https://github.com/jcboyer/SqlLens_PRE_PROD
