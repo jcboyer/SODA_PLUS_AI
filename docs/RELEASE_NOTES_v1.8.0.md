@@ -1,9 +1,9 @@
-# SODA+ AI - Release Notes v1.8.0
+# SqlLens - Release Notes v1.8.0
 
 **Release Date:** TBD (2026)  
 **Type:** Major Feature Release  
 **Scope:** Cumulative update since v1.6.0 (2025-12-31 baseline)  
-**Download:** [https://sodaplusbeta.blob.core.windows.net/downloads/download.html](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)
+**Download:** [https://sqllens.blob.core.windows.net/downloads/download.html](https://sqllens.blob.core.windows.net/downloads/download.html)
 
 ---
 
@@ -26,9 +26,9 @@ Version 1.8.0 captures six months of major product evolution after v1.6.0, inclu
 
 The compare stack was split and re-architected for stability, deployment isolation, and future extensibility.
 
-- Introduced `SODA_PLUS_COMPARE_LIB` (shared comparison services/UI layer)
-- Introduced standalone `SODA_PLUS_COMPARE` WPF executable
-- Wired `SODA_PLUS_MAIN` → `SODA_PLUS_COMPARE.exe` launch via named pipe
+- Introduced `SqlLens_COMPARE_LIB` (shared comparison services/UI layer)
+- Introduced standalone `SqlLens_COMPARE` WPF executable
+- Wired `SqlLens.Desktop` → `SqlLens_COMPARE.exe` launch via named pipe
 - Updated packaging/publish pipeline to include compare components
 - Shifted compare deployment to self-contained publish model
 
