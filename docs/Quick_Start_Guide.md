@@ -1,4 +1,4 @@
-# 🚀 SODA+ AI - Quick Start Guide
+# 🚀 SqlLens - Quick Start Guide
 ## Get Productive in 5 Minutes!
 
 ---
@@ -12,9 +12,9 @@
 
 ---
 
-## Welcome to SODA+ AI!
+## Welcome to SqlLens!
 
-**SODA+ AI** is your AI-powered SQL Object Dependency Analyzer. This guide will get you analyzing database dependencies in **under 5 minutes**.
+**SqlLens** is your AI-powered SQL Server Analysis & Visualization. This guide will get you analyzing database dependencies in **under 5 minutes**.
 
 ---
 
@@ -26,14 +26,14 @@ In the next 5 minutes, you'll:
 - ✅ Analyze your first stored procedure or table
 - ✅ See dependency relationships instantly
 
-For Git/source-control workflows, see the [Git Integration Guide](SODA_PLUS_Git_Integration_Guide.md).
+For Git/source-control workflows, see the [Git Integration Guide](SqlLens_Git_Integration_Guide.md).
 
 ---
 
 ## Prerequisites
 
 Before you start:
-- ✅ **SODA+ AI installed** - You should have the `SODA_PLUS_MAIN.exe` on your machine
+- ✅ **SqlLens installed** - You should have the `SqlLens.Desktop.exe` on your machine
 - ✅ **SQL Server access** - You need connection details for a SQL Server
 - ✅ **Basic SQL knowledge** - You should know what procedures, tables, and views are
 
@@ -45,8 +45,8 @@ Before you start:
 
 ### Step 1: Login & Select Environment
 
-**1.1 Launch SODA+ AI**
-- Double-click `SODA_PLUS_MAIN.exe`
+**1.1 Launch SqlLens**
+- Double-click `SqlLens.Desktop.exe`
 - **First time?** Registration dialog appears automatically
 
 **1.2 Register (First Time Only)**
@@ -161,7 +161,7 @@ Click [🔌 Test Connection]
 
 🎉 **Congratulations!** You just:
 
-1. ✅ **Logged in** to SODA+ AI with secure session management
+1. ✅ **Logged in** to SqlLens with secure session management
 2. ✅ **Connected** to a SQL Server database
 3. ✅ **Analyzed** dependencies for a database object
 4. ✅ **Viewed** upstream/downstream relationships
@@ -224,7 +224,7 @@ Click [🔌 Test Connection]
 - Click **🔍 Search**
 - See results from all databases!
 - **Tip:** Double-click a result to open it in Dependency Analyzer
-- **→ See [Step 11: Cross-Database Search](SODA_PLUS_Search_Guide.md) in Search Guide**
+- **→ See [Step 11: Cross-Database Search](SqlLens_Search_Guide.md) in Search Guide**
 
 **4. Check Drill-Down** (3 minutes)
 - In the dependency tree, **right-click** a dependency
@@ -246,7 +246,7 @@ Once you're comfortable, explore these:
   - 🔍 **Comprehensive** - Searches names, code, columns, triggers, constraints
   - 🌐 **Multi-server** - Search entire environments (DEV, TEST, PROD)
   - 🤖 **AI Filtering** - Remove irrelevant matches with Grok AI
-- **→ See [Step 11: Cross-Database Search](SODA_PLUS_Search_Guide.md) in Search Guide**
+- **→ See [Step 11: Cross-Database Search](SqlLens_Search_Guide.md) in Search Guide**
 
 **📊 Charting** (10 minutes)
 - Right-click object → **Chart Analysis** → **Quick Chart**
@@ -255,39 +255,39 @@ Once you're comfortable, explore these:
 - **NEW:** Use **File menu** to save, load, or copy Mermaid charts
 - **NEW:** Use **Output menu** to render, open, or save SVG files
 - Export as SVG for documentation
-- **→ See [Step 10: Dependency Charting](SODA_PLUS_User_Guide.md#step-10-dependency-charting-new-) in Full Guide**
+- **→ See [Step 10: Dependency Charting](SqlLens_User_Guide.md#step-10-dependency-charting-new-) in Full Guide**
 
 **🤖 AI Analysis** (15 minutes)
 - Right-click procedure → **AI Analysis** → **Summary**
 - Get AI-powered code improvements
 - See formatted recommendations
-- **→ See [Step 9: AI Code Analysis](SODA_PLUS_User_Guide.md#step-9-ai-code-analysis---new-enhanced-workflow-) in Full Guide**
+- **→ See [Step 9: AI Code Analysis](SqlLens_User_Guide.md#step-9-ai-code-analysis---new-enhanced-workflow-) in Full Guide**
 
 **💾 Export Dependencies** (5 minutes)
 - Click **Export** button in analyzer toolbar
 - Choose format: CSV, JSON, Markdown, or Text
 - Save for documentation or reports
-- **→ See [Step 8b: Toolbar Actions](SODA_PLUS_User_Guide.md#step-8b-dependency-analyzer-toolbar-actions-new) in Full Guide**
+- **→ See [Step 8b: Toolbar Actions](SqlLens_User_Guide.md#step-8b-dependency-analyzer-toolbar-actions-new) in Full Guide**
 
 **📺 Full Window Mode** (2 minutes)
 - Click **Full Window** button in analyzer toolbar
 - Get standalone window for analysis
 - Great for dual monitors
-- **→ See [Step 8b: Full Window](SODA_PLUS_User_Guide.md#-full-window-button-new) in Full Guide**
+- **→ See [Step 8b: Full Window](SqlLens_User_Guide.md#-full-window-button-new) in Full Guide**
 
 ### **Read the Full Documentation:**
 
-📖 **[Complete User Guide](SODA_PLUS_User_Guide.md)** (2-3 hours)
+📖 **[Complete User Guide](SqlLens_User_Guide.md)** (2-3 hours)
 - Comprehensive reference for all features
 - Advanced workflows and troubleshooting
 - Deep dives into AI analysis and refactoring
 
-📘 **[Concise User Guide](SODA_PLUS_Guide_Concise.md)** (30 minutes)
+📘 **[Concise User Guide](SqlLens_Guide_Concise.md)** (30 minutes)
 - Essential features without the deep details
 - Perfect for onboarding and training
 - 80% of what you need to know
 
-🔍 **[Reference Guide](SODA_PLUS_Reference.md)** (Quick Lookup)
+🔍 **[Reference Guide](SqlLens_Reference.md)** (Quick Lookup)
 - Alphabetical feature index
 - Keyboard shortcuts cheat sheet
 - Fast answers to "How do I...?"
@@ -363,7 +363,7 @@ Once you're comfortable, explore these:
 
 After 5 minutes, you should be able to:
 
-- ✅ Login to SODA+ AI
+- ✅ Login to SqlLens
 - ✅ Select SANDBOX environment
 - ✅ Add a SQL Server
 - ✅ Connect to a database
@@ -380,7 +380,7 @@ After 5 minutes, you should be able to:
 - 📊 Explore **Dependency Charting** for visual diagrams
 - 🤖 Test **AI Analysis** for code improvements
 
-**Need more?** 📖 Move to the [Concise User Guide](SODA_PLUS_Guide_Concise.md) for essential features.
+**Need more?** 📖 Move to the [Concise User Guide](SqlLens_Guide_Concise.md) for essential features.
 
 ---
 
@@ -397,6 +397,6 @@ All guides have built-in search to help you navigate:
 - Use feature names: "AI Analysis", "Charting", "Dependencies"
 - Search error messages or symptoms directly
 
-**Still can't find what you need?** See the [Complete User Guide](SODA_PLUS_User_Guide.md) for comprehensive coverage.
+**Still can't find what you need?** See the [Complete User Guide](SqlLens_User_Guide.md) for comprehensive coverage.
 
 ---
