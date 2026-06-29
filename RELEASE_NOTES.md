@@ -1,4 +1,4 @@
-# SODA+ AI - Release 1.8.0
+# SqlLens - Release 1.8.0
 
 ## What's New
 
@@ -7,9 +7,9 @@
 For full details, see: [docs/RELEASE_NOTES_v1.8.0.md](docs/RELEASE_NOTES_v1.8.0.md)
 
 ## Installation
-1. **[📦 Download Latest Release](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)**
+1. **[📦 Download Latest Release](https://sqllens.blob.core.windows.net/downloads/download.html)**
 2. **Double-click** `Install-SODA_Latest.bat`
-3. **Launch** from Start Menu → Search "SODA+ AI"
+3. **Launch** from Start Menu → Search "SqlLens"
 
 ## Documentation
 - [Quick Start Guide](docs/Quick_Start_Guide.md) (5 min)
@@ -21,11 +21,11 @@ For full details, see: [docs/RELEASE_NOTES_v1.8.0.md](docs/RELEASE_NOTES_v1.8.0.
 - [Full User Guide](docs/User_Guide_Full.md) (Complete Reference)
 
 ## Support
-- [GitHub Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues)
-- [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
+- [GitHub Issues](https://github.com/jcboyer/SqlLens/issues)
+- [GitHub Discussions](https://github.com/jcboyer/SqlLens/discussions)
 
 ---
 
 **Version:** 1.8.0  
 **Release Date:** June 27, 2026  
-**Download:** https://sodaplusbeta.blob.core.windows.net/downloads/download.html
+**Download:** https://sqllens.blob.core.windows.net/downloads/download.html
