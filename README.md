@@ -102,6 +102,7 @@ Every bug report, suggestion, and piece of feedback helps make SqlLens better fo
 | 📘 [Concise Guide](docs/Concise_Guide.md) | 30 min | Essential features (80% of what you need) |
 | 🔍 [Reference Guide](docs/Reference_Guide.md) | Instant | Alphabetical feature lookup |
 | 📖 [Full User Guide](docs/User_Guide_Full.md) | 2-3 hrs | Complete reference with all features |
+| 🤖 [Agent Jobs Guide](docs/SqlLens_Agent_Jobs_Guide.md) | 15 min | SQL Server Agent Job dependency graph, Git drift detection |
 | 🛠️ [Developer Docs](docs/developers/) | Varies | Version sync, Azure integration |
 
 **Not sure which guide to use?** See: [Which Guide Should I Use?](docs/README.md#which-guide-should-i-use)
@@ -133,6 +134,12 @@ Every bug report, suggestion, and piece of feedback helps make SqlLens better fo
 - **Search inside code** definitions (procedures, functions, views)
 - **AI-powered relevance filtering** for accurate results
 - **Multi-server support** with connection management
+
+### 🤖 SQL Server Agent Job Management
+- **Agent Job dependency graph** — visualize stored procedure calls from each job step
+- **Git drift detection** — compare live DB scripts vs committed versions (In Sync / DB Ahead / Git Ahead)
+- **Script history** — browse Active and Archived job step scripts stored in Git
+- **Repo changes report** — full Git commit history for all Agent scripts with CSV export
 
 ### ☁️ Cloud Integration
 - **Azure Key Vault** secure API key management
