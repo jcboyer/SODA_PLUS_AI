@@ -102,6 +102,7 @@ Every bug report, suggestion, and piece of feedback helps make SqlLens better fo
 | 📘 [Concise Guide](docs/Concise_Guide.md) | 30 min | Essential features (80% of what you need) |
 | 🔍 [Reference Guide](docs/Reference_Guide.md) | Instant | Alphabetical feature lookup |
 | 📖 [Full User Guide](docs/User_Guide_Full.md) | 2-3 hrs | Complete reference with all features |
+| 🧩 [VS Code Extension Guide](docs/SqlLens_VSCode_Guide.md) | 15 min | Full command reference for the VS Code extension |
 | 🤖 [Agent Jobs Guide](docs/SqlLens_Agent_Jobs_Guide.md) | 15 min | SQL Server Agent Job dependency graph, Git drift detection |
 | 🛠️ [Developer Docs](docs/developers/) | Varies | Version sync, Azure integration |
 
