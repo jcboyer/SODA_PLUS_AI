@@ -1,8 +1,8 @@
-# SODA+ AI - SQL Server Dependency Analysis
+# SqlLens - SQL Server Dependency Analysis
 
-[![Download Latest](https://img.shields.io/badge/Download-Latest%20Release-blueviolet?style=for-the-badge&logo=download)](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)
-[![Latest Version](https://img.shields.io/badge/dynamic/json?url=https://sodaplusbeta.blob.core.windows.net/downloads/version.json&query=$.latestVersion&label=Version&style=for-the-badge&color=blue)](docs/CHANGELOG.md)
-[![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11%20x64-brightgreen?style=for-the-badge)](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)
+[![Download Latest](https://img.shields.io/badge/Download-Latest%20Release-blueviolet?style=for-the-badge&logo=download)](https://sqllens.blob.core.windows.net/downloads/download.html)
+[![Latest Version](https://img.shields.io/badge/dynamic/json?url=https://sqllens.blob.core.windows.net/downloads/version.json&query=$.latestVersion&label=Version&style=for-the-badge&color=blue)](docs/CHANGELOG.md)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11%20x64-brightgreen?style=for-the-badge)](https://sqllens.blob.core.windows.net/downloads/download.html)
 
 ---
 
@@ -10,7 +10,7 @@
 
 <div align="center">
 
-### We need YOUR help to make SODA+ AI better! 🚀
+### We need YOUR help to make SqlLens better! 🚀
 
 **Try the latest version on your SQL Server environments and share your feedback.**
 
@@ -18,9 +18,9 @@
 
 ### 📦 Get Started in 3 Steps
 
-1. **[⬇️ Download the Latest Beta](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)**
+1. **[⬇️ Download the Latest Beta](https://sqllens.blob.core.windows.net/downloads/download.html)**
 2. **Double-click `Install-SODA_Latest.bat`** (no admin rights needed!)
-3. **Launch from Start Menu** → Search "SODA+ AI"
+3. **Launch from Start Menu** → Search "SqlLens"
 
 ### 🎯 What We're Looking For
 
@@ -39,8 +39,8 @@ Choose the method that works best for you:
 
 | Method | Best For | Link |
 |--------|----------|------|
-| 🐛 **GitHub Issues** | Bug reports, specific problems | [Report Issue](https://github.com/jcboyer/SODA_PLUS_AI/issues/new?labels=beta-feedback) |
-| 💬 **GitHub Discussions** | General feedback, questions, ideas | [Beta Testing Thread](https://github.com/jcboyer/SODA_PLUS_AI/discussions) |
+| 🐛 **GitHub Issues** | Bug reports, specific problems | [Report Issue](https://github.com/jcboyer/SqlLens/issues/new?labels=beta-feedback) |
+| 💬 **GitHub Discussions** | General feedback, questions, ideas | [Beta Testing Thread](https://github.com/jcboyer/SqlLens/discussions) |
 | 📧 **Direct Email** | Private feedback, security concerns | [Contact via GitHub](https://github.com/jcboyer) |
 
 ### ✅ Beta Testing Requirements
@@ -69,15 +69,15 @@ Choose the method that works best for you:
 
 ### 🙏 Thank You for Helping Us Build Something Great!
 
-Every bug report, suggestion, and piece of feedback helps make SODA+ AI better for the entire SQL Server community. We read and respond to every submission!
+Every bug report, suggestion, and piece of feedback helps make SqlLens better for the entire SQL Server community. We read and respond to every submission!
 
 ---
 
 ## 🎬 Quick Demo
 
-**Watch SODA+ AI in action!** See how to analyze SQL Server dependencies in just 2 minutes:
+**Watch SqlLens in action!** See how to analyze SQL Server dependencies in just 2 minutes:
 
-[![SODA+ AI Demo](https://img.youtube.com/vi/ecZOFDrbr9I/maxresdefault.jpg)](https://youtu.be/ecZOFDrbr9I)
+[![SqlLens Demo](https://img.youtube.com/vi/ecZOFDrbr9I/maxresdefault.jpg)](https://youtu.be/ecZOFDrbr9I)
 
 **[▶️ Watch Demo Video (2 min)](https://youtu.be/ecZOFDrbr9I)**
 
@@ -85,9 +85,9 @@ Every bug report, suggestion, and piece of feedback helps make SODA+ AI better f
 
 ## 🚀 Quick Start
 
-1. **[⬇️ Download Latest Release](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)** (Always up-to-date)
+1. **[⬇️ Download Latest Release](https://sqllens.blob.core.windows.net/downloads/download.html)** (Always up-to-date)
 2. Double-click `Install-SODA_Latest.bat`
-3. Launch from Start Menu → Search "SODA+ AI"
+3. Launch from Start Menu → Search "SqlLens"
 4. Login with your email address
 5. Connect to your SQL Server and start analyzing!
 
@@ -190,13 +190,13 @@ For detailed release notes and version history, visit:
 
 | Resource | Link |
 |----------|------|
-| 📥 **Download** | [Latest Release](https://sodaplusbeta.blob.core.windows.net/downloads/download.html) |
+| 📥 **Download** | [Latest Release](https://sqllens.blob.core.windows.net/downloads/download.html) |
 | 📖 **Documentation** | [User Guides](docs/) |
 | 📄 **Release Notes** | [CHANGELOG](docs/CHANGELOG.md) |
 | 📦 **Previous Versions** | [Release History](docs/RELEASE_HISTORY.md) |
-| 🐛 **Report Issues** | [GitHub Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) |
-| 💬 **Discussions** | [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions) |
-| 🧪 **Beta Feedback** | [Beta Testing Thread](https://github.com/jcboyer/SODA_PLUS_AI/discussions) |
+| 🐛 **Report Issues** | [GitHub Issues](https://github.com/jcboyer/SqlLens/issues) |
+| 💬 **Discussions** | [GitHub Discussions](https://github.com/jcboyer/SqlLens/discussions) |
+| 🧪 **Beta Feedback** | [Beta Testing Thread](https://github.com/jcboyer/SqlLens/discussions) |
 
 ---
 
@@ -208,7 +208,7 @@ For detailed release notes and version history, visit:
 - ✅ **Encrypted sessions** with Windows DPAPI
 - ✅ **Open documentation** (public repo for transparency)
 
-**Security Disclosure:** Please report security vulnerabilities via [GitHub Security Advisories](https://github.com/jcboyer/SODA_PLUS_AI/security/advisories/new)
+**Security Disclosure:** Please report security vulnerabilities via [GitHub Security Advisories](https://github.com/jcboyer/SqlLens/security/advisories/new)
 
 ---
 
@@ -238,20 +238,20 @@ For detailed release notes and version history, visit:
 We welcome contributions! Here's how you can help:
 
 ### Bug Reports
-1. [Open an issue](https://github.com/jcboyer/SODA_PLUS_AI/issues/new?template=bug_report.md)
+1. [Open an issue](https://github.com/jcboyer/SqlLens/issues/new?template=bug_report.md)
 2. Include Windows version and system specs
 3. Attach screenshots if applicable
 4. Describe steps to reproduce
 
 ### Feature Requests
-1. [Open an issue](https://github.com/jcboyer/SODA_PLUS_AI/issues/new?template=feature_request.md)
+1. [Open an issue](https://github.com/jcboyer/SqlLens/issues/new?template=feature_request.md)
 2. Describe the use case
 3. Explain expected behavior
 
 ### Documentation
 1. Submit pull requests for documentation improvements
 2. Report unclear or missing documentation
-3. Share tips and best practices in [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
+3. Share tips and best practices in [Discussions](https://github.com/jcboyer/SqlLens/discussions)
 
 ---
 
@@ -260,9 +260,9 @@ We welcome contributions! Here's how you can help:
 Need help? We're here for you:
 
 - 📖 **Documentation**: [User Guides](docs/)
-- 🔍 **Search Issues**: [Existing Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues)
-- 🐛 **Report Bugs**: [New Issue](https://github.com/jcboyer/SODA_PLUS_AI/issues/new)
-- 💬 **Ask Questions**: [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
+- 🔍 **Search Issues**: [Existing Issues](https://github.com/jcboyer/SqlLens/issues)
+- 🐛 **Report Bugs**: [New Issue](https://github.com/jcboyer/SqlLens/issues/new)
+- 💬 **Ask Questions**: [GitHub Discussions](https://github.com/jcboyer/SqlLens/discussions)
 
 **Response Time:** We typically respond to issues within 24-48 hours.
 
@@ -277,13 +277,13 @@ This software is currently in beta and available for testing purposes.
 - ✅ No warranty or support guarantee
 - ⚠️ Not licensed for production use without agreement
 
-For licensing inquiries, please [contact us](https://github.com/jcboyer/SODA_PLUS_AI/discussions).
+For licensing inquiries, please [contact us](https://github.com/jcboyer/SqlLens/discussions).
 
 ---
 
 ## 🎉 Thank You!
 
-Thank you for using SODA+ AI! Your feedback helps make it better for everyone.
+Thank you for using SqlLens! Your feedback helps make it better for everyone.
 
 **Special Thanks:**
 - All beta testers who provided valuable feedback
@@ -307,14 +307,14 @@ Thank you for using SODA+ AI! Your feedback helps make it better for everyone.
 
 <div align="center">
 
-### [⬇️ Download Latest Release Now](https://sodaplusbeta.blob.core.windows.net/downloads/download.html)
+### [⬇️ Download Latest Release Now](https://sqllens.blob.core.windows.net/downloads/download.html)
 
 **Latest Version:** [See CHANGELOG](docs/CHANGELOG.md)
 
 ---
 
-**Made with ❤️ by the SODA+ AI Team**
+**Made with ❤️ by the SqlLens Team**
 
-[Documentation](docs/) • [Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues) • [Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions) • [Release History](docs/RELEASE_HISTORY.md)
+[Documentation](docs/) • [Issues](https://github.com/jcboyer/SqlLens/issues) • [Discussions](https://github.com/jcboyer/SqlLens/discussions) • [Release History](docs/RELEASE_HISTORY.md)
 
 </div>
