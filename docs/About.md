@@ -23,8 +23,8 @@ SqlLens is an AI-powered SQL Server Analysis & Visualization that helps develope
 ## Community & Support
 
 ### GitHub Resources
-- **Community Discussions:** https://github.com/jcboyer/sqllens-docs-docs/discussions
-- **Issue Tracking:** https://github.com/jcboyer/sqllens-docs-docs/issues
+- **Community Discussions:** https://github.com/jcboyer/sqllens-docs/discussions
+- **Issue Tracking:** https://github.com/jcboyer/sqllens-docs/issues
 - **Source Code:** https://github.com/jcboyer/sqllens-docs
 
 ### Getting Help
