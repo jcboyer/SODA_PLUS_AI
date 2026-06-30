@@ -244,7 +244,7 @@ No default bindings assigned. Add via **File → Preferences → Keyboard Shortc
 |----------|------|
 | 🖥️ Desktop Application | [Download](https://sqllens.blob.core.windows.net/downloads/download.html) |
 | 📊 Desktop vs VS Code Feature Comparison | [Feature_Comparison.md](Feature_Comparison.md) |
-| 🔍 Full Desktop Reference Guide | [SqlLens_Reference.md](SqlLens_Reference.md) |
+| 🔍 Full Desktop Reference Guide | [Reference_Guide.md](Reference_Guide.md) |
 | 🐛 Report Issues | [GitHub Issues](https://github.com/jcboyer/sqllens-docs/issues) |
 
 ---
