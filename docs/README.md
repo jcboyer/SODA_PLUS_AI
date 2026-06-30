@@ -134,8 +134,8 @@ Complete documentation with all features and workflows.
 
 ## 🆘 Support
 
-- **Issues**: [GitHub Issues](https://github.com/jcboyer/sqllens-docs-docs/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/jcboyer/sqllens-docs-docs/discussions)
+- **Issues**: [GitHub Issues](https://github.com/jcboyer/sqllens-docs/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/jcboyer/sqllens-docs/discussions)
 
 ---
 
