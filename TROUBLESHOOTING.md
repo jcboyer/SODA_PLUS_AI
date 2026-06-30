@@ -55,7 +55,7 @@ GRANT VIEW DEFINITION TO [YourLoginName];
 
 ## Still Having Issues?
 
-[🐛 Report Bug on GitHub](https://github.com/jcboyer/sqllens-docs-docs/issues/new?template=bug_report.md)
+[🐛 Report Bug on GitHub](https://github.com/jcboyer/sqllens-docs/issues/new?template=bug_report.md)
 
 ---
 
