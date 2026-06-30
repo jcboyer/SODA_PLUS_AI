@@ -77,7 +77,7 @@ Every bug report, suggestion, and piece of feedback helps make SqlLens better fo
 
 **Watch SqlLens in action!** See how to analyze SQL Server dependencies in just 2 minutes:
 
-[![SqlLens Demo](https://img.youtube.com/vi/ecZOFDrbr9I/maxresdefault.jpg)](https://youtu.be/ecZOFDrbr9I)
+[![SqlLens Demo](docs/screenshots/MainInterface_PUBLIC_GUIDE.png)](https://youtu.be/ecZOFDrbr9I)
 
 **[▶️ Watch Demo Video (2 min)](https://youtu.be/ecZOFDrbr9I)**
 
