@@ -216,7 +216,7 @@ For detailed release notes and version history, visit:
 - ✅ **Encrypted sessions** with Windows DPAPI
 - ✅ **Open documentation** (public repo for transparency)
 
-**Security Disclosure:** Please report security vulnerabilities via [GitHub Security Advisories](https://github.com/jcboyer/sqllens-docs/discussions/advisories/new)
+**Security Disclosure:** Please report security vulnerabilities via [GitHub Security Advisories](https://github.com/jcboyer/sqllens-docs/security/advisories/new)
 
 ---
 
@@ -326,6 +326,7 @@ Thank you for using SqlLens! Your feedback helps make it better for everyone.
 [Documentation](docs/) • [Issues](https://github.com/jcboyer/sqllens-docs/issues) • [Discussions](https://github.com/jcboyer/sqllens-docs/discussions) • [Release History](docs/Release_Notes/RELEASE_HISTORY.md)
 
 </div>
+
 
 
 

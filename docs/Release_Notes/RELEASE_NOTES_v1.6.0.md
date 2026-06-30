@@ -518,7 +518,7 @@ All known issues are **non-blocking** and have workarounds or minimal impact.
 ## 📞 Support
 
 - **GitHub Issues**: [Report a Bug](https://github.com/jcboyer/SODA_PLUS_AI/issues)
-- **GitHub Discussions**: [Ask Questions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
+- **GitHub Discussions**: [Ask Questions](https://github.com/jcboyer/sqllens-docs/discussions)
 - **Documentation**: [User Guides](https://github.com/jcboyer/SODA_PLUS_AI/tree/main/docs)
 - **Azure Functions Logs**: Check Azure Portal for API errors
 
@@ -587,4 +587,5 @@ This release represents a **major milestone** in SODA+ AI's evolution:
 - ⚡ **Format Button Integration** - Automatically uses your preferences
 
 **Upgrade today** and enjoy consistent, professional SQL formatting! 💎✨
+
 

@@ -22,11 +22,12 @@ For full details, see: [docs/Release_Notes/RELEASE_NOTES_v1.8.0.md](docs/Release
 
 ## Support
 - [GitHub Issues](https://github.com/jcboyer/SqlLens/issues)
-- [GitHub Discussions](https://github.com/jcboyer/SqlLens/discussions)
+- [GitHub Discussions](https://github.com/jcboyer/sqllens-docs/discussions)
 
 ---
 
 **Version:** 1.8.0  
 **Release Date:** June 27, 2026  
 **Download:** https://sqllens.blob.core.windows.net/downloads/download.html
+
 

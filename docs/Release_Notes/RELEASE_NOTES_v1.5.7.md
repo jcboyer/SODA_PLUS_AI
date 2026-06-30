@@ -257,7 +257,7 @@ None at this time. All features tested and stable:
 ## 📞 Support
 
 - **GitHub Issues**: [Report a Bug](https://github.com/jcboyer/SODA_PLUS_AI/issues)
-- **GitHub Discussions**: [Ask Questions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
+- **GitHub Discussions**: [Ask Questions](https://github.com/jcboyer/sqllens-docs/discussions)
 - **Documentation**: [User Guides](https://github.com/jcboyer/SODA_PLUS_AI/tree/main/docs)
 
 ---
@@ -279,4 +279,5 @@ None at this time. All features tested and stable:
 ---
 
 **Thank you for using SODA+ AI!** 🎉
+
 

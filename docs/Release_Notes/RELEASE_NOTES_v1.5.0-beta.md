@@ -51,7 +51,7 @@ None at this time.
 ## 📞 Support
 
 - **Issues**: [GitHub Issues](https://github.com/jcboyer/SODA_PLUS_AI/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/jcboyer/SODA_PLUS_AI/discussions)
+- **Discussions**: [GitHub Discussions](https://github.com/jcboyer/sqllens-docs/discussions)
 
 ---
 

@@ -51,7 +51,7 @@ IMPORTANT: This is beta software and may contain bugs or incomplete features. Us
 
 This is beta software provided for free. Support is provided on a best-effort basis through:
 - GitHub Issues: https://github.com/jcboyer/sqllens-desktop/issues
-- GitHub Discussions: https://github.com/jcboyer/sqllens-desktop/discussions
+- GitHub Discussions: https://github.com/jcboyer/sqllens-docs/discussions
 
 ### Contact
 
@@ -62,3 +62,4 @@ For licensing questions, contact: https://github.com/jcboyer/sqllens-desktop/iss
 By downloading and using this software, you agree to these terms.
 
 Last Updated: June 29, 2026
+
