@@ -19,9 +19,9 @@ assignees: ''
 
 
 ## 📖 Documentation Checked
-- [ ] [User Guide](../SqlLens_User_Guide.md)
-- [ ] [Installation Guide](../INSTALLATION.md)
-- [ ] [Troubleshooting Guide](../TROUBLESHOOTING.md)
+- [ ] [User Guide](../User_Guide_Full.md)
+- [ ] [Quick Start Guide](../../docs/Quick_Start_Guide.md)
+- [ ] [Troubleshooting Guide](../../TROUBLESHOOTING.md)
 - [ ] [Existing Issues](https://github.com/jcboyer/sqllens-docs/issues)
 
 ## 💻 Environment (if relevant)
