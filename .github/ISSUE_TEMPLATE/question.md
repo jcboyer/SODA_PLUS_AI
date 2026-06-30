@@ -22,7 +22,7 @@ assignees: ''
 - [ ] [User Guide](../SqlLens_User_Guide.md)
 - [ ] [Installation Guide](../INSTALLATION.md)
 - [ ] [Troubleshooting Guide](../TROUBLESHOOTING.md)
-- [ ] [Existing Issues](https://github.com/jcboyer/sqllens-docs-docs/issues)
+- [ ] [Existing Issues](https://github.com/jcboyer/sqllens-docs/issues)
 
 ## 💻 Environment (if relevant)
 - **Windows Version:** [e.g., Windows 11]
