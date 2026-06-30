@@ -19,7 +19,7 @@ assignees: ''
 
 
 ## 📖 Documentation Checked
-- [ ] [User Guide](../User_Guide_Full.md)
+- [ ] [User Guide](../../docs/User_Guide_Full.md)
 - [ ] [Quick Start Guide](../../docs/Quick_Start_Guide.md)
 - [ ] [Troubleshooting Guide](../../TROUBLESHOOTING.md)
 - [ ] [Existing Issues](https://github.com/jcboyer/sqllens-docs/issues)
