@@ -182,9 +182,9 @@ This keeps deployment evidence and runtime configuration aligned.
 
 ## Related Guides
 
-- [Quick Start](SqlLens_QuickStart.md)
-- [User Guide](SqlLens_User_Guide.md)
-- [Reference Guide](SqlLens_Reference.md)
-- [Cross-Database Search Guide](SqlLens_Search_Guide.md)
-- [Project Management Guide](SqlLens_ProjectManagement_Guide.md)
+- [Quick Start](Quick_Start_Guide.md)
+- [User Guide](User_Guide_Full.md)
+- [Reference Guide](Reference_Guide.md)
+- [Cross-Database Search Guide](Search_Guide.md)
+- [Project Management Guide](Project_Management_Guide.md)
 
