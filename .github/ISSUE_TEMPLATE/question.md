@@ -19,8 +19,8 @@ assignees: ''
 
 
 ## 📖 Documentation Checked
-- [ ] [User Guide](../../docs/SqlLens_User_Guide_Full.md)
-- [ ] [Quick Start Guide](../../docs/SqlLens_Quick_Start_Guide.md)
+- [ ] [User Guide](../../docs/Guides/SqlLens_User_Guide_Full.md)
+- [ ] [Quick Start Guide](../../docs/Guides/SqlLens_Quick_Start_Guide.md)
 - [ ] [Troubleshooting Guide](../../TROUBLESHOOTING.md)
 - [ ] [Existing Issues](https://github.com/jcboyer/sqllens-docs/issues)
 
@@ -28,5 +28,6 @@ assignees: ''
 - **Windows Version:** [e.g., Windows 11]
 - **SQL Server Version:** [e.g., SQL Server 2019]
 - **SqlLens Version:** [e.g., 1.0.0-beta]
+
 
 

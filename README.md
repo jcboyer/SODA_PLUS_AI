@@ -1,7 +1,7 @@
 # SqlLens - SQL Server Analysis & Visualization
 
 [![Download Latest](https://img.shields.io/badge/Download-Latest%20Release-blueviolet?style=for-the-badge&logo=download)](https://sqllens.blob.core.windows.net/downloads/download.html)
-[![Latest Version](https://img.shields.io/badge/dynamic/json?url=https://sqllens.blob.core.windows.net/downloads/version.json&query=$.latestVersion&label=Version&style=for-the-badge&color=blue)](docs/CHANGELOG.md)
+[![Latest Version](https://img.shields.io/badge/dynamic/json?url=https://sqllens.blob.core.windows.net/downloads/version.json&query=$.latestVersion&label=Version&style=for-the-badge&color=blue)](docs/Release_Notes/CHANGELOG.md)
 [![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11%20x64-brightgreen?style=for-the-badge)](https://sqllens.blob.core.windows.net/downloads/download.html)
 
 ---
@@ -77,7 +77,7 @@ Every bug report, suggestion, and piece of feedback helps make SqlLens better fo
 
 **Watch SqlLens in action!** See how to analyze SQL Server dependencies in just 2 minutes:
 
-[![SqlLens Demo](docs/screenshots/MainInterface_PUBLIC_GUIDE.png)](https://youtu.be/ecZOFDrbr9I)
+[![SqlLens Demo](docs/Screenshots/MainInterface_PUBLIC_GUIDE.png)](https://youtu.be/ecZOFDrbr9I)
 
 **[▶️ Watch Demo Video (2 min)](https://youtu.be/ecZOFDrbr9I)**
 
@@ -98,13 +98,13 @@ Every bug report, suggestion, and piece of feedback helps make SqlLens better fo
 
 | Guide | Time | Description |
 |-------|------|-------------|
-| 🚀 [Quick Start Guide](docs/SqlLens_Quick_Start_Guide.md) | 5 min | Perfect for first-time users |
-| 📘 [Concise Guide](docs/SqlLens_Concise_Guide.md) | 30 min | Essential features (80% of what you need) |
-| 🔍 [Reference Guide](docs/SqlLens_Reference_Guide.md) | Instant | Alphabetical feature lookup |
-| 📖 [Full User Guide](docs/SqlLens_User_Guide_Full.md) | 2-3 hrs | Complete reference with all features |
-| 🧩 [VS Code Extension Guide](docs/SqlLens_VSCode_Guide.md) | 15 min | Full command reference for the VS Code extension |
-| 🤖 [Agent Jobs Guide](docs/SqlLens_Agent_Jobs_Guide.md) | 15 min | SQL Server Agent Job dependency graph, Git drift detection |
-| 🛠️ [Developer Docs](docs/developers/) | Varies | Version sync, Azure integration |
+| 🚀 [Quick Start Guide](docs/Guides/SqlLens_Quick_Start_Guide.md) | 5 min | Perfect for first-time users |
+| 📘 [Concise Guide](docs/Guides/SqlLens_Concise_Guide.md) | 30 min | Essential features (80% of what you need) |
+| 🔍 [Reference Guide](docs/Guides/SqlLens_Reference_Guide.md) | Instant | Alphabetical feature lookup |
+| 📖 [Full User Guide](docs/Guides/SqlLens_User_Guide_Full.md) | 2-3 hrs | Complete reference with all features |
+| 🧩 [VS Code Extension Guide](docs/Guides/SqlLens_VSCode_Guide.md) | 15 min | Full command reference for the VS Code extension |
+| 🤖 [Agent Jobs Guide](docs/Guides/SqlLens_Agent_Jobs_Guide.md) | 15 min | SQL Server Agent Job dependency graph, Git drift detection |
+| 🛠️ [Developer Docs](docs/Developers/) | Varies | Version sync, Azure integration |
 
 **Not sure which guide to use?** See: [Which Guide Should I Use?](docs/README.md#which-guide-should-i-use)
 
@@ -164,11 +164,11 @@ Every bug report, suggestion, and piece of feedback helps make SqlLens better fo
 
 ## 📝 Latest Release
 
-**Current Version:** See [CHANGELOG](docs/CHANGELOG.md)
+**Current Version:** See [CHANGELOG](docs/Release_Notes/CHANGELOG.md)
 
 For detailed release notes and version history, visit:
-- 📄 [Release History](docs/RELEASE_HISTORY.md) - All versions with download links
-- 📋 [CHANGELOG](docs/CHANGELOG.md) - Detailed version history
+- 📄 [Release History](docs/Release_Notes/RELEASE_HISTORY.md) - All versions with download links
+- 📋 [CHANGELOG](docs/Release_Notes/CHANGELOG.md) - Detailed version history
 
 ---
 
@@ -200,8 +200,8 @@ For detailed release notes and version history, visit:
 |----------|------|
 | 📥 **Download** | [Latest Release](https://sqllens.blob.core.windows.net/downloads/download.html) |
 | 📖 **Documentation** | [User Guides](docs/) |
-| 📄 **Release Notes** | [CHANGELOG](docs/CHANGELOG.md) |
-| 📦 **Previous Versions** | [Release History](docs/RELEASE_HISTORY.md) |
+| 📄 **Release Notes** | [CHANGELOG](docs/Release_Notes/CHANGELOG.md) |
+| 📦 **Previous Versions** | [Release History](docs/Release_Notes/RELEASE_HISTORY.md) |
 | 🐛 **Report Issues** | [GitHub Issues](https://github.com/jcboyer/sqllens-docs/issues) |
 | 💬 **Discussions** | [GitHub Discussions](https://github.com/jcboyer/sqllens-docs/discussions) |
 | 🧪 **Beta Feedback** | [Beta Testing Thread](https://github.com/jcboyer/sqllens-docs/discussions) |
@@ -223,21 +223,21 @@ For detailed release notes and version history, visit:
 ## 📸 Screenshots
 
 ### Main Interface
-![Main Interface](docs/screenshots/MainInterface_PUBLIC_GUIDE.png)
+![Main Interface](docs/Screenshots/MainInterface_PUBLIC_GUIDE.png)
 
 ### Environment Selection
-![Environment Selection](docs/screenshots/EnvironmentSelection_PUBLIC_GUIDE.png)
+![Environment Selection](docs/Screenshots/EnvironmentSelection_PUBLIC_GUIDE.png)
 
 ### Dependency Analysis
-![Dependency Analysis](docs/screenshots/AnalyzerMainView_PUBLIC_GUIDE.png)
+![Dependency Analysis](docs/Screenshots/AnalyzerMainView_PUBLIC_GUIDE.png)
 
 ### AI Code Review
-![AI Code Review](docs/screenshots/AIReviewWindow_PUBLIC_GUIDE.png)
+![AI Code Review](docs/Screenshots/AIReviewWindow_PUBLIC_GUIDE.png)
 
 ### Dependency Charts
-![Dependency Charts](docs/screenshots/ChartWindow_PUBLIC_GUIDE.png)
+![Dependency Charts](docs/Screenshots/ChartWindow_PUBLIC_GUIDE.png)
 
-*More screenshots available in [docs/screenshots/](docs/screenshots/)*
+*More screenshots available in [docs/Screenshots/](docs/Screenshots/)*
 
 ---
 
@@ -317,13 +317,15 @@ Thank you for using SqlLens! Your feedback helps make it better for everyone.
 
 ### [⬇️ Download Latest Release Now](https://sqllens.blob.core.windows.net/downloads/download.html)
 
-**Latest Version:** [See CHANGELOG](docs/CHANGELOG.md)
+**Latest Version:** [See CHANGELOG](docs/Release_Notes/CHANGELOG.md)
 
 ---
 
 **Made with ❤️ by the SqlLens Team**
 
-[Documentation](docs/) • [Issues](https://github.com/jcboyer/sqllens-docs/issues) • [Discussions](https://github.com/jcboyer/sqllens-docs/discussions) • [Release History](docs/RELEASE_HISTORY.md)
+[Documentation](docs/) • [Issues](https://github.com/jcboyer/sqllens-docs/issues) • [Discussions](https://github.com/jcboyer/sqllens-docs/discussions) • [Release History](docs/Release_Notes/RELEASE_HISTORY.md)
 
 </div>
+
+
 
