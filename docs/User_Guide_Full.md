@@ -5,7 +5,7 @@
 
 ## 📑 **Table of Contents**
 
-> 🔗 For GitHub repository workflows (mappings, compare/drift, Agent Job script Active/Archive, Repo Changes CSV), see the [Git Integration Guide](SqlLens_Git_Integration_Guide.md).
+> 🔗 For GitHub repository workflows (mappings, compare/drift, Agent Job script Active/Archive, Repo Changes CSV), see the [Git Integration Guide](Git_Integration_Guide.md).
 
 ### **📚 Getting Started**
 - [Step 0: Initial Login & Registration](#step-0-initial-login--registration-new) ⭐ **NEW!**
