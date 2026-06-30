@@ -819,7 +819,7 @@ Actual: DEV-SQL-01 (unchanged)
 4. Try copying a project to TEST
 5. Open All Objects to verify
 
-**Questions?** Check the [SqlLens User Guide](SqlLens_User_Guide.md) or contact support.
+**Questions?** Check the [SqlLens User Guide](User_Guide_Full.md) or contact support.
 
 ---
 
