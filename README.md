@@ -40,7 +40,7 @@ Choose the method that works best for you:
 | Method | Best For | Link |
 |--------|----------|------|
 | 🐛 **GitHub Issues** | Bug reports, specific problems | [Report Issue](https://github.com/jcboyer/sqllens-docs/issues/new?labels=beta-feedback) |
-| 💬 **GitHub Discussions** | General feedback, questions, ideas | [Beta Testing Thread](https://github.com/jcboyer/sqllens-docs-docs/discussions) |
+| 💬 **GitHub Discussions** | General feedback, questions, ideas | [Beta Testing Thread](https://github.com/jcboyer/sqllens-docs/discussions) |
 | 📧 **Direct Email** | Private feedback, security concerns | [Contact via GitHub](https://github.com/jcboyer) |
 
 ### ✅ Beta Testing Requirements
@@ -203,8 +203,8 @@ For detailed release notes and version history, visit:
 | 📄 **Release Notes** | [CHANGELOG](docs/CHANGELOG.md) |
 | 📦 **Previous Versions** | [Release History](docs/RELEASE_HISTORY.md) |
 | 🐛 **Report Issues** | [GitHub Issues](https://github.com/jcboyer/sqllens-docs/issues) |
-| 💬 **Discussions** | [GitHub Discussions](https://github.com/jcboyer/sqllens-docs-docs/discussions) |
-| 🧪 **Beta Feedback** | [Beta Testing Thread](https://github.com/jcboyer/sqllens-docs-docs/discussions) |
+| 💬 **Discussions** | [GitHub Discussions](https://github.com/jcboyer/sqllens-docs/discussions) |
+| 🧪 **Beta Feedback** | [Beta Testing Thread](https://github.com/jcboyer/sqllens-docs/discussions) |
 
 ---
 
@@ -216,7 +216,7 @@ For detailed release notes and version history, visit:
 - ✅ **Encrypted sessions** with Windows DPAPI
 - ✅ **Open documentation** (public repo for transparency)
 
-**Security Disclosure:** Please report security vulnerabilities via [GitHub Security Advisories](https://github.com/jcboyer/sqllens-docs-docs/discussions/advisories/new)
+**Security Disclosure:** Please report security vulnerabilities via [GitHub Security Advisories](https://github.com/jcboyer/sqllens-docs/discussions/advisories/new)
 
 ---
 
@@ -259,7 +259,7 @@ We welcome contributions! Here's how you can help:
 ### Documentation
 1. Submit pull requests for documentation improvements
 2. Report unclear or missing documentation
-3. Share tips and best practices in [Discussions](https://github.com/jcboyer/sqllens-docs-docs/discussions)
+3. Share tips and best practices in [Discussions](https://github.com/jcboyer/sqllens-docs/discussions)
 
 ---
 
@@ -270,7 +270,7 @@ Need help? We're here for you:
 - 📖 **Documentation**: [User Guides](docs/)
 - 🔍 **Search Issues**: [Existing Issues](https://github.com/jcboyer/sqllens-docs/issues)
 - 🐛 **Report Bugs**: [New Issue](https://github.com/jcboyer/sqllens-docs/issues/new)
-- 💬 **Ask Questions**: [GitHub Discussions](https://github.com/jcboyer/sqllens-docs-docs/discussions)
+- 💬 **Ask Questions**: [GitHub Discussions](https://github.com/jcboyer/sqllens-docs/discussions)
 
 **Response Time:** We typically respond to issues within 24-48 hours.
 
@@ -285,7 +285,7 @@ This software is currently in beta and available for testing purposes.
 - ✅ No warranty or support guarantee
 - ⚠️ Not licensed for production use without agreement
 
-For licensing inquiries, please [contact us](https://github.com/jcboyer/sqllens-docs-docs/discussions).
+For licensing inquiries, please [contact us](https://github.com/jcboyer/sqllens-docs/discussions).
 
 ---
 
@@ -323,6 +323,6 @@ Thank you for using SqlLens! Your feedback helps make it better for everyone.
 
 **Made with ❤️ by the SqlLens Team**
 
-[Documentation](docs/) • [Issues](https://github.com/jcboyer/sqllens-docs/issues) • [Discussions](https://github.com/jcboyer/sqllens-docs-docs/discussions) • [Release History](docs/RELEASE_HISTORY.md)
+[Documentation](docs/) • [Issues](https://github.com/jcboyer/sqllens-docs/issues) • [Discussions](https://github.com/jcboyer/sqllens-docs/discussions) • [Release History](docs/RELEASE_HISTORY.md)
 
 </div>
