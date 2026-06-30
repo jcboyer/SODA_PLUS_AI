@@ -98,10 +98,10 @@ Every bug report, suggestion, and piece of feedback helps make SqlLens better fo
 
 | Guide | Time | Description |
 |-------|------|-------------|
-| 🚀 [Quick Start Guide](docs/Quick_Start_Guide.md) | 5 min | Perfect for first-time users |
-| 📘 [Concise Guide](docs/Concise_Guide.md) | 30 min | Essential features (80% of what you need) |
-| 🔍 [Reference Guide](docs/Reference_Guide.md) | Instant | Alphabetical feature lookup |
-| 📖 [Full User Guide](docs/User_Guide_Full.md) | 2-3 hrs | Complete reference with all features |
+| 🚀 [Quick Start Guide](docs/SqlLens_Quick_Start_Guide.md) | 5 min | Perfect for first-time users |
+| 📘 [Concise Guide](docs/SqlLens_Concise_Guide.md) | 30 min | Essential features (80% of what you need) |
+| 🔍 [Reference Guide](docs/SqlLens_Reference_Guide.md) | Instant | Alphabetical feature lookup |
+| 📖 [Full User Guide](docs/SqlLens_User_Guide_Full.md) | 2-3 hrs | Complete reference with all features |
 | 🧩 [VS Code Extension Guide](docs/SqlLens_VSCode_Guide.md) | 15 min | Full command reference for the VS Code extension |
 | 🤖 [Agent Jobs Guide](docs/SqlLens_Agent_Jobs_Guide.md) | 15 min | SQL Server Agent Job dependency graph, Git drift detection |
 | 🛠️ [Developer Docs](docs/developers/) | Varies | Version sync, Azure integration |
@@ -326,3 +326,4 @@ Thank you for using SqlLens! Your feedback helps make it better for everyone.
 [Documentation](docs/) • [Issues](https://github.com/jcboyer/sqllens-docs/issues) • [Discussions](https://github.com/jcboyer/sqllens-docs/discussions) • [Release History](docs/RELEASE_HISTORY.md)
 
 </div>
+

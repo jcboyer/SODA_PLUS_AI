@@ -265,8 +265,8 @@ None at this time. All features tested and stable:
 ## 📚 Related Documentation
 
 - [CHANGELOG.md](https://github.com/jcboyer/SODA_PLUS_AI/blob/main/docs/CHANGELOG.md) - Complete version history
-- [Quick Start Guide](https://github.com/jcboyer/SODA_PLUS_AI/blob/main/docs/Quick_Start_Guide.md) - Get started in 5 minutes
-- [Full User Guide](https://github.com/jcboyer/SODA_PLUS_AI/blob/main/docs/User_Guide_Full.md) - Complete reference
+- [Quick Start Guide](https://github.com/jcboyer/SODA_PLUS_AI/blob/main/docs/SqlLens_Quick_Start_Guide.md) - Get started in 5 minutes
+- [Full User Guide](https://github.com/jcboyer/SODA_PLUS_AI/blob/main/docs/SqlLens_User_Guide_Full.md) - Complete reference
 - [Feature Documentation](SODA_PLUS_MAIN/FEATURE_DATABASE_OBJECT_SIZE_ANALYSIS.md) - Database Object Size Analysis details
 
 ---
@@ -279,3 +279,4 @@ None at this time. All features tested and stable:
 ---
 
 **Thank you for using SODA+ AI!** 🎉
+

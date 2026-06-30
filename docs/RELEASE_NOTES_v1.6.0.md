@@ -527,7 +527,7 @@ All known issues are **non-blocking** and have workarounds or minimal impact.
 ## 📚 Related Documentation
 
 - [CHANGELOG.md](https://github.com/jcboyer/SODA_PLUS_AI/blob/main/docs/CHANGELOG.md) - Complete version history
-- [Quick Start Guide](https://github.com/jcboyer/SODA_PLUS_AI/blob/main/docs/Quick_Start_Guide.md) - Get started in 5 minutes
+- [Quick Start Guide](https://github.com/jcboyer/SODA_PLUS_AI/blob/main/docs/SqlLens_Quick_Start_Guide.md) - Get started in 5 minutes
 - [Full User Guide - Step 6a](SODA_PLUS_MAIN/Resources/Guides/SODA_PLUS_User_Guide.md#step-6a-sql-formatting-preferences-new) - SQL Formatting Preferences comprehensive guide
 - [Concise Guide](SODA_PLUS_MAIN/Resources/Guides/SODA_PLUS_Guide_Concise.md) - 30-minute essentials (includes SQL Formatting)
 - [Reference Guide](SODA_PLUS_MAIN/Resources/Guides/SODA_PLUS_Reference.md) - Feature lookup (includes SQL Formatting)
@@ -587,3 +587,4 @@ This release represents a **major milestone** in SODA+ AI's evolution:
 - ⚡ **Format Button Integration** - Automatically uses your preferences
 
 **Upgrade today** and enjoy consistent, professional SQL formatting! 💎✨
+

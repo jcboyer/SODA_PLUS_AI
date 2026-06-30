@@ -2,7 +2,7 @@
 
 ## 📚 User Guides
 
-### 🚀 [Quick Start Guide](Quick_Start_Guide.md) (5 minutes)
+### 🚀 [Quick Start Guide](SqlLens_Quick_Start_Guide.md) (5 minutes)
 Perfect for first-time users who want to get started immediately.
 
 **What's covered:**
@@ -11,7 +11,7 @@ Perfect for first-time users who want to get started immediately.
 - Basic Dependency Analysis
 - Essential Features
 
-### 📘 [Concise Guide](Concise_Guide.md) (30 minutes)
+### 📘 [Concise Guide](SqlLens_Concise_Guide.md) (30 minutes)
 Essential features covering 80% of what you need to know.
 
 **What's covered:**
@@ -21,7 +21,7 @@ Essential features covering 80% of what you need to know.
 - Basic charting and AI analysis
 - Multi-tab workflow
 
-### 🔗 [Git Integration Guide](Git_Integration_Guide.md) (Source Control Workflow)
+### 🔗 [Git Integration Guide](SqlLens_Git_Integration_Guide.md) (Source Control Workflow)
 Git, drift, mappings, and Agent Job script lifecycle documentation.
 
 **What's covered:**
@@ -30,7 +30,7 @@ Git, drift, mappings, and Agent Job script lifecycle documentation.
 - Agent Job script save/archive patterns
 - Repo Changes reporting and CSV export
 
-### 🔍 [Reference Guide](Reference_Guide.md) (Quick Lookup)
+### 🔍 [Reference Guide](SqlLens_Reference_Guide.md) (Quick Lookup)
 Alphabetical feature index, shortcuts, and troubleshooting.
 
 **What's covered:**
@@ -40,7 +40,7 @@ Alphabetical feature index, shortcuts, and troubleshooting.
 - Common error messages
 - Configuration reference
 
-### 🔎 [Search Guide](Search_Guide.md) (Cross-Database & Agent Search)
+### 🔎 [Search Guide](SqlLens_Search_Guide.md) (Cross-Database & Agent Search)
 Search-focused guide for multi-database discovery and Agent result workflows.
 
 **What's covered:**
@@ -49,7 +49,7 @@ Search-focused guide for multi-database discovery and Agent result workflows.
 - SQL Agent Job search on current server
 - Performance tips and troubleshooting
 
-### 📁 [Project Management Guide](Project_Management_Guide.md) (Projects & Copy Workflows)
+### 📁 [Project Management Guide](SqlLens_Project_Management_Guide.md) (Projects & Copy Workflows)
 Guide for organizing, copying, and managing project-level workflows.
 
 **What's covered:**
@@ -57,7 +57,7 @@ Guide for organizing, copying, and managing project-level workflows.
 - Copy/migration workflows
 - Environment-oriented project handling
 
-### 📖 [Full User Guide](User_Guide_Full.md) (Complete Reference)
+### 📖 [Full User Guide](SqlLens_User_Guide_Full.md) (Complete Reference)
 Complete documentation with all features and workflows.
 
 **What's covered:**
@@ -100,25 +100,25 @@ Complete documentation with all features and workflows.
 ## 🎯 Which Guide Should I Use?
 
 **I'm brand new:**
-→ Start with [Quick Start Guide](Quick_Start_Guide.md)
+→ Start with [Quick Start Guide](SqlLens_Quick_Start_Guide.md)
 
 **I want essential features fast:**
-→ Read [Concise Guide](Concise_Guide.md)
+→ Read [Concise Guide](SqlLens_Concise_Guide.md)
 
 **I need Git / source-control workflows:**
-→ Use [Git Integration Guide](Git_Integration_Guide.md)
+→ Use [Git Integration Guide](SqlLens_Git_Integration_Guide.md)
 
 **I need to look something up:**
-→ Use [Reference Guide](Reference_Guide.md)
+→ Use [Reference Guide](SqlLens_Reference_Guide.md)
 
 **I need to search across databases or Agent Jobs:**
-→ Use [Search Guide](Search_Guide.md)
+→ Use [Search Guide](SqlLens_Search_Guide.md)
 
 **I need project organization or copy workflows:**
-→ Use [Project Management Guide](Project_Management_Guide.md)
+→ Use [Project Management Guide](SqlLens_Project_Management_Guide.md)
 
 **I want to master everything:**
-→ Study [Full User Guide](User_Guide_Full.md)
+→ Study [Full User Guide](SqlLens_User_Guide_Full.md)
 
 **I'm a developer:**
 → Check [Developer Documentation](developers/)
@@ -141,3 +141,11 @@ Complete documentation with all features and workflows.
 
 **Last Updated:** June 27, 2026  
 **Version:** 1.8.0
+
+
+---
+
+## Naming Standard
+
+Use the canonical guide naming rules in [Guide_Naming_Rules.md](Guide_Naming_Rules.md).
+

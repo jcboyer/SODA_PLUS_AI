@@ -26,7 +26,7 @@ In the next 5 minutes, you'll:
 - ✅ Analyze your first stored procedure or table
 - ✅ See dependency relationships instantly
 
-For Git/source-control workflows, see the [Git Integration Guide](Git_Integration_Guide.md).
+For Git/source-control workflows, see the [Git Integration Guide](SqlLens_Git_Integration_Guide.md).
 
 ---
 
@@ -224,7 +224,7 @@ Click [🔌 Test Connection]
 - Click **🔍 Search**
 - See results from all databases!
 - **Tip:** Double-click a result to open it in Dependency Analyzer
-- **→ See [Step 11: Cross-Database Search](Search_Guide.md) in Search Guide**
+- **→ See [Step 11: Cross-Database Search](SqlLens_Search_Guide.md) in Search Guide**
 
 **4. Check Drill-Down** (3 minutes)
 - In the dependency tree, **right-click** a dependency
@@ -246,7 +246,7 @@ Once you're comfortable, explore these:
   - 🔍 **Comprehensive** - Searches names, code, columns, triggers, constraints
   - 🌐 **Multi-server** - Search entire environments (DEV, TEST, PROD)
   - 🤖 **AI Filtering** - Remove irrelevant matches with Grok AI
-- **→ See [Step 11: Cross-Database Search](Search_Guide.md) in Search Guide**
+- **→ See [Step 11: Cross-Database Search](SqlLens_Search_Guide.md) in Search Guide**
 
 **📊 Charting** (10 minutes)
 - Right-click object → **Chart Analysis** → **Quick Chart**
@@ -255,39 +255,39 @@ Once you're comfortable, explore these:
 - **NEW:** Use **File menu** to save, load, or copy Mermaid charts
 - **NEW:** Use **Output menu** to render, open, or save SVG files
 - Export as SVG for documentation
-- **→ See [Step 10: Dependency Charting](User_Guide_Full.md#step-10-dependency-charting-new-) in Full Guide**
+- **→ See [Step 10: Dependency Charting](SqlLens_User_Guide_Full.md#step-10-dependency-charting-new-) in Full Guide**
 
 **🤖 AI Analysis** (15 minutes)
 - Right-click procedure → **AI Analysis** → **Summary**
 - Get AI-powered code improvements
 - See formatted recommendations
-- **→ See [Step 9: AI Code Analysis](User_Guide_Full.md#step-9-ai-code-analysis---new-enhanced-workflow-) in Full Guide**
+- **→ See [Step 9: AI Code Analysis](SqlLens_User_Guide_Full.md#step-9-ai-code-analysis---new-enhanced-workflow-) in Full Guide**
 
 **💾 Export Dependencies** (5 minutes)
 - Click **Export** button in analyzer toolbar
 - Choose format: CSV, JSON, Markdown, or Text
 - Save for documentation or reports
-- **→ See [Step 8b: Toolbar Actions](User_Guide_Full.md#step-8b-dependency-analyzer-toolbar-actions-new) in Full Guide**
+- **→ See [Step 8b: Toolbar Actions](SqlLens_User_Guide_Full.md#step-8b-dependency-analyzer-toolbar-actions-new) in Full Guide**
 
 **📺 Full Window Mode** (2 minutes)
 - Click **Full Window** button in analyzer toolbar
 - Get standalone window for analysis
 - Great for dual monitors
-- **→ See [Step 8b: Full Window](User_Guide_Full.md#-full-window-button-new) in Full Guide**
+- **→ See [Step 8b: Full Window](SqlLens_User_Guide_Full.md#-full-window-button-new) in Full Guide**
 
 ### **Read the Full Documentation:**
 
-📖 **[Complete User Guide](User_Guide_Full.md)** (2-3 hours)
+📖 **[Complete User Guide](SqlLens_User_Guide_Full.md)** (2-3 hours)
 - Comprehensive reference for all features
 - Advanced workflows and troubleshooting
 - Deep dives into AI analysis and refactoring
 
-📘 **[Concise User Guide](Concise_Guide.md)** (30 minutes)
+📘 **[Concise User Guide](SqlLens_Concise_Guide.md)** (30 minutes)
 - Essential features without the deep details
 - Perfect for onboarding and training
 - 80% of what you need to know
 
-🔍 **[Reference Guide](Reference_Guide.md)** (Quick Lookup)
+🔍 **[Reference Guide](SqlLens_Reference_Guide.md)** (Quick Lookup)
 - Alphabetical feature index
 - Keyboard shortcuts cheat sheet
 - Fast answers to "How do I...?"
@@ -380,7 +380,7 @@ After 5 minutes, you should be able to:
 - 📊 Explore **Dependency Charting** for visual diagrams
 - 🤖 Test **AI Analysis** for code improvements
 
-**Need more?** 📖 Move to the [Concise User Guide](Concise_Guide.md) for essential features.
+**Need more?** 📖 Move to the [Concise User Guide](SqlLens_Concise_Guide.md) for essential features.
 
 ---
 
@@ -397,6 +397,7 @@ All guides have built-in search to help you navigate:
 - Use feature names: "AI Analysis", "Charting", "Dependencies"
 - Search error messages or symptoms directly
 
-**Still can't find what you need?** See the [Complete User Guide](User_Guide_Full.md) for comprehensive coverage.
+**Still can't find what you need?** See the [Complete User Guide](SqlLens_User_Guide_Full.md) for comprehensive coverage.
 
 ---
+
