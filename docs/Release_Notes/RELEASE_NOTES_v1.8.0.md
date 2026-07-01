@@ -140,11 +140,3 @@ Documentation was expanded to reflect the broader platform surface:
 Thank you to all beta users and contributors who provided detailed workflow feedback across comparison, deployment, Git integration, and Agent job management scenarios.
 
 ---
-
-## Notes for Finalization
-
-Before final publication, update:
-
-- `Release Date` above
-- Any final links to versioned artifacts if you choose to publish version-specific assets for v1.8.0
-
