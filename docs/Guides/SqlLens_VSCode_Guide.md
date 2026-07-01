@@ -17,7 +17,7 @@ The SqlLens VS Code extension brings SQL Server dependency analysis directly int
 2. Search **SqlLens SQL Server Tools**
 3. Click **Install** — reload if prompted
 
-**Recommended:** Install [SQL Server (mssql)](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) to unlock right-click analysis from the mssql Object Explorer.
+**Recommended:** Install [SQL Server (mssql)](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) to enable right-click dependency analysis from the mssql Object Explorer.
 
 ---
 
@@ -87,8 +87,8 @@ Three ways to trigger:
 Right-click any stored procedure, view, function, or table → **Analyze Dependencies**
 
 **2. From mssql Object Explorer**
-Right-click any object in the mssql extension tree → **SqlLens: Analyze Dependencies**
-*(Supports: Tables, Views, Stored Procedures, Scalar Functions, Table-Valued Functions)*
+Right-click any object in the mssql extension tree → **SqlLens: Analyze Dependencies from mssql Object Explorer**
+*(Supports: Tables, Views, Stored Procedures, Scalar Functions, Table-Valued Functions. Use SQL Login for this flow.)*
 
 **3. From SQL editor selection**
 Highlight an object name in any `.sql` file → right-click → **SqlLens: Analyze SQL Object Dependencies**
@@ -196,6 +196,7 @@ Organize servers by environment (Development, Staging, Production):
 | `SqlLens: Select Environment` | Switch environment |
 | `SqlLens: Create New Environment` | Add environment |
 | `SqlLens: Analyze Dependencies` | Analyze object from Explorer |
+| `SqlLens: Analyze Dependencies from mssql Object Explorer` | Analyze object from mssql Object Explorer |
 | `SqlLens: Analyze SQL Object Dependencies` | Analyze highlighted SQL in editor |
 | `SqlLens: Search Across Databases` | Cross-database search |
 | `SqlLens: Compare Database with Git` | Diff live DB vs Git |
@@ -204,7 +205,6 @@ Organize servers by environment (Development, Staging, Production):
 | `SqlLens: Configure Batch Review Notifications` | Schedule AI review |
 | `SqlLens: Explore GitHub Repo Structure` | Browse mapped Git repo |
 | `SqlLens: Check Key Vault Credentials` | Diagnostic: Key Vault access |
-| `SqlLens: Test mssql Extension Integration` | Diagnostic: mssql connection |
 
 ---
 
@@ -228,9 +228,11 @@ No default bindings assigned. Add via **File → Preferences → Keyboard Shortc
 **"Not logged in" errors**
 - Run `SqlLens: Login` — sessions expire periodically
 
-**mssql right-click menu not showing**
+**mssql Object Explorer right-click menu not showing**
 - Confirm the [mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) is installed
-- Must right-click on a Table, View, Stored Procedure, or Function node (not a folder)
+- Right-click a Table, View, Stored Procedure, or Function node (not a folder)
+- Use SQL Login for this path (Windows Integrated and Azure MFA are not supported)
+- If prompted for password, enable mssql profile password save/remember to avoid repeated prompts
 
 **Compare with Git returns no results**
 - Set GitHub PAT (`SqlLens: Configure GitHub PAT`) with `repo` scope
@@ -244,10 +246,9 @@ No default bindings assigned. Add via **File → Preferences → Keyboard Shortc
 |----------|------|
 | 🖥️ Desktop Application | [Download](https://sqllens.blob.core.windows.net/downloads/download.html) |
 | 📊 Desktop vs VS Code Feature Comparison | [Feature_Comparison.md](Feature_Comparison.md) |
-| 🔍 Full Desktop Reference Guide | [SqlLens_Reference_Guide.md](SqlLens_Reference_Guide.md) |
-| 🐛 Report Issues | [GitHub Issues](https://github.com/jcboyer/sqllens-docs/issues) |
+| 🔍 Full Desktop Reference Guide | [SqlLens_Reference.md](SqlLens_Reference.md) |
+| 🐛 Report Issues | [GitHub Issues](https://github.com/jcboyer/SqlLens/issues) |
 
 ---
 
 *Part of the [SqlLens SQL Server Analysis & Visualization](https://marketplace.visualstudio.com/items?itemName=sqllens.sqllens-sql-server-tools) toolset by [Thoughts In Motion](https://sodaplusai.com)*
-
