@@ -1,6 +1,6 @@
 # SqlLens - Release Notes v1.8.0
 
-**Release Date:** TBD (2026)  
+**Release Date:** July 1, 2026  
 **Type:** Major Feature Release  
 **Scope:** Cumulative update since v1.6.0 (2025-12-31 baseline)  
 **Download:** [https://sqllens.blob.core.windows.net/downloads/download.html](https://sqllens.blob.core.windows.net/downloads/download.html)
